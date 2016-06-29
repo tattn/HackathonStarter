@@ -21,6 +21,7 @@
 		24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8B1D242DF7008B0A97 /* NibHelper.swift */; };
 		24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8D1D242E48008B0A97 /* UIView+.swift */; };
 		24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8F1D242E98008B0A97 /* CollectionType+.swift */; };
+		24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D911D242ED2008B0A97 /* EnumEnumerable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		24410D8B1D242DF7008B0A97 /* NibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibHelper.swift; sourceTree = "<group>"; };
 		24410D8D1D242E48008B0A97 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		24410D8F1D242E98008B0A97 /* CollectionType+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+.swift"; sourceTree = "<group>"; };
+		24410D911D242ED2008B0A97 /* EnumEnumerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumEnumerable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				24410D7C1D2429A5008B0A97 /* Application */,
 				24410D7E1D242A00008B0A97 /* Extension */,
+				24410D931D242EDD008B0A97 /* Protocol */,
 				24410D7D1D2429B5008B0A97 /* UI */,
 				24410D711D2427AA008B0A97 /* Assets.xcassets */,
 				24410D761D2427AA008B0A97 /* Info.plist */,
@@ -102,17 +105,25 @@
 		24410D7E1D242A00008B0A97 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				24410D8F1D242E98008B0A97 /* CollectionType+.swift */,
 				24410D7F1D242A71008B0A97 /* NSObject+.swift */,
-				24410D811D242AF9008B0A97 /* UITableView+.swift */,
+				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
+				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
+				24410D871D242CAB008B0A97 /* UIApplication+.swift */,
 				24410D831D242B58008B0A97 /* UICollectionView+.swift */,
 				24410D851D242BEE008B0A97 /* UIColor+.swift */,
-				24410D871D242CAB008B0A97 /* UIApplication+.swift */,
-				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
-				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
+				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
-				24410D8F1D242E98008B0A97 /* CollectionType+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		24410D931D242EDD008B0A97 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				24410D911D242ED2008B0A97 /* EnumEnumerable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
+				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
 				24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,
