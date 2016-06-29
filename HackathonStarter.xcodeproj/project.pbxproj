@@ -20,6 +20,7 @@
 		24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D891D242DBD008B0A97 /* StoryboardHelper.swift */; };
 		24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8B1D242DF7008B0A97 /* NibHelper.swift */; };
 		24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8D1D242E48008B0A97 /* UIView+.swift */; };
+		24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8F1D242E98008B0A97 /* CollectionType+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		24410D891D242DBD008B0A97 /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		24410D8B1D242DF7008B0A97 /* NibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibHelper.swift; sourceTree = "<group>"; };
 		24410D8D1D242E48008B0A97 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		24410D8F1D242E98008B0A97 /* CollectionType+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
 				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
+				24410D8F1D242E98008B0A97 /* CollectionType+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
+				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
