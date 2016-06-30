@@ -22,6 +22,9 @@
 		24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8D1D242E48008B0A97 /* UIView+.swift */; };
 		24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8F1D242E98008B0A97 /* CollectionType+.swift */; };
 		24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D911D242ED2008B0A97 /* EnumEnumerable.swift */; };
+		24410D951D243538008B0A97 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D941D243538008B0A97 /* UIImage+.swift */; };
+		24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D961D24FCBB008B0A97 /* GCFloat+.swift */; };
+		24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* NSURL+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		24410D8D1D242E48008B0A97 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		24410D8F1D242E98008B0A97 /* CollectionType+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+.swift"; sourceTree = "<group>"; };
 		24410D911D242ED2008B0A97 /* EnumEnumerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumEnumerable.swift; sourceTree = "<group>"; };
+		24410D941D243538008B0A97 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		24410D961D24FCBB008B0A97 /* GCFloat+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCFloat+.swift"; sourceTree = "<group>"; };
+		24410D981D24FD01008B0A97 /* NSURL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 				24410D851D242BEE008B0A97 /* UIColor+.swift */,
 				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
+				24410D941D243538008B0A97 /* UIImage+.swift */,
+				24410D961D24FCBB008B0A97 /* GCFloat+.swift */,
+				24410D981D24FD01008B0A97 /* NSURL+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -200,12 +209,15 @@
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
 				24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */,
 				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
+				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
+				24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
+				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
 				24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,
