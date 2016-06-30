@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
+		243F94871D25820900C302D0 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94861D25820900C302D0 /* Async.swift */; };
 		24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6A1D2427A9008B0A97 /* AppDelegate.swift */; };
 		24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6C1D2427A9008B0A97 /* ViewController.swift */; };
 		24410D701D2427AA008B0A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24410D6E1D2427AA008B0A97 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
+		243F94861D25820900C302D0 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		24410D671D2427A9008B0A97 /* HackathonStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24410D6A1D2427A9008B0A97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24410D6C1D2427A9008B0A97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				243F94831D25815500C302D0 /* Ionicons.swift */,
+				243F94861D25820900C302D0 /* Async.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
 				24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */,
 				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
+				243F94871D25820900C302D0 /* Async.swift in Sources */,
 				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
