@@ -11,6 +11,7 @@
 		243F94871D25820900C302D0 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94861D25820900C302D0 /* Async.swift */; };
 		243F94891D25825B00C302D0 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94881D25825B00C302D0 /* Regexp.swift */; };
 		243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948A1D25852500C302D0 /* GlobalFunctions.swift */; };
+		243F948D1D2585DA00C302D0 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948C1D2585DA00C302D0 /* App.swift */; };
 		24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6A1D2427A9008B0A97 /* AppDelegate.swift */; };
 		24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6C1D2427A9008B0A97 /* ViewController.swift */; };
 		24410D701D2427AA008B0A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24410D6E1D2427AA008B0A97 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		243F94861D25820900C302D0 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		243F948A1D25852500C302D0 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		243F948C1D2585DA00C302D0 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		24410D671D2427A9008B0A97 /* HackathonStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24410D6A1D2427A9008B0A97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24410D6C1D2427A9008B0A97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				24410D6A1D2427A9008B0A97 /* AppDelegate.swift */,
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
+				243F948C1D2585DA00C302D0 /* App.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
+				243F948D1D2585DA00C302D0 /* App.swift in Sources */,
 				243F94841D25815500C302D0 /* Ionicons.swift in Sources */,
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
