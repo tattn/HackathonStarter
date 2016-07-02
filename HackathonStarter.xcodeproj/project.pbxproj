@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */; };
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
 		243F94871D25820900C302D0 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94861D25820900C302D0 /* Async.swift */; };
 		243F94891D25825B00C302D0 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94881D25825B00C302D0 /* Regexp.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		243F94861D25820900C302D0 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				243F94831D25815500C302D0 /* Ionicons.swift */,
 				243F94861D25820900C302D0 /* Async.swift */,
 				243F94881D25825B00C302D0 /* Regexp.swift */,
+				242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				243F94841D25815500C302D0 /* Ionicons.swift in Sources */,
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
+				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
 				24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,
