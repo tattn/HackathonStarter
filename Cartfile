@@ -1,0 +1,34 @@
+# HTTP Networking
+github "Alamofire/Alamofire" ~> 3.4
+github "ashleymills/Reachability.swift" ~> 2.3.3
+
+
+# Object Mapping
+github "Hearst-DD/ObjectMapper" ~> 1.3
+# github "Anviking/Decodable" ~> 0.4.2
+
+
+# Downloading and Caching image
+github "onevcat/Kingfisher" ~> 2.4
+
+
+# Flat Color Framework
+github "ViccAlexander/Chameleon" ~> 2.1.0
+
+
+# Mobile database
+github "realm/realm-cocoa"
+
+
+# Progress Indicator
+github "SVProgressHUD/SVProgressHUD"
+
+
+# Animation
+# github "MengTo/Spring" "swift2"
+
+
+github "malcommac/SwiftDate" ~> 3.0.8
+# github "radex/SwiftyUserDefaults" ~> 2.2.0
+github "tattn/SwiftyToast"
+
