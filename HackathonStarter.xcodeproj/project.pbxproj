@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24137CC51D297814006AE0EC /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24137CC41D297814006AE0EC /* Array+.swift */; };
 		242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */; };
 		242C3BEF1D27AE4200BF7992 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BEE1D27AE4200BF7992 /* Alamofire.framework */; };
 		242C3BF01D27AE4200BF7992 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BEE1D27AE4200BF7992 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24137CC41D297814006AE0EC /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		242C3BEC1D27AE3700BF7992 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		242C3BEE1D27AE4200BF7992 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		24410D7E1D242A00008B0A97 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				24137CC41D297814006AE0EC /* Array+.swift */,
 				24410D8F1D242E98008B0A97 /* CollectionType+.swift */,
 				24410D961D24FCBB008B0A97 /* GCFloat+.swift */,
 				24410D7F1D242A71008B0A97 /* NSObject+.swift */,
@@ -359,6 +362,7 @@
 			files = (
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
 				24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */,
+				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
 				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
 				243F94871D25820900C302D0 /* Async.swift in Sources */,
 				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
