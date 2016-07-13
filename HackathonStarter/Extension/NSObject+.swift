@@ -17,3 +17,17 @@ extension NSObject {
         return self.dynamicType.className
     }
 }
+
+extension NSObjectProtocol where Self: NSObject {
+    var description: String {
+        let mirror = Mirror(reflecting: self)
+        return mirror.children
+            .map { element -> String in
+                let key = element.label ?? "Unknown"
+                let value = element.value
+                return "\(key): \(value)"
+            }
+            .joinWithSeparator("\n")
+    }
+
+}

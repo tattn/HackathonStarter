@@ -53,6 +53,7 @@
 		24410D951D243538008B0A97 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D941D243538008B0A97 /* UIImage+.swift */; };
 		24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D961D24FCBB008B0A97 /* GCFloat+.swift */; };
 		24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* NSURL+.swift */; };
+		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +120,7 @@
 		24410D941D243538008B0A97 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		24410D961D24FCBB008B0A97 /* GCFloat+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCFloat+.swift"; sourceTree = "<group>"; };
 		24410D981D24FD01008B0A97 /* NSURL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+.swift"; sourceTree = "<group>"; };
+		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 				24410D941D243538008B0A97 /* UIImage+.swift */,
 				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
+				24DDCC6E1D36870700CC8046 /* Dictionary+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
 				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
 				243F94871D25820900C302D0 /* Async.swift in Sources */,
+				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,
 				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
 				243F94901D25874800C302D0 /* IBDesignable.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,

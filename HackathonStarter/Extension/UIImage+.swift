@@ -46,4 +46,43 @@ extension UIImage {
         return image
     }
 
+    func cropping(rect: CGRect) -> UIImage? {
+        let originalRect = CGRect(
+            x: rect.origin.x * scale,
+            y: rect.origin.y * scale,
+            width: rect.size.width * scale,
+            height: rect.size.height * scale
+        )
+
+        var croppingImage: UIImage?
+
+        if let cgImage = CGImage,
+            imageRef = CGImageCreateWithImageInRect(cgImage, originalRect) {
+            croppingImage = UIImage(CGImage: imageRef, scale: scale, orientation: imageOrientation)
+        }
+        
+        return croppingImage
+    }
+
+    func resize(size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContext(CGSize(
+            width: size.width * scale,
+            height: size.height * scale
+        ))
+
+        drawInRect(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+
+        var resizedImage: UIImage?
+
+        if let cgImage = image.CGImage {
+            resizedImage = UIImage(CGImage: cgImage, scale:  scale, orientation: imageOrientation)
+        }
+
+        UIGraphicsEndImageContext()
+
+        return resizedImage
+    }
+
 }
