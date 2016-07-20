@@ -44,6 +44,7 @@
 		244274CC1D3F47CD00088A78 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFC1D27AE5B00BF7992 /* SwiftDate.framework */; };
 		244274CD1D3F47CD00088A78 /* SwiftyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
+		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,8 @@
 		24410D961D24FCBB008B0A97 /* GCFloat+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCFloat+.swift"; sourceTree = "<group>"; };
 		24410D981D24FD01008B0A97 /* NSURL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+.swift"; sourceTree = "<group>"; };
 		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +158,7 @@
 				242C3C101D27AE7B00BF7992 /* Frameworks */,
 				24410D691D2427A9008B0A97 /* HackathonStarter */,
 				24410D681D2427A9008B0A97 /* Products */,
+				244274E21D3FD42400088A78 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +215,7 @@
 				24410D7F1D242A71008B0A97 /* NSObject+.swift */,
 				24410D981D24FD01008B0A97 /* NSURL+.swift */,
 				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
+				244274E31D3FD4BB00088A78 /* Realm+.swift */,
 				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
 				24410D871D242CAB008B0A97 /* UIApplication+.swift */,
 				24410D831D242B58008B0A97 /* UICollectionView+.swift */,
@@ -229,6 +234,14 @@
 				24410D911D242ED2008B0A97 /* EnumEnumerable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		244274E21D3FD42400088A78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				244274E11D3FD41600088A78 /* ionicons.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +346,7 @@
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
 				24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */,
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
+				244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */,
 				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
 				243F94871D25820900C302D0 /* Async.swift in Sources */,
 				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,

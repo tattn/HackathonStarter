@@ -26,3 +26,11 @@ func parallel(acyncProcesses: [AsyncProcess], completion: [AnyObject?] -> ()) {
         completion(results)
     }
 }
+
+func threadOnMain(block: dispatch_block_t) {
+    dispatch_async(dispatch_get_main_queue(), block)
+}
+
+func threadOnBackground(name: String = "background", block: dispatch_block_t) {
+    dispatch_async(dispatch_queue_create(name, nil), block)
+}
