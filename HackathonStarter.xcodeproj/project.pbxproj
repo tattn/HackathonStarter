@@ -43,6 +43,7 @@
 		244274CB1D3F47CD00088A78 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFB1D27AE5B00BF7992 /* SVProgressHUD.framework */; };
 		244274CC1D3F47CD00088A78 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFC1D27AE5B00BF7992 /* SwiftDate.framework */; };
 		244274CD1D3F47CD00088A78 /* SwiftyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */; };
+		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		24410D941D243538008B0A97 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		24410D961D24FCBB008B0A97 /* GCFloat+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCFloat+.swift"; sourceTree = "<group>"; };
 		24410D981D24FD01008B0A97 /* NSURL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+.swift"; sourceTree = "<group>"; };
+		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +216,7 @@
 				24410D831D242B58008B0A97 /* UICollectionView+.swift */,
 				24410D851D242BEE008B0A97 /* UIColor+.swift */,
 				24410D941D243538008B0A97 /* UIImage+.swift */,
+				244274D01D3F4B5F00088A78 /* UIImageView+.swift */,
 				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
 			);
@@ -346,6 +349,7 @@
 				243F948D1D2585DA00C302D0 /* App.swift in Sources */,
 				243F94841D25815500C302D0 /* Ionicons.swift in Sources */,
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
+				244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
 				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
