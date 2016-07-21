@@ -16,6 +16,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        if AppData.get(.FirstLaunch) == nil {
+            // First launching
+            AppData.save(.FirstLaunch, value: false)
+        }
+
         return true
     }
 

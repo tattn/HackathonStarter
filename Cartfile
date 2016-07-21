@@ -1,5 +1,6 @@
 # HTTP Networking
 github "Alamofire/Alamofire" ~> 3.4
+# github "tattn/APItan"
 github "ashleymills/Reachability.swift" ~> 2.3.3
 
 
@@ -9,7 +10,7 @@ github "Hearst-DD/ObjectMapper" ~> 1.3
 
 
 # Downloading and Caching image
-github "onevcat/Kingfisher" ~> 2.4
+github "onevcat/Kingfisher" ~> 2.4.2
 
 
 # Flat Color Framework
@@ -27,6 +28,8 @@ github "SVProgressHUD/SVProgressHUD"
 # Animation
 # github "MengTo/Spring" "swift2"
 
+# KeyChain
+github "kishikawakatsumi/KeychainAccess"
 
 github "malcommac/SwiftDate" ~> 3.0.8
 # github "radex/SwiftyUserDefaults" ~> 2.2.0

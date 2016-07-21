@@ -9,10 +9,11 @@
 import Foundation
 
 struct AppData {
-    static let userDefaults = NSUserDefaults.standardUserDefaults()
+    private static let userDefaults = NSUserDefaults.standardUserDefaults()
 
     static func save(key: AppDataKey, value: AnyObject) {
         userDefaults.setObject(value, forKey: key.rawValue)
+        userDefaults.synchronize()
     }
 
     static func get<T>(key: AppDataKey) -> T? {
@@ -23,4 +24,5 @@ struct AppData {
 
 enum AppDataKey: String {
     case DeviceToken
+    case FirstLaunch
 }

@@ -47,6 +47,9 @@
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		244274E91D40EECD00088A78 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E81D40EECD00088A78 /* AppData.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
+		244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274ED1D40FF8400088A78 /* KeyChainManager.swift */; };
+		244274F01D4102C000088A78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EF1D4102C000088A78 /* RealmManager.swift */; };
+		244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244274F11D4103BD00088A78 /* KeychainAccess.framework */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,9 @@
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		244274E81D40EECD00088A78 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		244274EB1D40F28000088A78 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		244274ED1D40FF8400088A78 /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		244274EF1D4102C000088A78 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		244274F11D4103BD00088A78 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +111,7 @@
 			files = (
 				244274C41D3F47CD00088A78 /* Alamofire.framework in Frameworks */,
 				244274C51D3F47CD00088A78 /* Chameleon.framework in Frameworks */,
+				244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */,
 				244274C61D3F47CD00088A78 /* Kingfisher.framework in Frameworks */,
 				244274C71D3F47CD00088A78 /* ObjectMapper.framework in Frameworks */,
 				244274C81D3F47CD00088A78 /* Reachability.framework in Frameworks */,
@@ -122,6 +129,7 @@
 		242C3C101D27AE7B00BF7992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				244274F11D4103BD00088A78 /* KeychainAccess.framework */,
 				242C3BF51D27AE5B00BF7992 /* Chameleon.framework */,
 				242C3BF61D27AE5B00BF7992 /* Kingfisher.framework */,
 				242C3BF71D27AE5B00BF7992 /* ObjectMapper.framework */,
@@ -254,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
+				244274ED1D40FF8400088A78 /* KeyChainManager.swift */,
+				244274EF1D4102C000088A78 /* RealmManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyToast.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
@@ -373,6 +384,8 @@
 				24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
+				244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */,
+				244274F01D4102C000088A78 /* RealmManager.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
