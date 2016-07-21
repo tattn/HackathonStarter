@@ -85,4 +85,55 @@ extension UIImage {
         return resizedImage
     }
 
+    func resizeAspectFitWith256x256() -> UIImage {
+        return resizeAspectFitWithSize(CGSize(width: 256, height: 256))
+    }
+
+    func resizeAspectFitWithSize(size: CGSize) -> UIImage {
+        let widthRatio  = size.width  / self.size.width
+        let heightRatio = size.height / self.size.height
+        let ratio = (widthRatio < heightRatio) ? widthRatio : heightRatio
+
+        let resizedSize = CGSize(width: self.size.width*ratio, height: self.size.height*ratio)
+
+        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
+        drawInRect(CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return resizedImage
+    }
+
+    func toJPEG(quarity: CGFloat = 1.0) -> NSData? {
+        return UIImageJPEGRepresentation(self, quarity)
+    }
+
+    func rounded() -> UIImage? {
+        let imageView = UIImageView(image: self)
+        imageView.layer.cornerRadius = min(size.height/2, size.width/2)
+        imageView.layer.masksToBounds = true
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0.0)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.renderInContext(context)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
+    }
+
+    func circle() -> UIImage? {
+        let square = CGSize(width: min(size.width, size.height), height: min(size.width, size.height))
+        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+        imageView.contentMode = .ScaleAspectFill
+        imageView.image = self
+        imageView.layer.cornerRadius = square.width/2
+        imageView.layer.masksToBounds = true
+        UIGraphicsBeginImageContext(imageView.bounds.size)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.renderInContext(context)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return result
+    }
+
+
 }

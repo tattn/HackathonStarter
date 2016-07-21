@@ -50,6 +50,7 @@
 		244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274ED1D40FF8400088A78 /* KeyChainManager.swift */; };
 		244274F01D4102C000088A78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EF1D4102C000088A78 /* RealmManager.swift */; };
 		244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244274F11D4103BD00088A78 /* KeychainAccess.framework */; };
+		244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274F31D410CE100088A78 /* SwipeReturnable.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		244274ED1D40FF8400088A78 /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		244274EF1D4102C000088A78 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		244274F11D4103BD00088A78 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		244274F31D410CE100088A78 /* SwipeReturnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeReturnable.swift; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,9 +187,9 @@
 		24410D691D2427A9008B0A97 /* HackathonStarter */ = {
 			isa = PBXGroup;
 			children = (
-				244274EA1D40F25000088A78 /* Manager */,
 				24410D7C1D2429A5008B0A97 /* Application */,
 				24410D7E1D242A00008B0A97 /* Extension */,
+				244274EA1D40F25000088A78 /* Manager */,
 				24410D931D242EDD008B0A97 /* Protocol */,
 				24410D7D1D2429B5008B0A97 /* UI */,
 				243F94851D25816F00C302D0 /* Utility */,
@@ -202,9 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				243F948C1D2585DA00C302D0 /* App.swift */,
+				244274E81D40EECD00088A78 /* AppData.swift */,
 				24410D6A1D2427A9008B0A97 /* AppDelegate.swift */,
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
-				244274E81D40EECD00088A78 /* AppData.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -231,6 +233,7 @@
 				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
 				244274E31D3FD4BB00088A78 /* Realm+.swift */,
 				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
+				244274F31D410CE100088A78 /* SwipeReturnable.swift */,
 				24410D871D242CAB008B0A97 /* UIApplication+.swift */,
 				24410D831D242B58008B0A97 /* UICollectionView+.swift */,
 				24410D851D242BEE008B0A97 /* UIColor+.swift */,
@@ -261,11 +264,11 @@
 		244274EA1D40F25000088A78 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
 				244274ED1D40FF8400088A78 /* KeyChainManager.swift */,
+				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
 				244274EF1D4102C000088A78 /* RealmManager.swift */,
 			);
-			name = Manager;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +384,7 @@
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
+				244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */,
 				24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,

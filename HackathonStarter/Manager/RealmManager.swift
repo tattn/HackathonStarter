@@ -10,10 +10,7 @@ import Foundation
 import RealmSwift
 
 struct RealmManager {
-    static let shared = RealmManager()
-
-
-    func migrate() {
+    static func migrate() {
         let build = UInt64(App.build)!
         
         let config = Realm.Configuration(

@@ -28,4 +28,17 @@ struct App {
         static func hiraKakuW6(size size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W6", size: size) ?? UIFont.systemFontOfSize(size) }
         static func hiraKakuW3(size size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W3", size: size) ?? UIFont.systemFontOfSize(size) }
     }
+
+
+    static func setupDefaultAppearance() {
+        // Icon color on Nav
+        UINavigationBar.appearance().tintColor = Color.main
+
+        // Text color on Nav
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: Color.main]
+
+        // Text color (UIButton & UIAlertView & ...)
+        UIView.appearance().tintColor = Color.main
+    }
+
 }

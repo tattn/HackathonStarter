@@ -19,7 +19,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         if AppData.get(.FirstLaunch) == nil {
             // First launching
             AppData.save(.FirstLaunch, value: false)
+        } else {
+            RealmManager.migrate()
         }
+
+        // Launch via push notification
+        if let launch = launchOptions {
+            if let userInfo = launch[UIApplicationLaunchOptionsRemoteNotificationKey] as? [NSObject : AnyObject] {
+                PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
+            }
+        }
+
+        App.setupDefaultAppearance()
 
         return true
     }
@@ -47,6 +58,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
 
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print(error)
     }
 
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
@@ -62,12 +74,12 @@ extension AppDelegate {
         if let deviceToken: String = AppData.get(.DeviceToken) where deviceToken == tokenAsString {
         } else {
             AppData.save(.DeviceToken, value: tokenAsString)
-            PushNotificationManager.shared.sendDeviceToken(tokenAsString)
+            PushNotificationManager.sendDeviceToken(tokenAsString)
         }
     }
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print(userInfo)
-        PushNotificationManager.shared.handlePushNotification(userInfo, state: application.applicationState)
+        PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
     }
 }

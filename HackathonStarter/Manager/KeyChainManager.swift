@@ -10,9 +10,7 @@ import Foundation
 import KeychainAccess
 
 struct KeychainManager {
-    static let shared = KeyboardManager()
-
-    func get(key: String, service: String? = nil) -> String? {
+    static func get(key: String, service: String? = nil) -> String? {
         var token: String?
 
         let keychain = getKeychain(service)
@@ -30,7 +28,7 @@ struct KeychainManager {
         return token
     }
 
-    private func getFailBackOldDataKey(key: String) throws -> String? {
+    private static func getFailBackOldDataKey(key: String) throws -> String? {
         var query = [String: AnyObject]()
         query[kSecClass as String] = kSecClassGenericPassword
         query[kSecAttrAccount as String] = key.dataUsingEncoding(NSUTF8StringEncoding)
@@ -60,7 +58,7 @@ struct KeychainManager {
         }
     }
 
-    func set(key: String, value: String, service: String? = nil) {
+    static func set(key: String, value: String, service: String? = nil) {
         let keychain = getKeychain(service)
 
         do {
@@ -70,7 +68,7 @@ struct KeychainManager {
         }
     }
     
-    func remove(key: String, service: String? = nil) {
+    static func remove(key: String, service: String? = nil) {
         let keychain = getKeychain(service)
 
         do {
@@ -80,7 +78,7 @@ struct KeychainManager {
         }
     }
 
-    private func getKeychain(service: String? = nil) -> Keychain {
+    private static func getKeychain(service: String? = nil) -> Keychain {
         if let service = service {
             return Keychain(service: service)
         } else {
