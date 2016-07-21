@@ -745,6 +745,9 @@ public enum Ionicons: String {
     case Wrench = "\u{f2ba}"
     case Xbox = "\u{f30c}"
 
+    static func getFont(size: CGFloat = UIFont.systemFontSize()) -> UIFont {
+        return UIFont(name: "ionicons", size: size) ?? UIFont.systemFontOfSize(size)
+    }
 
     func image(size: CGFloat, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor? = nil) -> UIImage {
 
@@ -754,7 +757,7 @@ public enum Ionicons: String {
         style.alignment = .Left
         style.baseWritingDirection = .LeftToRight
 
-        guard let font = UIFont(name: "ionicons", size: size) else { return UIImage() }
+        let font = self.dynamicType.getFont(size)
 
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
         let attString = NSMutableAttributedString(string: self.rawValue, attributes: [

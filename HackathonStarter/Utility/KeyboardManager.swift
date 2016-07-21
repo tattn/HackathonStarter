@@ -14,7 +14,7 @@ public protocol KeyboardDelegate: class {
 }
 
 /// キーボードを管理するクラス
-public class KeyboardManager: NSObject {
+public final class KeyboardManager: NSObject {
 
     public static let shared = KeyboardManager()
 

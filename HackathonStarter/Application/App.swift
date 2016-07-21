@@ -15,6 +15,9 @@ struct App {
     static let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
     static let statusBarAndNavigationBarHeight = App.statusBarHeight + App.navigationBarHeight
 
+    static let version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
+    static let build = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion") as! String
+
     struct Color {
         static let main = UIColor.redColor()
     }

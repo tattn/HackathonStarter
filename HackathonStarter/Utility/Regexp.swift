@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Regexp {
+final class Regexp {
     let internalRegexp: NSRegularExpression
     let pattern: String
 

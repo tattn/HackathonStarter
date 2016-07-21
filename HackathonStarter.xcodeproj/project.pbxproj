@@ -45,6 +45,8 @@
 		244274CD1D3F47CD00088A78 /* SwiftyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
+		244274E91D40EECD00088A78 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E81D40EECD00088A78 /* AppData.swift */; };
+		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
+		244274E81D40EECD00088A78 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		244274EB1D40F28000088A78 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,7 @@
 		24410D691D2427A9008B0A97 /* HackathonStarter */ = {
 			isa = PBXGroup;
 			children = (
+				244274EA1D40F25000088A78 /* Manager */,
 				24410D7C1D2429A5008B0A97 /* Application */,
 				24410D7E1D242A00008B0A97 /* Extension */,
 				24410D931D242EDD008B0A97 /* Protocol */,
@@ -191,6 +196,7 @@
 				243F948C1D2585DA00C302D0 /* App.swift */,
 				24410D6A1D2427A9008B0A97 /* AppDelegate.swift */,
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
+				244274E81D40EECD00088A78 /* AppData.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -242,6 +248,14 @@
 				244274E11D3FD41600088A78 /* ionicons.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		244274EA1D40F25000088A78 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,11 +365,13 @@
 				243F94871D25820900C302D0 /* Async.swift in Sources */,
 				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,
 				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
+				244274E91D40EECD00088A78 /* AppData.swift in Sources */,
 				243F94901D25874800C302D0 /* IBDesignable.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
 				24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */,
+				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
