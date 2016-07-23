@@ -15,7 +15,7 @@ struct App {
     static let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
     static let statusBarAndNavigationBarHeight = App.statusBarHeight + App.navigationBarHeight
 
-    static let service = "com.github.foo.bar"
+    static let bundleID = NSBundle.mainBundle().bundleIdentifier!
     static let version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
     static let build = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion") as! String
 
