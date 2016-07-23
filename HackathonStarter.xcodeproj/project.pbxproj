@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24137CC51D297814006AE0EC /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24137CC41D297814006AE0EC /* Array+.swift */; };
+		2419F2891D441703005917D2 /* HogeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419F2881D441703005917D2 /* HogeModel.swift */; };
 		242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */; };
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
 		243F94871D25820900C302D0 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94861D25820900C302D0 /* Async.swift */; };
@@ -51,11 +52,13 @@
 		244274F01D4102C000088A78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EF1D4102C000088A78 /* RealmManager.swift */; };
 		244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244274F11D4103BD00088A78 /* KeychainAccess.framework */; };
 		244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274F31D410CE100088A78 /* SwipeReturnable.swift */; };
+		244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274FC1D4128D500088A78 /* UIViewController+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24137CC41D297814006AE0EC /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		2419F2881D441703005917D2 /* HogeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HogeModel.swift; sourceTree = "<group>"; };
 		242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		242C3BEE1D27AE4200BF7992 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		242C3BF21D27AE4900BF7992 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		244274EF1D4102C000088A78 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		244274F11D4103BD00088A78 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		244274F31D410CE100088A78 /* SwipeReturnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeReturnable.swift; sourceTree = "<group>"; };
+		244274FC1D4128D500088A78 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2419F2871D4416F2005917D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2419F2881D441703005917D2 /* HogeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		242C3C101D27AE7B00BF7992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +202,7 @@
 				24410D7C1D2429A5008B0A97 /* Application */,
 				24410D7E1D242A00008B0A97 /* Extension */,
 				244274EA1D40F25000088A78 /* Manager */,
+				2419F2871D4416F2005917D2 /* Model */,
 				24410D931D242EDD008B0A97 /* Protocol */,
 				24410D7D1D2429B5008B0A97 /* UI */,
 				243F94851D25816F00C302D0 /* Utility */,
@@ -241,6 +254,7 @@
 				244274D01D3F4B5F00088A78 /* UIImageView+.swift */,
 				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
+				244274FC1D4128D500088A78 /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -371,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2419F2891D441703005917D2 /* HogeModel.swift in Sources */,
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
 				24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */,
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
@@ -397,6 +412,7 @@
 				243F94841D25815500C302D0 /* Ionicons.swift in Sources */,
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */,
+				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
 				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
