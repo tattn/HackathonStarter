@@ -53,6 +53,8 @@
 		244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244274F11D4103BD00088A78 /* KeychainAccess.framework */; };
 		244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274F31D410CE100088A78 /* SwipeReturnable.swift */; };
 		244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274FC1D4128D500088A78 /* UIViewController+.swift */; };
+		247D6D521D47CA06005864EC /* NSCoding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D511D47CA06005864EC /* NSCoding+.swift */; };
+		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,8 @@
 		244274F11D4103BD00088A78 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		244274F31D410CE100088A78 /* SwipeReturnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeReturnable.swift; sourceTree = "<group>"; };
 		244274FC1D4128D500088A78 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		247D6D511D47CA06005864EC /* NSCoding+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+.swift"; sourceTree = "<group>"; };
+		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +262,8 @@
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
 				244274FC1D4128D500088A78 /* UIViewController+.swift */,
 				24DA30E31D441E3E00E4C9C4 /* NSError+.swift */,
+				247D6D511D47CA06005864EC /* NSCoding+.swift */,
+				247D6D531D47CEBE005864EC /* UIFont+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
+				247D6D521D47CA06005864EC /* NSCoding+.swift in Sources */,
 				244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */,
 				24410D971D24FCBC008B0A97 /* GCFloat+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
@@ -415,6 +422,7 @@
 				243F948D1D2585DA00C302D0 /* App.swift in Sources */,
 				243F94841D25815500C302D0 /* Ionicons.swift in Sources */,
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
+				247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */,
 				244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */,
 				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
