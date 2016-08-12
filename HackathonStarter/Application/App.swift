@@ -12,6 +12,7 @@ struct App {
     static let screenWidth = UIScreen.mainScreen().bounds.width
     static let screenHeight = UIScreen.mainScreen().bounds.height
     static let navigationBarHeight: CGFloat = 44
+    static let toolBarHeight: CGFloat = 44
     static let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
     static let statusBarAndNavigationBarHeight = App.statusBarHeight + App.navigationBarHeight
 

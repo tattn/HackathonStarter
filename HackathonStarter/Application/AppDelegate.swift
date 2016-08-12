@@ -66,11 +66,11 @@ extension AppDelegate {
     }
 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        // Convert devicetoken
+        // Convert a devicetoken
         let tokenAsString = deviceToken.description.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "<>")).stringByReplacingOccurrencesOfString(" ", withString: "")
         print(tokenAsString)
 
-        // Send devicetoken if it was changed
+        // Send a devicetoken if it was changed
         if let deviceToken: String = AppData.get(.DeviceToken) where deviceToken == tokenAsString {
         } else {
             AppData.save(.DeviceToken, value: tokenAsString)
