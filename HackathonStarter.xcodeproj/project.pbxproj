@@ -60,6 +60,8 @@
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 		24FD0C421D5E38910031B6F0 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C411D5E38910031B6F0 /* PhotoManager.swift */; };
+		24FD0C461D5EBBC40031B6F0 /* UIActivityViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */; };
+		24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,8 @@
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		24FD0C411D5E38910031B6F0 /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityViewController+.swift"; sourceTree = "<group>"; };
+		24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 				243F94831D25815500C302D0 /* Ionicons.swift */,
 				242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */,
 				243F94881D25825B00C302D0 /* Regexp.swift */,
+				24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				247D6D531D47CEBE005864EC /* UIFont+.swift */,
 				242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */,
 				242CA7511D5DD70700BD0C4E /* UIAlertController+.swift */,
+				24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				242CA7521D5DD70700BD0C4E /* UIAlertController+.swift in Sources */,
 				244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */,
 				244274F01D4102C000088A78 /* RealmManager.swift in Sources */,
+				24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
@@ -434,6 +441,7 @@
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */,
 				244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */,
+				24FD0C461D5EBBC40031B6F0 /* UIActivityViewController+.swift in Sources */,
 				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
 				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
