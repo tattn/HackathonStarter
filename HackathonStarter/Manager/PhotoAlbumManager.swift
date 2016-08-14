@@ -13,6 +13,14 @@ struct PhotoAlbumManager {
 
     private static var pickerListener: ImagePickerListener?
 
+    static func runIfAuthorized(block: () -> Void) {
+        requestAuthorization { status in
+            if status == .Authorized {
+                block()
+            }
+        }
+    }
+
     static func requestAuthorization(completion: PHAuthorizationStatus -> Void) {
         let status = PHPhotoLibrary.authorizationStatus()
 
@@ -25,6 +33,7 @@ struct PhotoAlbumManager {
 
         case .Denied:
             showAlertForDenied()
+            completion(status)
         }
     }
 

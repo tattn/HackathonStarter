@@ -59,7 +59,7 @@
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
-		24FD0C421D5E38910031B6F0 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C411D5E38910031B6F0 /* PhotoManager.swift */; };
+		24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */; };
 		24FD0C461D5EBBC40031B6F0 /* UIActivityViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */; };
 		24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
@@ -121,7 +121,7 @@
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
-		24FD0C411D5E38910031B6F0 /* PhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumManager.swift; sourceTree = "<group>"; };
 		24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityViewController+.swift"; sourceTree = "<group>"; };
 		24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,9 +180,8 @@
 			children = (
 				243F94861D25820900C302D0 /* Async.swift */,
 				243F94831D25815500C302D0 /* Ionicons.swift */,
-				242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */,
-				243F94881D25825B00C302D0 /* Regexp.swift */,
 				24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */,
+				243F94881D25825B00C302D0 /* Regexp.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -258,26 +257,25 @@
 				24410D8F1D242E98008B0A97 /* CollectionType+.swift */,
 				24DDCC6E1D36870700CC8046 /* Dictionary+.swift */,
 				24410D961D24FCBB008B0A97 /* GCFloat+.swift */,
+				247D6D511D47CA06005864EC /* NSCoding+.swift */,
+				24DA30E31D441E3E00E4C9C4 /* NSError+.swift */,
+				242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */,
 				24410D7F1D242A71008B0A97 /* NSObject+.swift */,
 				24410D981D24FD01008B0A97 /* NSURL+.swift */,
 				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
 				244274E31D3FD4BB00088A78 /* Realm+.swift */,
 				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
-				244274F31D410CE100088A78 /* SwipeReturnable.swift */,
+				24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */,
+				242CA7511D5DD70700BD0C4E /* UIAlertController+.swift */,
 				24410D871D242CAB008B0A97 /* UIApplication+.swift */,
 				24410D831D242B58008B0A97 /* UICollectionView+.swift */,
 				24410D851D242BEE008B0A97 /* UIColor+.swift */,
+				247D6D531D47CEBE005864EC /* UIFont+.swift */,
 				24410D941D243538008B0A97 /* UIImage+.swift */,
 				244274D01D3F4B5F00088A78 /* UIImageView+.swift */,
 				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
 				244274FC1D4128D500088A78 /* UIViewController+.swift */,
-				24DA30E31D441E3E00E4C9C4 /* NSError+.swift */,
-				247D6D511D47CA06005864EC /* NSCoding+.swift */,
-				247D6D531D47CEBE005864EC /* UIFont+.swift */,
-				242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */,
-				242CA7511D5DD70700BD0C4E /* UIAlertController+.swift */,
-				24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -286,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				24410D911D242ED2008B0A97 /* EnumEnumerable.swift */,
+				244274F31D410CE100088A78 /* SwipeReturnable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -302,9 +301,10 @@
 			isa = PBXGroup;
 			children = (
 				244274ED1D40FF8400088A78 /* KeyChainManager.swift */,
+				242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */,
+				24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */,
 				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
 				244274EF1D4102C000088A78 /* RealmManager.swift */,
-				24FD0C411D5E38910031B6F0 /* PhotoManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -447,7 +447,7 @@
 				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
 				242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */,
 				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
-				24FD0C421D5E38910031B6F0 /* PhotoManager.swift in Sources */,
+				24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */,
 				24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,
 			);
@@ -572,6 +572,7 @@
 				);
 				INFOPLIST_FILE = HackathonStarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.HackathonStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -587,6 +588,7 @@
 				);
 				INFOPLIST_FILE = HackathonStarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.HackathonStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

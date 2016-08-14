@@ -84,10 +84,38 @@ extension RealmType where Self: Object {
         return []
     }
 
-    static func findAll(predicate: String) -> [Self] {
+    static func findAll(predicateFormat: String, _ args: AnyObject...) -> [Self] {
         if let realm = try? Realm() {
-            return Array(realm.objects(Self).filter(predicate))
+            return Array(realm.objects(Self).filter(predicateFormat, args))
         }
         return []
+    }
+}
+
+
+// MARK:- Delete
+extension RealmType where Self: Object {
+    static func deleteAll(predicateFormat: String, _ args: AnyObject...) -> Bool {
+        return realmBlock { realm in
+            let results = realm.objects(Self).filter(predicateFormat, args)
+            
+            try realm.write {
+                realm.delete(results)
+            }
+        }
+    }
+
+    func delete() -> Bool {
+        return write { realm in
+            realm.delete(self)
+        }
+    }
+}
+
+extension Array where Element: Object {
+    func delete() -> Bool {
+        return write { realm in
+            realm.delete(self)
+        }
     }
 }
