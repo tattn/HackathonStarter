@@ -15,17 +15,12 @@ extension UIView {
         }
     }
 
-    func image(size: CGSize) -> UIImage? {
-        let resizeSize = CGSize(
-            width: size.width,
-            height: bounds.size.height * (size.width / bounds.size.width)
-        )
+    func screenShot(width width: CGFloat) -> UIImage? {
+        let imageBounds = CGRect(x: 0, y: 0, width: width, height: bounds.size.height * (width / bounds.size.width))
 
-        let scaleBounds = CGRect(x: 0, y: 0, width: resizeSize.width, height: resizeSize.height)
+        UIGraphicsBeginImageContextWithOptions(imageBounds.size, true, 0)
 
-        UIGraphicsBeginImageContextWithOptions(scaleBounds.size, true, 0.0)
-
-        drawViewHierarchyInRect(scaleBounds, afterScreenUpdates: false)
+        drawViewHierarchyInRect(imageBounds, afterScreenUpdates: true)
 
         var image: UIImage?
         let contextImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -40,11 +35,6 @@ extension UIView {
 
         UIGraphicsEndImageContext()
 
-        if let captureImage = image
-            where !(captureImage.size.width == size.width && captureImage.size.height == size.height) {
-            image = captureImage.cropping(CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height))
-        }
-        
         return image
     }
 

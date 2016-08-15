@@ -1,5 +1,5 @@
 //
-//  GCFloat+.swift
+//  Comparable+.swift
 //  HackathonStarter
 //
 //  Created by 田中　達也 on 2016/06/30.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension CGFloat {
-    func clamped(min min: CGFloat, max: CGFloat) -> CGFloat {
+extension Comparable {
+    func clamped(min min: Self, max: Self) -> Self {
         if self < min {
             return min
         }

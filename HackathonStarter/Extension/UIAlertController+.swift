@@ -37,8 +37,9 @@ extension UIAlertController {
         return self
     }
 
-    func addTextField(handler: UITextField -> Void) {
+    func addTextField(handler: UITextField -> Void) -> Self {
         addTextFieldWithConfigurationHandler(handler)
+        return self
     }
 
     func show() {
