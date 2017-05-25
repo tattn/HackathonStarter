@@ -38,7 +38,6 @@
 		24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* NSURL+.swift */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
-		244274E91D40EECD00088A78 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E81D40EECD00088A78 /* AppData.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
 		244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274ED1D40FF8400088A78 /* KeyChainManager.swift */; };
 		244274F01D4102C000088A78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EF1D4102C000088A78 /* RealmManager.swift */; };
@@ -46,6 +45,7 @@
 		244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274FC1D4128D500088A78 /* UIViewController+.swift */; };
 		247D6D521D47CA06005864EC /* NSCoding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D511D47CA06005864EC /* NSCoding+.swift */; };
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
+		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 		24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */; };
@@ -99,7 +99,6 @@
 		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
-		244274E81D40EECD00088A78 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		244274EB1D40F28000088A78 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		244274ED1D40FF8400088A78 /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		244274EF1D4102C000088A78 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		244274FC1D4128D500088A78 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		247D6D511D47CA06005864EC /* NSCoding+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+.swift"; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumManager.swift; sourceTree = "<group>"; };
@@ -211,9 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				243F948C1D2585DA00C302D0 /* App.swift */,
-				244274E81D40EECD00088A78 /* AppData.swift */,
 				24410D6A1D2427A9008B0A97 /* AppDelegate.swift */,
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
+				24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -372,6 +372,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyToast.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/UserDefaults.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
@@ -397,7 +398,6 @@
 				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,
 				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
 				24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */,
-				244274E91D40EECD00088A78 /* AppData.swift in Sources */,
 				243F94901D25874800C302D0 /* IBDesignable.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
@@ -411,6 +411,7 @@
 				244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */,
 				244274F01D4102C000088A78 /* RealmManager.swift in Sources */,
 				24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */,
+				24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
 				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,

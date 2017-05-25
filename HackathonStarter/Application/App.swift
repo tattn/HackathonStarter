@@ -9,12 +9,12 @@
 import UIKit
 
 struct App {
-    static let screenWidth = UIScreen.main.bounds.width
-    static let screenHeight = UIScreen.main.bounds.height
-    static let navigationBarHeight: CGFloat = 44
-    static let toolBarHeight: CGFloat = 44
-    static let statusBarHeight = UIApplication.shared.statusBarFrame.height
-    static let statusBarAndNavigationBarHeight = App.statusBarHeight + App.navigationBarHeight
+    static var screenWidth: CGFloat { return UIScreen.main.bounds.width }
+    static var screenHeight: CGFloat { return UIScreen.main.bounds.height }
+    static var navigationBarHeight: CGFloat { return 44 }
+    static var toolBarHeight: CGFloat { return 44 }
+    static var statusBarHeight: CGFloat { return UIApplication.shared.statusBarFrame.height }
+    static var statusBarAndNavigationBarHeight: CGFloat { return statusBarHeight + navigationBarHeight }
 
     static let bundleID = Bundle.main.bundleIdentifier!
     static let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String

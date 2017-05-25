@@ -16,9 +16,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        if AppData.get(.FirstLaunch) == nil {
+        if UserDefaults.standard.string(for: .previousLaunchAppVersion) == nil {
             // First launching
-            AppData.save(.FirstLaunch, value: false as AnyObject)
+            UserDefaults.standard.set("version number", for: .previousLaunchAppVersion)
         } else {
             RealmManager.migrate()
         }
@@ -67,14 +67,13 @@ extension AppDelegate {
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // Convert a devicetoken
-        let tokenAsString = deviceToken.description.trimmingCharacters(in: CharacterSet(charactersIn: "<>")).replacingOccurrences(of: " ", with: "")
-        print(tokenAsString)
+        let token = deviceToken.map { String(format: "%.2hhx", $0) }.joined()
+        print(token)
 
         // Send a devicetoken if it was changed
-        if let deviceToken: String = AppData.get(.DeviceToken), deviceToken == tokenAsString {
-        } else {
-            AppData.save(.DeviceToken, value: tokenAsString as AnyObject)
-            PushNotificationManager.sendDeviceToken(tokenAsString)
+        if UserDefaults.standard.string(for: .deviceToken) != token {
+            UserDefaults.standard.set(token, for: .deviceToken)
+            PushNotificationManager.sendDeviceToken(token)
         }
     }
 
