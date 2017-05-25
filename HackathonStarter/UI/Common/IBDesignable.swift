@@ -11,8 +11,8 @@ import UIKit
 @IBDesignable
 class IBDesignableView: UIView, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
-        didSet { layer.borderColor = borderColor.CGColor }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet { layer.borderWidth = borderWidth }
@@ -29,8 +29,8 @@ class IBDesignableView: UIView, IBRoundable, IBBorderable {
 @IBDesignable
 class IBDesignableLabel: UILabel, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
-        didSet { layer.borderColor = borderColor.CGColor }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet { layer.borderWidth = borderWidth }
@@ -47,8 +47,8 @@ class IBDesignableLabel: UILabel, IBRoundable, IBBorderable {
 @IBDesignable
 class IBDesignableButton: UIButton, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
-        didSet { layer.borderColor = borderColor.CGColor }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet { layer.borderWidth = borderWidth }
@@ -64,8 +64,8 @@ class IBDesignableButton: UIButton, IBRoundable, IBBorderable {
 @IBDesignable
 class IBDesignableImageView: UIImageView, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
-        didSet { layer.borderColor = borderColor.CGColor }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet { layer.borderWidth = borderWidth }
@@ -81,8 +81,8 @@ class IBDesignableImageView: UIImageView, IBRoundable, IBBorderable {
 @IBDesignable
 class IBDesignableCollectionViewCell: UICollectionViewCell, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
-        didSet { layer.borderColor = borderColor.CGColor }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet { layer.borderWidth = borderWidth }
@@ -98,8 +98,8 @@ class IBDesignableCollectionViewCell: UICollectionViewCell, IBRoundable, IBBorde
 @IBDesignable
 class IBDesignableTableViewCell: UITableViewCell, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.blackColor() {
-        didSet { layer.borderColor = borderColor.CGColor }
+    @IBInspectable var borderColor: UIColor = UIColor.black {
+        didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
         didSet { layer.borderWidth = borderWidth }

@@ -15,25 +15,25 @@ final class Regexp {
     init(_ pattern: String) {
         self.pattern = pattern
         do {
-            internalRegexp = try NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
+            internalRegexp = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         } catch {
             print(error)
             internalRegexp = NSRegularExpression()
         }
     }
 
-    func isMatch(input: String) -> Bool {
-        let matches = internalRegexp.matchesInString(input, options: [], range: NSRange(location: 0, length: input.characters.count))
+    func isMatch(_ input: String) -> Bool {
+        let matches = internalRegexp.matches(in: input, options: [], range: NSRange(location: 0, length: input.characters.count))
         return matches.count > 0
     }
 
-    func matches(input: String) -> [String]? {
+    func matches(_ input: String) -> [String]? {
         guard isMatch(input) else { return nil }
 
-        let matches = internalRegexp.matchesInString(input, options: [], range: NSRange(location: 0, length: input.characters.count))
+        let matches = internalRegexp.matches(in: input, options: [], range: NSRange(location: 0, length: input.characters.count))
         var results = [String]()
         for match in matches {
-            results.append((input as NSString).substringWithRange(match.range))
+            results.append((input as NSString).substring(with: match.range))
         }
         return results
     }

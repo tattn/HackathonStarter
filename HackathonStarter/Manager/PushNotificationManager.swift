@@ -11,25 +11,25 @@ import UIKit
 struct PushNotificationManager {
 
     static func allowToPushNotification() {
-        let application = UIApplication.sharedApplication()
-        let type: UIUserNotificationType = [.Alert, .Badge, .Sound]
-        let setting = UIUserNotificationSettings(forTypes: type, categories: nil)
+        let application = UIApplication.shared
+        let type: UIUserNotificationType = [.alert, .badge, .sound]
+        let setting = UIUserNotificationSettings(types: type, categories: nil)
         application.registerUserNotificationSettings(setting)
         application.registerForRemoteNotifications()
     }
 
-    static func sendDeviceToken(deviceToken: String) {
+    static func sendDeviceToken(_ deviceToken: String) {
         // send devicetoken to server
     }
 
-    static func handlePushNotification(userInfo: [NSObject : AnyObject], state: UIApplicationState) {
+    static func handlePushNotification(_ userInfo: [AnyHashable: Any], state: UIApplicationState) {
         switch state {
-        case .Inactive:
+        case .inactive:
             // Launch via push notification
             break
-        case .Active:
+        case .active:
             break
-        case .Background:
+        case .background:
             break
         }
     }

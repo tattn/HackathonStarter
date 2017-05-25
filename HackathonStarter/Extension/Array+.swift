@@ -9,13 +9,13 @@
 import Foundation
 
 extension Array where Element: Equatable {
-    mutating func remove(element element: Element) -> Bool {
-        guard let index = indexOf(element) else { return false }
-        removeAtIndex(index)
+    mutating func remove(element: Element) -> Bool {
+        guard let index = index(of: element) else { return false }
+        self.remove(at: index)
         return true
     }
 
-    mutating func remove(elements elements: [Element]) {
+    mutating func remove(elements: [Element]) {
         for element in elements {
             remove(element: element)
         }

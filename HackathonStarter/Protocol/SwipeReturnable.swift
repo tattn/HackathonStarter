@@ -15,7 +15,7 @@ protocol SwipeReturnable: class {
 extension SwipeReturnable where Self: UIViewController {
     func addSwipeReturnGesture() {
         let gestureToRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeBack))
-        gestureToRight.direction = UISwipeGestureRecognizerDirection.Right
+        gestureToRight.direction = UISwipeGestureRecognizerDirection.right
         view.addGestureRecognizer(gestureToRight)
     }
 }
@@ -25,6 +25,6 @@ extension UIViewController: SwipeReturnable {}
 
 extension UIViewController {
     func swipeBack() {
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
 }

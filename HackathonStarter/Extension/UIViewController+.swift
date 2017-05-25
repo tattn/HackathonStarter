@@ -10,8 +10,8 @@ import UIKit
 
 extension UIViewController {
 
-    func setBackBarTitle(title: String = "") {
-        let backButtonItem = UIBarButtonItem(title: title, style: .Plain, target: nil, action: nil)
+    func setBackBarTitle(_ title: String = "") {
+        let backButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButtonItem
     }
 }

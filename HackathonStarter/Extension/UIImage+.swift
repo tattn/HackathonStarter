@@ -16,14 +16,14 @@ extension UIImage {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        guard let cgImage = image.CGImage else { return nil }
-        self.init(CGImage: cgImage)
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
     }
 
     convenience init?(named: String, tintColor: UIColor) {
         let image = UIImage(named: named)?.imageWithTint(color: tintColor)
-        guard let cgImage = image?.CGImage else { return nil }
-        self.init(CGImage: cgImage)
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
     }
 
     func imageWithTint(color tintColor: UIColor) -> UIImage {
@@ -32,21 +32,21 @@ extension UIImage {
 
         UIGraphicsBeginImageContextWithOptions(rect.size, false, scale)
 
-        drawInRect(rect)
+        draw(in: rect)
 
         let ctx = UIGraphicsGetCurrentContext()
-        CGContextSetBlendMode(ctx, CGBlendMode.SourceIn)
+        ctx?.setBlendMode(CGBlendMode.sourceIn)
 
-        CGContextSetFillColorWithColor(ctx, tintColor.CGColor)
-        CGContextFillRect(ctx, rect)
+        ctx?.setFillColor(tintColor.cgColor)
+        ctx?.fill(rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 
-    func cropping(rect: CGRect) -> UIImage? {
+    func cropping(_ rect: CGRect) -> UIImage? {
         let originalRect = CGRect(
             x: rect.origin.x * scale,
             y: rect.origin.y * scale,
@@ -56,28 +56,28 @@ extension UIImage {
 
         var croppingImage: UIImage?
 
-        if let cgImage = CGImage,
-            imageRef = CGImageCreateWithImageInRect(cgImage, originalRect) {
-            croppingImage = UIImage(CGImage: imageRef, scale: scale, orientation: imageOrientation)
+        if let cgImage = cgImage,
+            let imageRef = cgImage.cropping(to: originalRect) {
+            croppingImage = UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
         }
         
         return croppingImage
     }
 
-    func resize(size: CGSize) -> UIImage? {
+    func resize(_ size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContext(CGSize(
             width: size.width * scale,
             height: size.height * scale
         ))
 
-        drawInRect(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
 
         var resizedImage: UIImage?
 
-        if let cgImage = image.CGImage {
-            resizedImage = UIImage(CGImage: cgImage, scale:  scale, orientation: imageOrientation)
+        if let cgImage = image?.cgImage {
+            resizedImage = UIImage(cgImage: cgImage, scale:  scale, orientation: imageOrientation)
         }
 
         UIGraphicsEndImageContext()
@@ -89,7 +89,7 @@ extension UIImage {
         return resizeAspectFitWithSize(CGSize(width: 256, height: 256))
     }
 
-    func resizeAspectFitWithSize(size: CGSize) -> UIImage {
+    func resizeAspectFitWithSize(_ size: CGSize) -> UIImage {
         let widthRatio  = size.width  / self.size.width
         let heightRatio = size.height / self.size.height
         let ratio = (widthRatio < heightRatio) ? widthRatio : heightRatio
@@ -97,14 +97,14 @@ extension UIImage {
         let resizedSize = CGSize(width: self.size.width*ratio, height: self.size.height*ratio)
 
         UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
-        drawInRect(CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+        draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return resizedImage
+        return resizedImage!
     }
 
-    func toJPEG(quarity: CGFloat = 1.0) -> NSData? {
+    func toJPEG(_ quarity: CGFloat = 1.0) -> Data? {
         return UIImageJPEGRepresentation(self, quarity)
     }
 
@@ -114,7 +114,7 @@ extension UIImage {
         imageView.layer.masksToBounds = true
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0.0)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        imageView.layer.renderInContext(context)
+        imageView.layer.render(in: context)
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return result
@@ -123,13 +123,13 @@ extension UIImage {
     func circle() -> UIImage? {
         let square = CGSize(width: min(size.width, size.height), height: min(size.width, size.height))
         let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
-        imageView.contentMode = .ScaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         imageView.image = self
         imageView.layer.cornerRadius = square.width/2
         imageView.layer.masksToBounds = true
         UIGraphicsBeginImageContext(imageView.bounds.size)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        imageView.layer.renderInContext(context)
+        imageView.layer.render(in: context)
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return result

@@ -13,7 +13,7 @@ protocol NibHelper {}
 extension NibHelper where Self: UIView {
     static func instantiate() -> Self {
         let nib = UINib(nibName: self.className, bundle: nil)
-        return nib.instantiateWithOwner(nil, options: nil)[0] as! Self
+        return nib.instantiate(withOwner: nil, options: nil)[0] as! Self
     }
 }
 

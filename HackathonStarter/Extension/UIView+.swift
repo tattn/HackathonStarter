@@ -15,21 +15,21 @@ extension UIView {
         }
     }
 
-    func screenShot(width width: CGFloat) -> UIImage? {
+    func screenShot(width: CGFloat) -> UIImage? {
         let imageBounds = CGRect(x: 0, y: 0, width: width, height: bounds.size.height * (width / bounds.size.width))
 
         UIGraphicsBeginImageContextWithOptions(imageBounds.size, true, 0)
 
-        drawViewHierarchyInRect(imageBounds, afterScreenUpdates: true)
+        drawHierarchy(in: imageBounds, afterScreenUpdates: true)
 
         var image: UIImage?
         let contextImage = UIGraphicsGetImageFromCurrentImageContext()
 
-        if let cgImage = contextImage.CGImage {
+        if let cgImage = contextImage?.cgImage {
             image = UIImage(
-                CGImage: cgImage,
-                scale: UIScreen.mainScreen().scale,
-                orientation: contextImage.imageOrientation
+                cgImage: cgImage,
+                scale: UIScreen.main.scale,
+                orientation: (contextImage?.imageOrientation)!
             )
         }
 

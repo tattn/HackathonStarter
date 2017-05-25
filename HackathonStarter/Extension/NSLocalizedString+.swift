@@ -13,7 +13,7 @@ extension String {
         return NSLocalizedString(self, comment: self)
     }
 
-    func localizedWithOption(tableName tableName: String? = nil, bundle: NSBundle = NSBundle.mainBundle(), value: String = "") -> String {
+    func localizedWithOption(tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "") -> String {
         return NSLocalizedString(self, tableName: tableName, bundle: bundle, value: value, comment: self)
     }
 }

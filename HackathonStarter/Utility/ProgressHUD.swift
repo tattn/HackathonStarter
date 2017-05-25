@@ -10,22 +10,22 @@ import UIKit
 import SVProgressHUD
 
 struct ProgressHUD {
-    static func show(title title: String? = nil, ignoreInteraction: Bool = false) {
+    static func show(title: String? = nil, ignoreInteraction: Bool = false) {
         if let title = title {
-            SVProgressHUD.showWithStatus(title)
+            SVProgressHUD.show(withStatus: title)
         } else {
             SVProgressHUD.show()
         }
 
         if ignoreInteraction {
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            UIApplication.shared.beginIgnoringInteractionEvents()
         }
     }
 
     static func dismiss() {
         SVProgressHUD.dismiss()
-        if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+        if UIApplication.shared.isIgnoringInteractionEvents {
+            UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
 }

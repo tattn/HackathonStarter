@@ -8,29 +8,29 @@
 
 import Foundation
 
-typealias AsyncProcess = (done: AnyObject? -> ()) -> ()
+typealias AsyncProcess = (_ done: (AnyObject?) -> ()) -> ()
 
-func parallel(acyncProcesses: [AsyncProcess], completion: [AnyObject?] -> ()) {
-    var results = [AnyObject?](count: acyncProcesses.count, repeatedValue: nil)
+func parallel(_ acyncProcesses: [AsyncProcess], completion: @escaping ([AnyObject?]) -> ()) {
+    var results = [AnyObject?](repeating: nil, count: acyncProcesses.count)
 
-    let group = dispatch_group_create()
-    for (i, acyncProcess) in acyncProcesses.enumerate() {
-        dispatch_group_enter(group)
+    let group = DispatchGroup()
+    for (i, acyncProcess) in acyncProcesses.enumerated() {
+        group.enter()
         acyncProcess { result in
             results[i] = result
-            dispatch_group_leave(group)
+            group.leave()
         }
     }
 
-    dispatch_group_notify(group, dispatch_get_main_queue()) {
+    group.notify(queue: DispatchQueue.main) {
         completion(results)
     }
 }
 
-func threadOnMain(block: dispatch_block_t) {
-    dispatch_async(dispatch_get_main_queue(), block)
+func threadOnMain(_ block: @escaping ()->()) {
+    DispatchQueue.main.async(execute: block)
 }
 
-func threadOnBackground(name: String = "background", block: dispatch_block_t) {
-    dispatch_async(dispatch_queue_create(name, nil), block)
+func threadOnBackground(_ name: String = "background", block: @escaping ()->()) {
+    DispatchQueue(label: name, attributes: []).async(execute: block)
 }

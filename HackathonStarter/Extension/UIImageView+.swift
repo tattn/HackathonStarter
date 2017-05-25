@@ -13,45 +13,45 @@ private let activityIndicatorViewTag = 2016
 
 extension UIImageView {
 
-    func setWebImage(url: NSURL?) {
+    func setWebImage(_ url: URL?) {
         if let url = url {
-            kf_setImageWithURL(url)
+            kf.setImage(with: url)
         }
     }
 
     @nonobjc
-    func setWebImage(urlString: String) {
+    func setWebImage(_ urlString: String) {
         setWebImage(urlString.url)
     }
 
-    func setWebImageWithIndicator(url: NSURL?) {
+    func setWebImageWithIndicator(_ url: URL?) {
         if let url = url {
             addLoading()
-            kf_setImageWithURL(url, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { [weak self] image, error, cacheType, imageURL in
+            kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { [weak self] image, error, cacheType, imageURL in
                 self?.removeLoading()
             }
         }
     }
 
     @nonobjc
-    func setWebImageWithIndicator(urlString: String) {
+    func setWebImageWithIndicator(_ urlString: String) {
         setWebImageWithIndicator(urlString.url)
     }
 
     func cancelDownload() {
-        kf_cancelDownloadTask()
+        kf.cancelDownloadTask()
     }
 
-    private func addLoading() {
+    fileprivate func addLoading() {
         if let loading = viewWithTag(activityIndicatorViewTag) as? UIActivityIndicatorView {
             loading.startAnimating()
         } else {
             let activityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
             activityIndicatorView.center = center
             activityIndicatorView.hidesWhenStopped = false
-            activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+            activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
             activityIndicatorView.layer.opacity = 0.8
-            activityIndicatorView.color = UIColor.whiteColor()
+            activityIndicatorView.color = UIColor.white
 
             activityIndicatorView.tag = activityIndicatorViewTag
             activityIndicatorView.startAnimating()
@@ -59,12 +59,12 @@ extension UIImageView {
 
             let views = ["activityIndicatorView":activityIndicatorView]
             activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[activityIndicatorView]|", options: [], metrics: nil, views: views))
-            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[activityIndicatorView]|", options: [], metrics: nil, views: views))
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[activityIndicatorView]|", options: [], metrics: nil, views: views))
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[activityIndicatorView]|", options: [], metrics: nil, views: views))
         }
     }
 
-    private func removeLoading() {
+    fileprivate func removeLoading() {
         if let activityIndicatorView = self.viewWithTag(activityIndicatorViewTag) as? UIActivityIndicatorView {
             activityIndicatorView.stopAnimating()
             activityIndicatorView.removeFromSuperview()

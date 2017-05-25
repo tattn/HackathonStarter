@@ -745,19 +745,19 @@ public enum Ionicons: String {
     case Wrench = "\u{f2ba}"
     case Xbox = "\u{f30c}"
 
-    static func getFont(size: CGFloat = UIFont.systemFontSize()) -> UIFont {
-        return UIFont(name: "ionicons", size: size) ?? UIFont.systemFontOfSize(size)
+    static func getFont(_ size: CGFloat = UIFont.systemFontSize) -> UIFont {
+        return UIFont(name: "ionicons", size: size) ?? UIFont.systemFont(ofSize: size)
     }
 
-    func image(size: CGFloat, color: UIColor = UIColor.whiteColor(), backgroundColor: UIColor? = nil) -> UIImage {
+    func image(_ size: CGFloat, color: UIColor = UIColor.white, backgroundColor: UIColor? = nil) -> UIImage {
 
         let imageSize = CGSize(width: size, height: size)
 
         let style = NSMutableParagraphStyle()
-        style.alignment = .Left
-        style.baseWritingDirection = .LeftToRight
+        style.alignment = .left
+        style.baseWritingDirection = .leftToRight
 
-        let font = self.dynamicType.getFont(size)
+        let font = type(of: self).getFont(size)
 
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
         let attString = NSMutableAttributedString(string: self.rawValue, attributes: [
@@ -771,8 +771,8 @@ public enum Ionicons: String {
         }
 
         let ctx = NSStringDrawingContext()
-        let boundingRect = attString.boundingRectWithSize(imageSize, options: .TruncatesLastVisibleLine, context: ctx)
-        attString.drawInRect(CGRect(
+        let boundingRect = attString.boundingRect(with: imageSize, options: .truncatesLastVisibleLine, context: ctx)
+        attString.draw(in: CGRect(
             x: (imageSize.width / 2.0) - boundingRect.width / 2.0,
             y: imageSize.height / 2.0 - boundingRect.height / 2.0,
             width: imageSize.width,
@@ -782,6 +782,6 @@ public enum Ionicons: String {
         let iconImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return iconImage
+        return iconImage!
     }
 }

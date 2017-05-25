@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    var url: NSURL? {
-        return NSURL(string: self)
+    var url: URL? {
+        return URL(string: self)
     }
 }

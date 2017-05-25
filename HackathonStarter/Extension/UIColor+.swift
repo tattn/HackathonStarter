@@ -17,9 +17,9 @@ extension UIColor {
     }
 
     convenience init?(rgbHexString: String, alpha: CGFloat = 1.0) {
-        let scanner = NSScanner(string: rgbHexString.stringByReplacingOccurrencesOfString("#", withString: ""))
+        let scanner = Scanner(string: rgbHexString.replacingOccurrences(of: "#", with: ""))
         var rgbHex: UInt32 = 0
-        guard scanner.scanHexInt(&rgbHex) else {
+        guard scanner.scanHexInt32(&rgbHex) else {
             return nil
         }
 

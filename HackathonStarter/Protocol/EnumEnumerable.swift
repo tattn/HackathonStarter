@@ -13,17 +13,17 @@ public protocol EnumEnumerable {
 }
 
 public extension EnumEnumerable where Case: Hashable {
-    private static var generator: AnyGenerator<Case> {
+    fileprivate static var generator: AnyIterator<Case> {
         var n = 0
-        return AnyGenerator {
+        return AnyIterator {
             defer { n += 1 }
-            let next = withUnsafePointer(&n) { UnsafePointer<Case>($0).memory }
+            let next = withUnsafePointer(to: &n) { UnsafeRawPointer($0).load(as: Case.self) }
             return next.hashValue == n ? next : nil
         }
     }
 
-    public static func enumerate() -> EnumerateSequence<AnySequence<Case>> {
-        return AnySequence(generator).enumerate()
+    public static func enumerate() -> EnumeratedSequence<AnySequence<Case>> {
+        return AnySequence(generator).enumerated()
     }
 
     public static var all: [Case] {

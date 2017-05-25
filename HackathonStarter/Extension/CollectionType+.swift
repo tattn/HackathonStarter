@@ -8,10 +8,8 @@
 
 import UIKit
 
-extension CollectionType {
-    subscript (safe index: Index) -> Generator.Element? {
-        get {
-            return indices.contains(index) ? self[index] : nil
-        }
+extension Collection {
+    subscript(safe index: Index) -> _Element? {
+        return index >= startIndex && index < endIndex ? self[index] : nil
     }
 }

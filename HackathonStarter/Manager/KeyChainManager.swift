@@ -10,7 +10,7 @@ import Foundation
 import KeychainAccess
 
 struct KeychainManager {
-    static func get(key: String, service: String? = nil) -> String? {
+    static func get(_ key: String, service: String? = nil) -> String? {
         var token: String?
 
         let keychain = getKeychain(service)
@@ -28,25 +28,25 @@ struct KeychainManager {
         return token
     }
 
-    private static func getFailBackOldDataKey(key: String) throws -> String? {
+    fileprivate static func getFailBackOldDataKey(_ key: String) throws -> String? {
         var query = [String: AnyObject]()
         query[kSecClass as String] = kSecClassGenericPassword
-        query[kSecAttrAccount as String] = key.dataUsingEncoding(NSUTF8StringEncoding)
+        query[kSecAttrAccount as String] = key.data(using: String.Encoding.utf8) as AnyObject
         query[kSecMatchLimit as String] = kSecMatchLimitOne
         query[kSecReturnData as String] = kCFBooleanTrue
 
         var result: AnyObject?
-        let status = withUnsafeMutablePointer(&result) { SecItemCopyMatching(query, UnsafeMutablePointer($0)) }
+        let status = withUnsafeMutablePointer(to: &result) { SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0)) }
 
         // see: https://github.com/kishikawakatsumi/KeychainAccess/blob/master/Lib/KeychainAccess/Keychain.swift#L507
         // see: https://github.com/kishikawakatsumi/KeychainAccess/blob/master/Lib/KeychainAccess/Keychain.swift#L1001
         switch status {
         case errSecSuccess:
-            guard let data = result as? NSData else {
-                throw Status.UnexpectedError
+            guard let data = result as? Data else {
+                throw Status.unexpectedError
             }
-            guard let string = String(data: data, encoding: NSUTF8StringEncoding) else {
-                throw Status.UnexpectedError
+            guard let string = String(data: data, encoding: String.Encoding.utf8) else {
+                throw Status.unexpectedError
             }
             return string
         case errSecItemNotFound:
@@ -58,7 +58,7 @@ struct KeychainManager {
         }
     }
 
-    static func set(key: String, value: String, service: String? = nil) {
+    static func set(_ key: String, value: String, service: String? = nil) {
         let keychain = getKeychain(service)
 
         do {
@@ -68,7 +68,7 @@ struct KeychainManager {
         }
     }
     
-    static func remove(key: String, service: String? = nil) {
+    static func remove(_ key: String, service: String? = nil) {
         let keychain = getKeychain(service)
 
         do {
@@ -78,7 +78,7 @@ struct KeychainManager {
         }
     }
 
-    private static func getKeychain(service: String? = nil) -> Keychain {
+    fileprivate static func getKeychain(_ service: String? = nil) -> Keychain {
         if let service = service {
             return Keychain(service: service)
         } else {

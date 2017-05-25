@@ -10,12 +10,12 @@ import UIKit
 
 extension UIActivityViewController {
 
-    func setExcludedActivity(types types: [String]) -> Self {
+    func setExcludedActivity(types: [UIActivityType]) -> Self {
         excludedActivityTypes = types
         return self
     }
 
-    func show(animated animated: Bool = true) {
-        UIApplication.sharedApplication().topViewController?.presentViewController(self, animated: animated, completion: nil)
+    func show(animated: Bool = true) {
+        UIApplication.shared.topViewController?.present(self, animated: animated, completion: nil)
     }
 }

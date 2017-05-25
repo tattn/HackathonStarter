@@ -9,15 +9,15 @@
 import Foundation
 
 struct AppData {
-    private static let userDefaults = NSUserDefaults.standardUserDefaults()
+    fileprivate static let userDefaults = UserDefaults.standard
 
-    static func save(key: AppDataKey, value: AnyObject) {
-        userDefaults.setObject(value, forKey: key.rawValue)
+    static func save(_ key: AppDataKey, value: AnyObject) {
+        userDefaults.set(value, forKey: key.rawValue)
         userDefaults.synchronize()
     }
 
-    static func get<T>(key: AppDataKey) -> T? {
-        return userDefaults.objectForKey(key.rawValue) as? T
+    static func get<T>(_ key: AppDataKey) -> T? {
+        return userDefaults.object(forKey: key.rawValue) as? T
     }
 
 }

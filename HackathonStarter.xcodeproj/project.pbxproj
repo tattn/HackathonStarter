@@ -36,23 +36,12 @@
 		24410D951D243538008B0A97 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D941D243538008B0A97 /* UIImage+.swift */; };
 		24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D961D24FCBB008B0A97 /* Comparable+.swift */; };
 		24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* NSURL+.swift */; };
-		244274C41D3F47CD00088A78 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BEE1D27AE4200BF7992 /* Alamofire.framework */; };
-		244274C51D3F47CD00088A78 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BF21D27AE4900BF7992 /* Chameleon.framework */; };
-		244274C61D3F47CD00088A78 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BF61D27AE5B00BF7992 /* Kingfisher.framework */; };
-		244274C71D3F47CD00088A78 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BF71D27AE5B00BF7992 /* ObjectMapper.framework */; };
-		244274C81D3F47CD00088A78 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BF81D27AE5B00BF7992 /* Reachability.framework */; };
-		244274C91D3F47CD00088A78 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BF91D27AE5B00BF7992 /* Realm.framework */; };
-		244274CA1D3F47CD00088A78 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFA1D27AE5B00BF7992 /* RealmSwift.framework */; };
-		244274CB1D3F47CD00088A78 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFB1D27AE5B00BF7992 /* SVProgressHUD.framework */; };
-		244274CC1D3F47CD00088A78 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFC1D27AE5B00BF7992 /* SwiftDate.framework */; };
-		244274CD1D3F47CD00088A78 /* SwiftyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		244274E91D40EECD00088A78 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E81D40EECD00088A78 /* AppData.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
 		244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274ED1D40FF8400088A78 /* KeyChainManager.swift */; };
 		244274F01D4102C000088A78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EF1D4102C000088A78 /* RealmManager.swift */; };
-		244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244274F11D4103BD00088A78 /* KeychainAccess.framework */; };
 		244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274F31D410CE100088A78 /* SwipeReturnable.swift */; };
 		244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274FC1D4128D500088A78 /* UIViewController+.swift */; };
 		247D6D521D47CA06005864EC /* NSCoding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D511D47CA06005864EC /* NSCoding+.swift */; };
@@ -131,17 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244274C41D3F47CD00088A78 /* Alamofire.framework in Frameworks */,
-				244274C51D3F47CD00088A78 /* Chameleon.framework in Frameworks */,
-				244274F21D4103BD00088A78 /* KeychainAccess.framework in Frameworks */,
-				244274C61D3F47CD00088A78 /* Kingfisher.framework in Frameworks */,
-				244274C71D3F47CD00088A78 /* ObjectMapper.framework in Frameworks */,
-				244274C81D3F47CD00088A78 /* Reachability.framework in Frameworks */,
-				244274C91D3F47CD00088A78 /* Realm.framework in Frameworks */,
-				244274CA1D3F47CD00088A78 /* RealmSwift.framework in Frameworks */,
-				244274CB1D3F47CD00088A78 /* SVProgressHUD.framework in Frameworks */,
-				244274CC1D3F47CD00088A78 /* SwiftDate.framework in Frameworks */,
-				244274CD1D3F47CD00088A78 /* SwiftyToast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,11 +315,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = tattn;
 				TargetAttributes = {
 					24410D661D2427A9008B0A97 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -386,7 +365,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
@@ -491,8 +469,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -537,8 +517,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -557,6 +539,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -575,6 +558,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.HackathonStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -591,6 +575,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.HackathonStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

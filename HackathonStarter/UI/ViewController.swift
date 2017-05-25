@@ -14,21 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-        label.text = "Message"
-        label.backgroundColor = .whiteColor()
-        let image = label.image(CGSize(width: 300, height: 300))
-
-        PhotoAlbumManager.runIfAuthorized {
-            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
-        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

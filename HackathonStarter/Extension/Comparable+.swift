@@ -9,7 +9,7 @@
 import UIKit
 
 extension Comparable {
-    func clamped(min min: Self, max: Self) -> Self {
+    func clamped(min: Self, max: Self) -> Self {
         if self < min {
             return min
         }

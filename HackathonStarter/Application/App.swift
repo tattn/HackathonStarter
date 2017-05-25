@@ -9,25 +9,25 @@
 import UIKit
 
 struct App {
-    static let screenWidth = UIScreen.mainScreen().bounds.width
-    static let screenHeight = UIScreen.mainScreen().bounds.height
+    static let screenWidth = UIScreen.main.bounds.width
+    static let screenHeight = UIScreen.main.bounds.height
     static let navigationBarHeight: CGFloat = 44
     static let toolBarHeight: CGFloat = 44
-    static let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+    static let statusBarHeight = UIApplication.shared.statusBarFrame.height
     static let statusBarAndNavigationBarHeight = App.statusBarHeight + App.navigationBarHeight
 
-    static let bundleID = NSBundle.mainBundle().bundleIdentifier!
-    static let version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
-    static let build = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion") as! String
+    static let bundleID = Bundle.main.bundleIdentifier!
+    static let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+    static let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
 
     struct Color {
-        static let main = UIColor.redColor()
+        static let main = UIColor.red
     }
 
     struct Font {
-        static func main(size: CGFloat) -> UIFont { return App.Font.hiraKakuW6(size: size) }
-        static func hiraKakuW6(size size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W6", size: size) ?? UIFont.systemFontOfSize(size) }
-        static func hiraKakuW3(size size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W3", size: size) ?? UIFont.systemFontOfSize(size) }
+        static func main(_ size: CGFloat) -> UIFont { return App.Font.hiraKakuW6(size: size) }
+        static func hiraKakuW6(size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W6", size: size) ?? UIFont.systemFont(ofSize: size) }
+        static func hiraKakuW3(size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W3", size: size) ?? UIFont.systemFont(ofSize: size) }
     }
 
 

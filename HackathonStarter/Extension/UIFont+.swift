@@ -12,8 +12,8 @@ extension UIFont {
 
     func size(ofString string: String, constrainedToWidth width: Double) -> CGSize {
         return (string as NSString)
-               .boundingRectWithSize(CGSize(width: width, height: DBL_MAX),
-                                     options: NSStringDrawingOptions.UsesLineFragmentOrigin,
+               .boundingRect(with: CGSize(width: width, height: DBL_MAX),
+                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                      attributes: [NSFontAttributeName: self],
                                      context: nil).size
     }

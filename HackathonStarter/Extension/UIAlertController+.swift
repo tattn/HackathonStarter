@@ -10,13 +10,13 @@ import UIKit
 
 extension UIAlertController {
 
-    func addAction(title title: String, style: UIAlertActionStyle = .Default, handler: (UIAlertAction -> Void)? = nil) -> Self {
+    func addAction(title: String, style: UIAlertActionStyle = .default, handler: ((UIAlertAction) -> Void)? = nil) -> Self {
         let okAction = UIAlertAction(title: title, style: style, handler: handler)
         addAction(okAction)
         return self
     }
 
-    func addActionWithTextFields(title title: String, style: UIAlertActionStyle = .Default, handler: ((UIAlertAction, [UITextField]) -> Void)? = nil) -> Self {
+    func addActionWithTextFields(title: String, style: UIAlertActionStyle = .default, handler: ((UIAlertAction, [UITextField]) -> Void)? = nil) -> Self {
         let okAction = UIAlertAction(title: title, style: style) { [weak self] action in
             handler?(action, self?.textFields ?? [])
         }
@@ -24,25 +24,25 @@ extension UIAlertController {
         return self
     }
 
-    func configureForIPad(sourceRect: CGRect, sourceView: UIView? = nil) -> Self {
+    func configureForIPad(_ sourceRect: CGRect, sourceView: UIView? = nil) -> Self {
         popoverPresentationController?.sourceRect = sourceRect
-        if let sourceView = UIApplication.sharedApplication().topViewController?.view {
+        if let sourceView = UIApplication.shared.topViewController?.view {
             popoverPresentationController?.sourceView = sourceView
         }
         return self
     }
 
-    func configureForIPad(barButtonItem: UIBarButtonItem) -> Self {
+    func configureForIPad(_ barButtonItem: UIBarButtonItem) -> Self {
         popoverPresentationController?.barButtonItem = barButtonItem
         return self
     }
 
-    func addTextField(handler: UITextField -> Void) -> Self {
-        addTextFieldWithConfigurationHandler(handler)
+    func addTextField(_ handler: @escaping (UITextField) -> Void) -> Self {
+        self.addTextField(configurationHandler: handler)
         return self
     }
 
     func show() {
-        UIApplication.sharedApplication().topViewController?.presentViewController(self, animated: true, completion: nil)
+        UIApplication.shared.topViewController?.present(self, animated: true, completion: nil)
     }
 }

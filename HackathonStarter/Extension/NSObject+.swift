@@ -10,11 +10,11 @@ import Foundation
 
 extension NSObject {
     class var className: String {
-        return String(self)
+        return String(describing: self)
     }
 
     var className: String {
-        return self.dynamicType.className
+        return type(of: self).className
     }
 }
 
@@ -27,7 +27,7 @@ extension NSObjectProtocol where Self: NSObject {
                 let value = element.value
                 return "\(key): \(value)"
             }
-            .joinWithSeparator("\n")
+            .joined(separator: "\n")
     }
 
 }

@@ -16,33 +16,33 @@ extension NSObject: Serializable {
 
 extension Serializable where Self: NSCoding {
     func restoreFromUserDefaults() -> Self? {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        guard let data: NSData = userDefaults.objectForKey(String(self)) as? NSData else {
+        let userDefaults = UserDefaults.standard
+        guard let data: Data = userDefaults.object(forKey: String(describing: self)) as? Data else {
             return nil
         }
 
-        return NSKeyedUnarchiver.unarchiveObjectWithData(data) as? Self
+        return NSKeyedUnarchiver.unarchiveObject(with: data) as? Self
     }
 
     func storeIntoUserDefaults() {
-        let saveData: NSData =  NSKeyedArchiver.archivedDataWithRootObject(self)
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(saveData, forKey: String(self))
+        let saveData: Data =  NSKeyedArchiver.archivedData(withRootObject: self)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(saveData, forKey: String(describing: self))
         userDefaults.synchronize()
     }
 }
 
 extension NSCoding where Self: NSObject {
 
-    func restoreAllPropeties(decoder: NSCoder) {
-        func isSuitableType<T>(property: T, key: String) -> Bool {
-            return (decoder.decodeObjectForKey(key) as? T) != nil
+    func restoreAllPropeties(_ decoder: NSCoder) {
+        func isSuitableType<T>(_ property: T, key: String) -> Bool {
+            return (decoder.decodeObject(forKey: key) as? T) != nil
         }
 
         let mirror = Mirror(reflecting: self)
         mirror.children.forEach { element in
             guard let key = element.label,
-                cachedValue = decoder.decodeObjectForKey(key) else { return }
+                let cachedValue = decoder.decodeObject(forKey: key) else { return }
 
             if isSuitableType(element.value, key: key) {
                 self.setValue(cachedValue, forKey: key)
@@ -52,11 +52,11 @@ extension NSCoding where Self: NSObject {
         }
     }
 
-    func storeAllPropeties(coder: NSCoder) {
+    func storeAllPropeties(_ coder: NSCoder) {
         let mirror = Mirror(reflecting: self)
         mirror.children.forEach { element in
-            if let key = element.label, value = element.value as? AnyObject {
-                coder.encodeObject(value, forKey: key)
+            if let key = element.label, let value = element.value as? AnyObject {
+                coder.encode(value, forKey: key)
             }
         }
     }

@@ -14,7 +14,7 @@ extension Object: RealmType {}
 extension Array: RealmType {}
 
 
-private func realmBlock(@noescape block: Realm throws -> Void) -> Bool {
+private func realmBlock(_ block: (Realm) throws -> Void) -> Bool {
     do {
         try block(try Realm())
         return true
@@ -28,7 +28,7 @@ private func realmBlock(@noescape block: Realm throws -> Void) -> Bool {
 // MARK:- Write
 extension RealmType where Self: Object {
 
-    func write(@noescape block: Realm -> Void) -> Bool {
+    func write(_ block: (Realm) -> Void) -> Bool {
         return realmBlock { realm in
             try realm.write {
                 block(realm)
@@ -52,7 +52,7 @@ extension RealmType where Self: Object {
 
 extension Array where Element: Object {
 
-    func write(@noescape block: Realm -> Void) -> Bool {
+    func write(_ block: (Realm) -> Void) -> Bool {
         return realmBlock { realm in
             try realm.write {
                 block(realm)
@@ -84,7 +84,7 @@ extension RealmType where Self: Object {
         return []
     }
 
-    static func findAll(predicateFormat: String, _ args: AnyObject...) -> [Self] {
+    static func findAll(_ predicateFormat: String, _ args: AnyObject...) -> [Self] {
         if let realm = try? Realm() {
             return Array(realm.objects(Self).filter(predicateFormat, args))
         }
@@ -95,7 +95,7 @@ extension RealmType where Self: Object {
 
 // MARK:- Delete
 extension RealmType where Self: Object {
-    static func deleteAll(predicateFormat: String, _ args: AnyObject...) -> Bool {
+    static func deleteAll(_ predicateFormat: String, _ args: AnyObject...) -> Bool {
         return realmBlock { realm in
             let results = realm.objects(Self).filter(predicateFormat, args)
             

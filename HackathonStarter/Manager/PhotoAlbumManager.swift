@@ -6,59 +6,61 @@
 //  Copyright © 2016年 tattn. All rights reserved.
 //
 
+#if false
+
 import Foundation
 import Photos
 
 struct PhotoAlbumManager {
 
-    private static var pickerListener: ImagePickerListener?
+    fileprivate static var pickerListener: ImagePickerListener?
 
-    static func runIfAuthorized(block: () -> Void) {
+    static func runIfAuthorized(_ block: @escaping () -> Void) {
         requestAuthorization { status in
-            if status == .Authorized {
+            if status == .authorized {
                 block()
             }
         }
     }
 
-    static func requestAuthorization(completion: PHAuthorizationStatus -> Void) {
+    static func requestAuthorization(_ completion: @escaping (PHAuthorizationStatus) -> Void) {
         let status = PHPhotoLibrary.authorizationStatus()
 
         switch (status) {
-        case .NotDetermined:
+        case .notDetermined:
             PHPhotoLibrary.requestAuthorization(completion)
 
-        case .Restricted, .Authorized:
+        case .restricted, .authorized:
             completion(status)
 
-        case .Denied:
+        case .denied:
             showAlertForDenied()
             completion(status)
         }
     }
 
-    private static func showAlertForDenied() {
-        UIAlertController(title: "Error".localized, message: "写真へのアクセスが許可されていません。設定より変更してください。".localized, preferredStyle:  .Alert)
+    fileprivate static func showAlertForDenied() {
+        UIAlertController(title: "Error".localized, message: "写真へのアクセスが許可されていません。設定より変更してください。".localized, preferredStyle:  .alert)
         .addAction(title: "設定画面へ".localized) { _ in
             goToSetting()
         }
-        .addAction(title: "キャンセル".localized, style: .Cancel)
+        .addAction(title: "キャンセル".localized, style: .cancel)
         .show()
     }
 
-    private static func goToSetting() {
-        if let url = NSURL(string: UIApplicationOpenSettingsURLString) {
-            UIApplication.sharedApplication().openURL(url)
+    fileprivate static func goToSetting() {
+        if let url = URL(string: UIApplicationOpenSettingsURLString) {
+            UIApplication.shared.openURL(url)
         }
     }
 
-    static func fetchAllPhotosAssets(fetchOptions fetchOptions: PHFetchOptions = .orderedByCreationDate(), block: PHAsset -> Bool) {
-        let assets = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
-        assets.enumerateObjectsUsingBlock { asset, index, stop in
+    static func fetchAllPhotosAssets(fetchOptions: PHFetchOptions = .orderedByCreationDate(), block: @escaping (PHAsset) -> Bool) {
+        let assets = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        assets.enumerateObjects({ asset, index, stop in
             if let asset = asset as? PHAsset {
-                stop.memory = ObjCBool(block(asset))
+                stop.pointee = ObjCBool(block(asset))
             }
-        }
+        })
     }
 
     /**
@@ -67,16 +69,16 @@ struct PhotoAlbumManager {
      - parameter fetchOptions: fetch options
      - parameter block:        stop fetching if the block returns false.
      */
-    static func fetchAllPhotos(fetchOptions fetchOptions: PHFetchOptions = .orderedByCreationDate(), block: UIImage -> Bool) {
-        let assets = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions)
-        assets.enumerateObjectsUsingBlock { asset, index, stop in
+    static func fetchAllPhotos(fetchOptions: PHFetchOptions = .orderedByCreationDate(), block: @escaping (UIImage) -> Bool) {
+        let assets = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+        assets.enumerateObjects({ asset, index, stop in
             (asset as? PHAsset)?.requestImage { image in
-                stop.memory = ObjCBool(block(image))
+                stop.pointee = ObjCBool(block(image))
             }
-        }
+        })
     }
 
-    static func pickPhotoFrom(sourceType: UIImagePickerControllerSourceType, completion: UIImage? -> Void) {
+    static func pickPhotoFrom(_ sourceType: UIImagePickerControllerSourceType, completion: @escaping (UIImage?) -> Void) {
         if UIImagePickerController.isSourceTypeAvailable(sourceType) {
             pickerListener = ImagePickerListener(completion: completion)
 
@@ -84,7 +86,7 @@ struct PhotoAlbumManager {
             imagePickerController.sourceType = sourceType
             imagePickerController.allowsEditing = true
             imagePickerController.delegate = pickerListener
-            UIApplication.sharedApplication().topViewController?.presentViewController(imagePickerController, animated: true, completion: nil)
+            UIApplication.shared.topViewController?.present(imagePickerController, animated: true, completion: nil)
         } else {
             completion(nil)
         }
@@ -93,13 +95,13 @@ struct PhotoAlbumManager {
 }
 
 extension PHAsset {
-    func requestImage(size: CGSize? = nil, completion: UIImage -> Void) {
+    func requestImage(_ size: CGSize? = nil, completion: @escaping (UIImage) -> Void) {
         let manager = PHImageManager()
 
         let size = size ?? CGSize(width: pixelWidth, height: pixelHeight)
-        manager.requestImageForAsset(self, targetSize: size, contentMode: .AspectFill, options: nil) { image, info in
+        manager.requestImage(for: self, targetSize: size, contentMode: .aspectFill, options: nil) { image, info in
             // 解像度の低いサムネイルは無視
-            guard let isDegraded = info?[PHImageResultIsDegradedKey]?.boolValue else { return }
+            guard let isDegraded = (info?[PHImageResultIsDegradedKey] as AnyObject).boolValue else { return }
             if isDegraded { return }
 
             if let image = image {
@@ -108,8 +110,8 @@ extension PHAsset {
         }
     }
 
-    func deleteAsset(completion: NSError? -> Void) {
-        PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+    func deleteAsset(_ completion: @escaping (NSError?) -> Void) {
+        PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.deleteAssets([self])
         }) { success, error in
             completion(error)
@@ -125,7 +127,7 @@ extension PHFetchOptions {
 
      - returns: PHFetchOptions
      */
-    static func orderedByCreationDate(ascending: Bool = false) -> PHFetchOptions {
+    static func orderedByCreationDate(_ ascending: Bool = false) -> PHFetchOptions {
         let options = PHFetchOptions()
         options.sortDescriptors = [
             NSSortDescriptor(key: "creationDate", ascending: ascending)
@@ -136,22 +138,24 @@ extension PHFetchOptions {
 
 private final class ImagePickerListener: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    let completion: UIImage? -> Void
+    let completion: (UIImage?) -> Void
 
-    init(completion: UIImage? -> Void) {
+    init(completion: @escaping (UIImage?) -> Void) {
         self.completion = completion
     }
 
-    @objc private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    @objc fileprivate func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             completion(image)
         } else if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             completion(image)
         }
-        picker.dismissViewControllerAnimated(true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 
-    @objc private func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    @objc fileprivate func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         completion(nil)
     }
 }
+
+#endif
