@@ -6,33 +6,34 @@
 //  Copyright © 2016年 tattn. All rights reserved.
 //
 
-#if false
 import Foundation
 import RealmSwift
-import ObjectMapper
+import Himotoki
+import SwiftDate
 
-class HogeModel: Object {
+final class HogeModel: Object {
 
-    dynamic var imageUrl = "http://***.png"
-
-    dynamic var updatedAt = Date()
+    fileprivate(set) dynamic var imageUrl: String = ""
+    fileprivate(set) dynamic var updatedAt: Date = .init()
 
     override static func primaryKey() -> String? {
         return "imageUrl"
     }
-
-    required convenience init?(_ map: Map) {
+    
+    convenience init(imageUrl: String, updatedAt: String) throws {
         self.init()
-        mapping(map)
+        self.imageUrl = imageUrl
+        self.updatedAt = try updatedAt.date(format: .custom("yyyy-MM-dd HH:mm:ss"))?.absoluteDate ??? JSONError.parseError
     }
 }
 
-extension HogeModel: Mappable {
-
-    func mapping(_ map: Map) {
-        imageUrl <- map["imageUrl"]
-        //updatedAt <- (map["updatedAt"], DateTransform()) // unixtime
-        updatedAt <- (map["updatedAt"], CustomDateFormatTransform(formatString: "yyyy-MM-dd HH:mm:ss"))
+extension HogeModel: Decodable {
+    
+    static func decode(_ e: Extractor) throws -> HogeModel {
+        return try HogeModel(
+            imageUrl: e <| "imageUrl",
+            updatedAt: e <| "updatedAt"
+        )
     }
 }
 
@@ -44,4 +45,3 @@ extension HogeModel {
         return []
     }
 }
-#endif

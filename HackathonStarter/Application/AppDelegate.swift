@@ -60,6 +60,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Push Notification
 extension AppDelegate {
 
+    // for iOS 9
 //    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 //        print(error)
 //    }

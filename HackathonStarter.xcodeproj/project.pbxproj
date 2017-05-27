@@ -37,6 +37,7 @@
 		244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274FC1D4128D500088A78 /* UIViewController+.swift */; };
 		247A9C7E1ED9B5E900D929FF /* Throwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9C7D1ED9B5E900D929FF /* Throwing.swift */; };
 		247A9C801ED9BF3C00D929FF /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */; };
+		247A9CD21EDA051200D929FF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9CD11EDA051200D929FF /* Errors.swift */; };
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
 		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
@@ -49,17 +50,6 @@
 		24137CC41D297814006AE0EC /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		2419F2881D441703005917D2 /* HogeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HogeModel.swift; sourceTree = "<group>"; };
 		242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
-		242C3BEE1D27AE4200BF7992 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		242C3BF21D27AE4900BF7992 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
-		242C3BF51D27AE5B00BF7992 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
-		242C3BF61D27AE5B00BF7992 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		242C3BF71D27AE5B00BF7992 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		242C3BF81D27AE5B00BF7992 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
-		242C3BF91D27AE5B00BF7992 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		242C3BFA1D27AE5B00BF7992 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		242C3BFB1D27AE5B00BF7992 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
-		242C3BFC1D27AE5B00BF7992 /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
-		242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyToast.framework; path = Carthage/Build/iOS/SwiftyToast.framework; sourceTree = "<group>"; };
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
@@ -86,11 +76,11 @@
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		244274EB1D40F28000088A78 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
-		244274F11D4103BD00088A78 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		244274F31D410CE100088A78 /* SwipeReturnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeReturnable.swift; sourceTree = "<group>"; };
 		244274FC1D4128D500088A78 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		247A9C7D1ED9B5E900D929FF /* Throwing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throwing.swift; sourceTree = "<group>"; };
 		247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
+		247A9CD11EDA051200D929FF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
@@ -118,25 +108,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		242C3C101D27AE7B00BF7992 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				244274F11D4103BD00088A78 /* KeychainAccess.framework */,
-				242C3BF51D27AE5B00BF7992 /* Chameleon.framework */,
-				242C3BF61D27AE5B00BF7992 /* Kingfisher.framework */,
-				242C3BF71D27AE5B00BF7992 /* ObjectMapper.framework */,
-				242C3BF81D27AE5B00BF7992 /* Reachability.framework */,
-				242C3BF91D27AE5B00BF7992 /* Realm.framework */,
-				242C3BFA1D27AE5B00BF7992 /* RealmSwift.framework */,
-				242C3BFB1D27AE5B00BF7992 /* SVProgressHUD.framework */,
-				242C3BFC1D27AE5B00BF7992 /* SwiftDate.framework */,
-				242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */,
-				242C3BF21D27AE4900BF7992 /* Chameleon.framework */,
-				242C3BEE1D27AE4200BF7992 /* Alamofire.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		243F94851D25816F00C302D0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +129,6 @@
 		24410D5E1D2427A9008B0A97 = {
 			isa = PBXGroup;
 			children = (
-				242C3C101D27AE7B00BF7992 /* Frameworks */,
 				24410D691D2427A9008B0A97 /* HackathonStarter */,
 				24410D681D2427A9008B0A97 /* Products */,
 				244274E21D3FD42400088A78 /* Resources */,
@@ -199,6 +169,7 @@
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
 				24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */,
 				247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */,
+				247A9CD11EDA051200D929FF /* Errors.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -362,6 +333,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alert.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Coding.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Version.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
@@ -407,6 +379,7 @@
 				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
 				242C3BEA1D279ACD00BF7992 /* KeyboardObserver.swift in Sources */,
+				247A9CD21EDA051200D929FF /* Errors.swift in Sources */,
 				242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */,
 				24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,

@@ -12,6 +12,7 @@ github "ashleymills/Reachability.swift" ~> 3.0
 github "tarunon/Instantiate" "feature/instantiate_init"
 
 # Object Mapping
+github "ikesyo/Himotoki"
 # github "Hearst-DD/ObjectMapper" ~> 1.3
 # github "Anviking/Decodable" ~> 0.4.2
 
