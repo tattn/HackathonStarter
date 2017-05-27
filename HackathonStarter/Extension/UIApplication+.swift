@@ -22,7 +22,7 @@ extension UIApplication {
         return topViewController as? UINavigationController
     }
     
-    func openSettingApp() {
+    func openSettingApplication() {
         if let url = URL(string: UIApplicationOpenSettingsURLString) {
             UIApplication.shared.open(url)
         }

@@ -38,3 +38,13 @@ final class Regexp {
         return results
     }
 }
+
+extension String {
+    func isMatch(_ other: String) -> Bool {
+        return Regexp(self).isMatch(other)
+    }
+    
+    func matches(_ other: String) -> [String]? {
+        return Regexp(self).matches(other)
+    }
+}
