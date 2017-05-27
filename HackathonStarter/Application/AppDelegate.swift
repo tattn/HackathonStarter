@@ -8,6 +8,7 @@
 
 import UIKit
 import Alert
+import RealmSwift
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             // First launching
             UserDefaults.standard.set("version number", for: .previousLaunchAppVersion)
         } else {
-            RealmManager.migrate()
+            Realm.migrate()
         }
 
         // Launch via push notification

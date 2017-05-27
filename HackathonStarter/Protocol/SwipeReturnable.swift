@@ -22,7 +22,6 @@ extension SwipeReturnable where Self: UIViewController {
 
 extension UIViewController: SwipeReturnable {}
 
-
 extension UIViewController {
     func swipeBack() {
         navigationController?.popViewController(animated: true)

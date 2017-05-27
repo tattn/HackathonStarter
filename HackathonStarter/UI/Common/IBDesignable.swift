@@ -8,10 +8,20 @@
 
 import UIKit
 
+protocol IBRoundable: class {
+    var cornerRadius: CGFloat { get set }
+    var masksToBounds: Bool { get set }
+}
+
+protocol IBBorderable: class {
+    var borderColor: UIColor { get set }
+    var borderWidth: CGFloat { get set }
+}
+
 @IBDesignable
 class IBDesignableView: UIView, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.black {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
@@ -24,12 +34,11 @@ class IBDesignableView: UIView, IBRoundable, IBBorderable {
         didSet { layer.masksToBounds = masksToBounds }
     }
 }
-
 
 @IBDesignable
 class IBDesignableLabel: UILabel, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.black {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
@@ -43,11 +52,10 @@ class IBDesignableLabel: UILabel, IBRoundable, IBBorderable {
     }
 }
 
-
 @IBDesignable
 class IBDesignableButton: UIButton, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.black {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
@@ -64,7 +72,7 @@ class IBDesignableButton: UIButton, IBRoundable, IBBorderable {
 @IBDesignable
 class IBDesignableImageView: UIImageView, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.black {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
@@ -81,7 +89,7 @@ class IBDesignableImageView: UIImageView, IBRoundable, IBBorderable {
 @IBDesignable
 class IBDesignableCollectionViewCell: UICollectionViewCell, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.black {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
@@ -98,7 +106,7 @@ class IBDesignableCollectionViewCell: UICollectionViewCell, IBRoundable, IBBorde
 @IBDesignable
 class IBDesignableTableViewCell: UITableViewCell, IBRoundable, IBBorderable {
 
-    @IBInspectable var borderColor: UIColor = UIColor.black {
+    @IBInspectable var borderColor: UIColor = .black {
         didSet { layer.borderColor = borderColor.cgColor }
     }
     @IBInspectable var borderWidth: CGFloat = 0.0 {
@@ -110,14 +118,4 @@ class IBDesignableTableViewCell: UITableViewCell, IBRoundable, IBBorderable {
     @IBInspectable var masksToBounds: Bool = true {
         didSet { layer.masksToBounds = masksToBounds }
     }
-}
-
-protocol IBRoundable: class {
-    var cornerRadius: CGFloat { get set }
-    var masksToBounds: Bool { get set }
-}
-
-protocol IBBorderable: class {
-    var borderColor: UIColor { get set }
-    var borderWidth: CGFloat { get set }
 }

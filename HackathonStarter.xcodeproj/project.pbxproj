@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		24137CC51D297814006AE0EC /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24137CC41D297814006AE0EC /* Array+.swift */; };
 		2419F2891D441703005917D2 /* HogeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419F2881D441703005917D2 /* HogeModel.swift */; };
-		242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */; };
+		242C3BEA1D279ACD00BF7992 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */; };
 		242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */; };
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
-		243F94871D25820900C302D0 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94861D25820900C302D0 /* Async.swift */; };
 		243F94891D25825B00C302D0 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94881D25825B00C302D0 /* Regexp.swift */; };
 		243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948A1D25852500C302D0 /* GlobalFunctions.swift */; };
 		243F948D1D2585DA00C302D0 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948C1D2585DA00C302D0 /* App.swift */; };
@@ -34,10 +33,9 @@
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
-		244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274ED1D40FF8400088A78 /* KeyChainManager.swift */; };
-		244274F01D4102C000088A78 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EF1D4102C000088A78 /* RealmManager.swift */; };
 		244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274F31D410CE100088A78 /* SwipeReturnable.swift */; };
 		244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274FC1D4128D500088A78 /* UIViewController+.swift */; };
+		247A9C7E1ED9B5E900D929FF /* Throwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9C7D1ED9B5E900D929FF /* Throwing.swift */; };
 		247D6D521D47CA06005864EC /* NSCoding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D511D47CA06005864EC /* NSCoding+.swift */; };
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
 		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
@@ -50,7 +48,7 @@
 /* Begin PBXFileReference section */
 		24137CC41D297814006AE0EC /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		2419F2881D441703005917D2 /* HogeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HogeModel.swift; sourceTree = "<group>"; };
-		242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		242C3BEE1D27AE4200BF7992 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		242C3BF21D27AE4900BF7992 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		242C3BF51D27AE5B00BF7992 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyToast.framework; path = Carthage/Build/iOS/SwiftyToast.framework; sourceTree = "<group>"; };
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
-		243F94861D25820900C302D0 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		243F948A1D25852500C302D0 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		243F948C1D2585DA00C302D0 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -89,11 +86,10 @@
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		244274EB1D40F28000088A78 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
-		244274ED1D40FF8400088A78 /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
-		244274EF1D4102C000088A78 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		244274F11D4103BD00088A78 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		244274F31D410CE100088A78 /* SwipeReturnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeReturnable.swift; sourceTree = "<group>"; };
 		244274FC1D4128D500088A78 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		247A9C7D1ED9B5E900D929FF /* Throwing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throwing.swift; sourceTree = "<group>"; };
 		247D6D511D47CA06005864EC /* NSCoding+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+.swift"; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
@@ -144,7 +140,6 @@
 		243F94851D25816F00C302D0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				243F94861D25820900C302D0 /* Async.swift */,
 				243F94831D25815500C302D0 /* Ionicons.swift */,
 				24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */,
 				243F94881D25825B00C302D0 /* Regexp.swift */,
@@ -185,6 +180,7 @@
 				24410D7E1D242A00008B0A97 /* Extension */,
 				244274EA1D40F25000088A78 /* Manager */,
 				2419F2871D4416F2005917D2 /* Model */,
+				247A9C7C1ED9B5B200D929FF /* Operator */,
 				24410D931D242EDD008B0A97 /* Protocol */,
 				24410D7D1D2429B5008B0A97 /* UI */,
 				243F94851D25816F00C302D0 /* Utility */,
@@ -260,13 +256,19 @@
 		244274EA1D40F25000088A78 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				244274ED1D40FF8400088A78 /* KeyChainManager.swift */,
-				242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */,
+				242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */,
 				24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */,
 				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
-				244274EF1D4102C000088A78 /* RealmManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		247A9C7C1ED9B5B200D929FF /* Operator */ = {
+			isa = PBXGroup;
+			children = (
+				247A9C7D1ED9B5E900D929FF /* Throwing.swift */,
+			);
+			path = Operator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,8 +378,8 @@
 				2419F2891D441703005917D2 /* HogeModel.swift in Sources */,
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
+				247A9C7E1ED9B5E900D929FF /* Throwing.swift in Sources */,
 				244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */,
-				243F94871D25820900C302D0 /* Async.swift in Sources */,
 				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,
 				24410D991D24FD01008B0A97 /* URL+.swift in Sources */,
 				24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */,
@@ -390,8 +392,6 @@
 				24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
-				244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */,
-				244274F01D4102C000088A78 /* RealmManager.swift in Sources */,
 				24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */,
 				24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
@@ -404,7 +404,7 @@
 				244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */,
 				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
-				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
+				242C3BEA1D279ACD00BF7992 /* KeyboardObserver.swift in Sources */,
 				242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */,
 				24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,

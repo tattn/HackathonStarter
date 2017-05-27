@@ -13,6 +13,22 @@ protocol RealmType {}
 extension Object: RealmType {}
 extension Array: RealmType {}
 
+extension Realm {
+    static func migrate() {
+        let build = UInt64(App.build)!
+        
+        let config = Realm.Configuration(schemaVersion: build)
+        
+        Realm.Configuration.defaultConfiguration = config
+        
+        // Do migrate
+        do {
+            _ = try Realm()
+        } catch {
+            print("realm migrate error")
+        }
+    }
+}
 
 private func realmBlock(_ block: (Realm) throws -> Void) -> Bool {
     do {
@@ -24,8 +40,7 @@ private func realmBlock(_ block: (Realm) throws -> Void) -> Bool {
     return false
 }
 
-
-// MARK:- Write
+// MARK: - Write
 extension RealmType where Self: Object {
 
     func write(_ block: (Realm) -> Void) -> Bool {
@@ -43,7 +58,7 @@ extension RealmType where Self: Object {
     }
 
     func saveAsync() {
-        threadOnBackground("realm-background") {
+        DispatchQueue.global().async {
             self.save()
         }
     }
@@ -67,14 +82,13 @@ extension Array where Element: Object {
     }
 
     func saveAsync() {
-        threadOnBackground("realm-background") {
+        DispatchQueue.global().async {
             self.save()
         }
     }
 }
 
-
-// MARK:- Read
+// MARK: - Read
 extension RealmType where Self: Object {
 
     static func all() -> [Self] {
@@ -92,8 +106,7 @@ extension RealmType where Self: Object {
     }
 }
 
-
-// MARK:- Delete
+// MARK: - Delete
 extension RealmType where Self: Object {
     static func deleteAll(_ predicateFormat: String, _ args: AnyObject...) -> Bool {
         return realmBlock { realm in
