@@ -9,6 +9,8 @@
 import UIKit
 import Alert
 import RealmSwift
+import Version
+import UserNotifications
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,18 +21,19 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if UserDefaults.standard.string(for: .previousLaunchAppVersion) == nil {
             // First launching
-            UserDefaults.standard.set("version number", for: .previousLaunchAppVersion)
+            UserDefaults.standard.set("\(Version.current)", for: .previousLaunchAppVersion)
         } else {
             Realm.migrate()
         }
 
         // Launch via push notification
-        if let launch = launchOptions {
-            if let userInfo = launch[UIApplicationLaunchOptionsKey.remoteNotification] as? [AnyHashable: Any] {
+        if let option = launchOptions {
+            if let userInfo = option[.remoteNotification] as? [AnyHashable: Any] {
                 PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
             }
         }
         
+        PushNotificationManager.allowToPushNotification(with: self)
         App.setupDefaultAppearance()
 
         return true
@@ -57,28 +60,54 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Push Notification
 extension AppDelegate {
 
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print(error)
-    }
-
-    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-        application.registerForRemoteNotifications()
-    }
+//    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+//        print(error)
+//    }
+//
+//    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+//        application.registerForRemoteNotifications()
+//    }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // Convert a devicetoken
-        let token = deviceToken.map { String(format: "%.2hhx", $0) }.joined()
+        let token = DeviceToken(data: deviceToken)
         print(token)
 
-        // Send a devicetoken if it was changed
-        if UserDefaults.standard.string(for: .deviceToken) != token {
-            UserDefaults.standard.set(token, for: .deviceToken)
-            PushNotificationManager.sendDeviceToken(token)
-        }
+        PushNotificationManager.send(token)
     }
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         print(userInfo)
         PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        debugPrint("push notification is open")
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        if notification.request.trigger is UNPushNotificationTrigger {
+            debugPrint("receive a push notification on foreground")
+        } else {
+            debugPrint("receive a local notification on foreground")
+        }
+        
+        switch notification.request.identifier {
+        case "alert":
+            completionHandler([.alert])
+        case "both":
+            completionHandler([.alert, .sound])
+        default: ()
+        }
     }
 }

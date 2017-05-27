@@ -56,7 +56,7 @@ struct PhotoAlbumManager {
 
     static func fetchAllPhotosAssets(fetchOptions: PHFetchOptions = .orderedByCreationDate(), block: @escaping (PHAsset) -> Bool) {
         let assets = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-        assets.enumerateObjects({ asset, index, stop in
+        assets.enumerateObjects({ asset, _, stop in
             if let asset = asset as? PHAsset {
                 stop.pointee = ObjCBool(block(asset))
             }
@@ -71,7 +71,7 @@ struct PhotoAlbumManager {
      */
     static func fetchAllPhotos(fetchOptions: PHFetchOptions = .orderedByCreationDate(), block: @escaping (UIImage) -> Bool) {
         let assets = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-        assets.enumerateObjects({ asset, index, stop in
+        assets.enumerateObjects({ asset, _, stop in
             (asset as? PHAsset)?.requestImage { image in
                 stop.pointee = ObjCBool(block(image))
             }
@@ -113,7 +113,7 @@ extension PHAsset {
     func deleteAsset(_ completion: @escaping (NSError?) -> Void) {
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.deleteAssets([self])
-        }) { success, error in
+        }) { _, error in
             completion(error)
         }
     }

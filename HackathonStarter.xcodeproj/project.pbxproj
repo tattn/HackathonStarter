@@ -361,6 +361,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/InstantiateStandard.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alert.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Coding.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Version.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (

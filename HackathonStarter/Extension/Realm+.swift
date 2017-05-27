@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import Version
 
 protocol RealmType {}
 extension Object: RealmType {}
@@ -15,13 +16,11 @@ extension Array: RealmType {}
 
 extension Realm {
     static func migrate() {
-        let build = UInt64(App.build)!
-        
+        let build = UInt64("\(Version.currentBuildNumber)")!
         let config = Realm.Configuration(schemaVersion: build)
         
         Realm.Configuration.defaultConfiguration = config
         
-        // Do migrate
         do {
             _ = try Realm()
         } catch {
@@ -43,6 +42,7 @@ private func realmBlock(_ block: (Realm) throws -> Void) -> Bool {
 // MARK: - Write
 extension RealmType where Self: Object {
 
+    @discardableResult
     func write(_ block: (Realm) -> Void) -> Bool {
         return realmBlock { realm in
             try realm.write {
@@ -51,6 +51,7 @@ extension RealmType where Self: Object {
         }
     }
 
+    @discardableResult
     func save() -> Bool {
         return write { realm in
             realm.add(self, update: true)
@@ -67,6 +68,7 @@ extension RealmType where Self: Object {
 
 extension Array where Element: Object {
 
+    @discardableResult
     func write(_ block: (Realm) -> Void) -> Bool {
         return realmBlock { realm in
             try realm.write {
@@ -75,6 +77,7 @@ extension Array where Element: Object {
         }
     }
 
+    @discardableResult
     func save() -> Bool {
         return write { realm in
             realm.add(self, update: true)
@@ -93,14 +96,14 @@ extension RealmType where Self: Object {
 
     static func all() -> [Self] {
         if let realm = try? Realm() {
-            return Array(realm.objects(Self))
+            return Array(realm.objects(Self.self))
         }
         return []
     }
 
-    static func findAll(_ predicateFormat: String, _ args: AnyObject...) -> [Self] {
+    static func findAll(_ predicateFormat: String, _ args: Any...) -> [Self] {
         if let realm = try? Realm() {
-            return Array(realm.objects(Self).filter(predicateFormat, args))
+            return Array(realm.objects(Self.self).filter(predicateFormat, args))
         }
         return []
     }
@@ -108,9 +111,10 @@ extension RealmType where Self: Object {
 
 // MARK: - Delete
 extension RealmType where Self: Object {
-    static func deleteAll(_ predicateFormat: String, _ args: AnyObject...) -> Bool {
+    @discardableResult
+    static func deleteAll(_ predicateFormat: String, _ args: Any...) -> Bool {
         return realmBlock { realm in
-            let results = realm.objects(Self).filter(predicateFormat, args)
+            let results = realm.objects(Self.self).filter(predicateFormat, args)
             
             try realm.write {
                 realm.delete(results)
@@ -118,6 +122,7 @@ extension RealmType where Self: Object {
         }
     }
 
+    @discardableResult
     func delete() -> Bool {
         return write { realm in
             realm.delete(self)
@@ -126,6 +131,7 @@ extension RealmType where Self: Object {
 }
 
 extension Array where Element: Object {
+    @discardableResult
     func delete() -> Bool {
         return write { realm in
             realm.delete(self)

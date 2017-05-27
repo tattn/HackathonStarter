@@ -16,10 +16,6 @@ struct App {
     static var statusBarHeight: CGFloat { return UIApplication.shared.statusBarFrame.height }
     static var statusBarAndNavigationBarHeight: CGFloat { return statusBarHeight + navigationBarHeight }
 
-    static let bundleID = Bundle.main.bundleIdentifier!
-    static let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-    static let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-
     struct Color {
         static let main = UIColor.red
     }
@@ -29,7 +25,6 @@ struct App {
         static func hiraKakuW6(size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W6", size: size) ?? UIFont.systemFont(ofSize: size) }
         static func hiraKakuW3(size: CGFloat) -> UIFont { return UIFont(name: "HiraKakuProN-W3", size: size) ?? UIFont.systemFont(ofSize: size) }
     }
-
 
     static func setupDefaultAppearance() {
         // Icon color on Nav
