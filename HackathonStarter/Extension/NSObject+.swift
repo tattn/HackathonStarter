@@ -29,5 +29,16 @@ extension NSObjectProtocol where Self: NSObject {
             }
             .joined(separator: "\n")
     }
+    
+    var properties: [String: Any] {
+        var properties: [String: Any] = [:]
+        let mirror = Mirror(reflecting: self)
+        mirror.children.forEach {
+            if let key = $0.label {
+                properties[key] = $0.value
+            }
+        }
 
+        return properties
+    }
 }

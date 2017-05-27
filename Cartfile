@@ -1,6 +1,7 @@
 github "tattn/UserDefaults"
 github "tattn/Alert"
 github "tattn/SwiftyToast"
+github "tattn/Coding"
 
 # HTTP Networking
 github "Alamofire/Alamofire"
