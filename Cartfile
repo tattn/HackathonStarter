@@ -32,6 +32,8 @@ github "realm/realm-cocoa"
 # Progress Indicator
 github "SVProgressHUD/SVProgressHUD"
 
+# GPS
+# github 'malcommac/SwiftLocation'
 
 # Animation
 # github "MengTo/Spring" "swift2"

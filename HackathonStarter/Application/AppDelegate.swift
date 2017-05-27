@@ -25,7 +25,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             Realm.migrate()
         }
-
+        
         // Launch via push notification
         if let option = launchOptions {
             if let userInfo = option[.remoteNotification] as? [AnyHashable: Any] {
