@@ -9,6 +9,7 @@
 import Foundation
 
 extension Array where Element: Equatable {
+    @discardableResult
     mutating func remove(element: Element) -> Bool {
         guard let index = index(of: element) else { return false }
         self.remove(at: index)

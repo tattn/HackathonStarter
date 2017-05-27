@@ -9,9 +9,14 @@
 import UIKit
 
 extension UIViewController {
+    
+    func present(animated: Bool = true) {
+        UIApplication.shared.topViewController?.present(self, animated: animated, completion: nil)
+    }
 
     func setBackBarTitle(_ title: String = "") {
         let backButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButtonItem
     }
+    
 }

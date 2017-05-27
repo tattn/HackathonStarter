@@ -9,14 +9,12 @@
 import UIKit
 import Kingfisher
 
-private let activityIndicatorViewTag = 2016
+private let activityIndicatorViewTag = 2017
 
 extension UIImageView {
 
     func setWebImage(_ url: URL?) {
-        if let url = url {
-            kf.setImage(with: url)
-        }
+        kf.setImage(with: url)
     }
 
     @nonobjc
@@ -24,12 +22,10 @@ extension UIImageView {
         setWebImage(urlString.url)
     }
 
-    func setWebImageWithIndicator(_ url: URL?) {
-        if let url = url {
-            addLoading()
-            kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { [weak self] image, error, cacheType, imageURL in
-                self?.removeLoading()
-            }
+    func setWebImageWithIndicator(_ url: URL?, indicatorColor: UIColor = .white) {
+        addLoading()
+        kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { [weak self] _ in
+            self?.removeLoading()
         }
     }
 
@@ -42,25 +38,21 @@ extension UIImageView {
         kf.cancelDownloadTask()
     }
 
-    fileprivate func addLoading() {
+    fileprivate func addLoading(_ indicatorColor: UIColor = .white) {
         if let loading = viewWithTag(activityIndicatorViewTag) as? UIActivityIndicatorView {
             loading.startAnimating()
         } else {
-            let activityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+            let activityIndicatorView = UIActivityIndicatorView(frame: .init(x: 0, y: 0, width: 50, height: 50))
             activityIndicatorView.center = center
             activityIndicatorView.hidesWhenStopped = false
-            activityIndicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+            activityIndicatorView.activityIndicatorViewStyle = .white
             activityIndicatorView.layer.opacity = 0.8
-            activityIndicatorView.color = UIColor.white
+            activityIndicatorView.color = indicatorColor
 
             activityIndicatorView.tag = activityIndicatorViewTag
             activityIndicatorView.startAnimating()
             addSubview(activityIndicatorView)
-
-            let views = ["activityIndicatorView":activityIndicatorView]
-            activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[activityIndicatorView]|", options: [], metrics: nil, views: views))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[activityIndicatorView]|", options: [], metrics: nil, views: views))
+            activityIndicatorView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         }
     }
 

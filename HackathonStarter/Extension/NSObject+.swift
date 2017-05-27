@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension NSObject {
-    class var className: String {
+extension NSObjectProtocol {
+    static var className: String {
         return String(describing: self)
     }
 

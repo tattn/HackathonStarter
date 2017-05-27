@@ -9,7 +9,7 @@
 import Foundation
 
 extension NSError {
-    convenience init(message: String) {
-        self.init(domain: App.bundleID, code: 0, userInfo: [NSLocalizedDescriptionKey: message])
+    convenience init(code: Int = 0, message: String) {
+        self.init(domain: App.bundleID, code: code, userInfo: [NSLocalizedDescriptionKey: message])
     }
 }

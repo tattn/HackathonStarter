@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImage {
-    convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+    convenience init?(color: UIColor, size: CGSize = .init(width: 1, height: 1)) {
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
         color.setFill()
         UIRectFill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
@@ -21,12 +21,12 @@ extension UIImage {
     }
 
     convenience init?(named: String, tintColor: UIColor) {
-        let image = UIImage(named: named)?.imageWithTint(color: tintColor)
+        let image = UIImage(named: named)?.image(withTint: tintColor)
         guard let cgImage = image?.cgImage else { return nil }
         self.init(cgImage: cgImage)
     }
 
-    func imageWithTint(color tintColor: UIColor) -> UIImage {
+    func image(withTint tintColor: UIColor) -> UIImage {
 
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
 
@@ -40,10 +40,10 @@ extension UIImage {
         ctx?.setFillColor(tintColor.cgColor)
         ctx?.fill(rect)
 
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
         UIGraphicsEndImageContext()
 
-        return image!
+        return image
     }
 
     func cropping(_ rect: CGRect) -> UIImage? {
@@ -107,6 +107,10 @@ extension UIImage {
     func toJPEG(_ quarity: CGFloat = 1.0) -> Data? {
         return UIImageJPEGRepresentation(self, quarity)
     }
+    
+    func toPNG(_ quarity: CGFloat = 1.0) -> Data? {
+        return UIImagePNGRepresentation(self)
+    }
 
     func rounded() -> UIImage? {
         let imageView = UIImageView(image: self)
@@ -134,6 +138,5 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return result
     }
-
 
 }

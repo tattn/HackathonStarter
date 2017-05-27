@@ -10,9 +10,9 @@ import UIKit
 
 extension UIFont {
 
-    func size(ofString string: String, constrainedToWidth width: Double) -> CGSize {
+    func size(of string: String, constrainedToWidth width: Double) -> CGSize {
         return (string as NSString)
-               .boundingRect(with: CGSize(width: width, height: DBL_MAX),
+               .boundingRect(with: CGSize(width: width, height: Double.greatestFiniteMagnitude),
                                      options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                      attributes: [NSFontAttributeName: self],
                                      context: nil).size

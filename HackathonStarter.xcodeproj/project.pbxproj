@@ -11,7 +11,6 @@
 		2419F2891D441703005917D2 /* HogeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419F2881D441703005917D2 /* HogeModel.swift */; };
 		242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardManager.swift */; };
 		242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */; };
-		242CA7521D5DD70700BD0C4E /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CA7511D5DD70700BD0C4E /* UIAlertController+.swift */; };
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
 		243F94871D25820900C302D0 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94861D25820900C302D0 /* Async.swift */; };
 		243F94891D25825B00C302D0 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94881D25825B00C302D0 /* Regexp.swift */; };
@@ -24,18 +23,14 @@
 		24410D721D2427AA008B0A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24410D711D2427AA008B0A97 /* Assets.xcassets */; };
 		24410D751D2427AA008B0A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24410D731D2427AA008B0A97 /* LaunchScreen.storyboard */; };
 		24410D801D242A71008B0A97 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D7F1D242A71008B0A97 /* NSObject+.swift */; };
-		24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D811D242AF9008B0A97 /* UITableView+.swift */; };
-		24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D831D242B58008B0A97 /* UICollectionView+.swift */; };
 		24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D851D242BEE008B0A97 /* UIColor+.swift */; };
 		24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D871D242CAB008B0A97 /* UIApplication+.swift */; };
-		24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D891D242DBD008B0A97 /* StoryboardHelper.swift */; };
-		24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8B1D242DF7008B0A97 /* NibHelper.swift */; };
 		24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8D1D242E48008B0A97 /* UIView+.swift */; };
 		24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D8F1D242E98008B0A97 /* CollectionType+.swift */; };
 		24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D911D242ED2008B0A97 /* EnumEnumerable.swift */; };
 		24410D951D243538008B0A97 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D941D243538008B0A97 /* UIImage+.swift */; };
 		24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D961D24FCBB008B0A97 /* Comparable+.swift */; };
-		24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* NSURL+.swift */; };
+		24410D991D24FD01008B0A97 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* URL+.swift */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
@@ -49,7 +44,6 @@
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
 		24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */; };
-		24FD0C461D5EBBC40031B6F0 /* UIActivityViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */; };
 		24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +63,6 @@
 		242C3BFC1D27AE5B00BF7992 /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		242C3BFD1D27AE5B00BF7992 /* SwiftyToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyToast.framework; path = Carthage/Build/iOS/SwiftyToast.framework; sourceTree = "<group>"; };
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
-		242CA7511D5DD70700BD0C4E /* UIAlertController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		243F94861D25820900C302D0 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
@@ -84,18 +77,14 @@
 		24410D741D2427AA008B0A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24410D761D2427AA008B0A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24410D7F1D242A71008B0A97 /* NSObject+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
-		24410D811D242AF9008B0A97 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
-		24410D831D242B58008B0A97 /* UICollectionView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		24410D851D242BEE008B0A97 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		24410D871D242CAB008B0A97 /* UIApplication+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
-		24410D891D242DBD008B0A97 /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
-		24410D8B1D242DF7008B0A97 /* NibHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibHelper.swift; sourceTree = "<group>"; };
 		24410D8D1D242E48008B0A97 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		24410D8F1D242E98008B0A97 /* CollectionType+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+.swift"; sourceTree = "<group>"; };
 		24410D911D242ED2008B0A97 /* EnumEnumerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumEnumerable.swift; sourceTree = "<group>"; };
 		24410D941D243538008B0A97 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		24410D961D24FCBB008B0A97 /* Comparable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+.swift"; sourceTree = "<group>"; };
-		24410D981D24FD01008B0A97 /* NSURL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+.swift"; sourceTree = "<group>"; };
+		24410D981D24FD01008B0A97 /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
 		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
@@ -111,7 +100,6 @@
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		24FD0C411D5E38910031B6F0 /* PhotoAlbumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumManager.swift; sourceTree = "<group>"; };
-		24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityViewController+.swift"; sourceTree = "<group>"; };
 		24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,19 +227,13 @@
 				24DA30E31D441E3E00E4C9C4 /* NSError+.swift */,
 				242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */,
 				24410D7F1D242A71008B0A97 /* NSObject+.swift */,
-				24410D981D24FD01008B0A97 /* NSURL+.swift */,
-				24410D8B1D242DF7008B0A97 /* NibHelper.swift */,
+				24410D981D24FD01008B0A97 /* URL+.swift */,
 				244274E31D3FD4BB00088A78 /* Realm+.swift */,
-				24410D891D242DBD008B0A97 /* StoryboardHelper.swift */,
-				24FD0C451D5EBBC40031B6F0 /* UIActivityViewController+.swift */,
-				242CA7511D5DD70700BD0C4E /* UIAlertController+.swift */,
 				24410D871D242CAB008B0A97 /* UIApplication+.swift */,
-				24410D831D242B58008B0A97 /* UICollectionView+.swift */,
 				24410D851D242BEE008B0A97 /* UIColor+.swift */,
 				247D6D531D47CEBE005864EC /* UIFont+.swift */,
 				24410D941D243538008B0A97 /* UIImage+.swift */,
 				244274D01D3F4B5F00088A78 /* UIImageView+.swift */,
-				24410D811D242AF9008B0A97 /* UITableView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
 				244274FC1D4128D500088A78 /* UIViewController+.swift */,
 			);
@@ -373,6 +355,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyToast.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Instantiate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/InstantiateStandard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alert.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
@@ -390,13 +375,11 @@
 			files = (
 				2419F2891D441703005917D2 /* HogeModel.swift in Sources */,
 				24410D6D1D2427A9008B0A97 /* ViewController.swift in Sources */,
-				24410D821D242AF9008B0A97 /* UITableView+.swift in Sources */,
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
 				244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */,
-				24410D8A1D242DBD008B0A97 /* StoryboardHelper.swift in Sources */,
 				243F94871D25820900C302D0 /* Async.swift in Sources */,
 				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,
-				24410D991D24FD01008B0A97 /* NSURL+.swift in Sources */,
+				24410D991D24FD01008B0A97 /* URL+.swift in Sources */,
 				24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */,
 				243F94901D25874800C302D0 /* IBDesignable.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
@@ -407,7 +390,6 @@
 				24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
 				24410D801D242A71008B0A97 /* NSObject+.swift in Sources */,
-				242CA7521D5DD70700BD0C4E /* UIAlertController+.swift in Sources */,
 				244274EE1D40FF8400088A78 /* KeyChainManager.swift in Sources */,
 				244274F01D4102C000088A78 /* RealmManager.swift in Sources */,
 				24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */,
@@ -420,14 +402,11 @@
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */,
 				244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */,
-				24FD0C461D5EBBC40031B6F0 /* UIActivityViewController+.swift in Sources */,
 				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
 				242C3BEA1D279ACD00BF7992 /* KeyboardManager.swift in Sources */,
 				242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */,
-				24410D841D242B58008B0A97 /* UICollectionView+.swift in Sources */,
 				24FD0C421D5E38910031B6F0 /* PhotoAlbumManager.swift in Sources */,
-				24410D8C1D242DF7008B0A97 /* NibHelper.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

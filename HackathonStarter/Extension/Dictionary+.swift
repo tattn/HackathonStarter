@@ -10,9 +10,15 @@ import Foundation
 
 extension Dictionary {
     // See http://ericasadun.com/2015/07/08/swift-merging-dictionaries/
-    mutating func merge<S: Sequence>(_ sequence: S) where S.Iterator.Element == (Key, Value) {
-        for (key, value) in sequence {
+    mutating func merge<S: Sequence>(_ other: S) where S.Iterator.Element == (key: Key, value: Value) {
+        for (key, value) in other {
             self[key] = value
         }
+    }
+
+    func merged<S: Sequence>(_ other: S) -> [Key: Value] where S.Iterator.Element == (key: Key, value: Value) {
+        var dic = self
+        dic.merge(other)
+        return dic
     }
 }

@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Alert
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -29,7 +29,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                 PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
             }
         }
-
+        
         App.setupDefaultAppearance()
 
         return true
@@ -51,10 +51,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
     }
 
-
 }
 
-//MARK:- Push Notification
+// MARK: - Push Notification
 extension AppDelegate {
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
