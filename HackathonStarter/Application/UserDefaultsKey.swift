@@ -10,6 +10,6 @@ import Foundation
 import UserDefaults
 
 extension UserDefaults.Key {
-    public static var deviceToken: UserDefaults.Key { return .init("deviceToken") }
-    public static var previousLaunchAppVersion: UserDefaults.Key { return .init("previousLaunchAppVersion") }
+    public static var deviceToken: UserDefaults.Key { return "deviceToken" }
+    public static var previousLaunchAppVersion: UserDefaults.Key { return "previousLaunchAppVersion" }
 }
