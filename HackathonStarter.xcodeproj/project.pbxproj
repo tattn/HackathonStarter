@@ -14,7 +14,7 @@
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
 		243F94891D25825B00C302D0 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94881D25825B00C302D0 /* Regexp.swift */; };
 		243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948A1D25852500C302D0 /* GlobalFunctions.swift */; };
-		243F948D1D2585DA00C302D0 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948C1D2585DA00C302D0 /* App.swift */; };
+		243F948D1D2585DA00C302D0 /* AppSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948C1D2585DA00C302D0 /* AppSize.swift */; };
 		243F94901D25874800C302D0 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948F1D25874800C302D0 /* IBDesignable.swift */; };
 		24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6A1D2427A9008B0A97 /* AppDelegate.swift */; };
 		24410D6D1D2427A9008B0A97 /* TopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6C1D2427A9008B0A97 /* TopVC.swift */; };
@@ -40,6 +40,7 @@
 		247A9CD21EDA051200D929FF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9CD11EDA051200D929FF /* Errors.swift */; };
 		247A9D301EDAD1C300D929FF /* HTTPRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D291EDAC81500D929FF /* HTTPRequestProtocol.swift */; };
 		247A9D331EDB12F900D929FF /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D321EDB12F900D929FF /* HTTPRequest.swift */; };
+		247A9D351EDB26C300D929FF /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D341EDB26C300D929FF /* Appearance.swift */; };
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
 		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
@@ -68,7 +69,7 @@
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		243F948A1D25852500C302D0 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
-		243F948C1D2585DA00C302D0 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		243F948C1D2585DA00C302D0 /* AppSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSize.swift; sourceTree = "<group>"; };
 		243F948F1D25874800C302D0 /* IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		24410D671D2427A9008B0A97 /* HackathonStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24410D6A1D2427A9008B0A97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -97,6 +98,7 @@
 		247A9CD11EDA051200D929FF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		247A9D291EDAC81500D929FF /* HTTPRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestProtocol.swift; sourceTree = "<group>"; };
 		247A9D321EDB12F900D929FF /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		247A9D341EDB26C300D929FF /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
@@ -216,12 +218,13 @@
 		247A9D2B1EDACD0400D929FF /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				243F948C1D2585DA00C302D0 /* App.swift */,
+				243F948C1D2585DA00C302D0 /* AppSize.swift */,
 				24410D6A1D2427A9008B0A97 /* AppDelegate.swift */,
 				247A9CD11EDA051200D929FF /* Errors.swift */,
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
 				247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */,
 				24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */,
+				247A9D341EDB26C300D929FF /* Appearance.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -268,10 +271,10 @@
 		247A9D311EDB12CB00D929FF /* HTTPClient */ = {
 			isa = PBXGroup;
 			children = (
-				247A9D291EDAC81500D929FF /* HTTPRequestProtocol.swift */,
 				247A9D321EDB12F900D929FF /* HTTPRequest.swift */,
+				247A9D291EDAC81500D929FF /* HTTPRequestProtocol.swift */,
 			);
-			name = HTTPClient;
+			path = HTTPClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2419F2891D441703005917D2 /* HogeModel.swift in Sources */,
+				247A9D351EDB26C300D929FF /* Appearance.swift in Sources */,
 				24410D6D1D2427A9008B0A97 /* TopVC.swift in Sources */,
 				247A9D301EDAD1C300D929FF /* HTTPRequestProtocol.swift in Sources */,
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
@@ -409,7 +413,7 @@
 				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
 				247A9C801ED9BF3C00D929FF /* NotificationKey.swift in Sources */,
-				243F948D1D2585DA00C302D0 /* App.swift in Sources */,
+				243F948D1D2585DA00C302D0 /* AppSize.swift in Sources */,
 				243F94841D25815500C302D0 /* Ionicons.swift in Sources */,
 				24410D951D243538008B0A97 /* UIImage+.swift in Sources */,
 				247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */,

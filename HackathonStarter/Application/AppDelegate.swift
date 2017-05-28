@@ -11,7 +11,6 @@ import Alert
 import RealmSwift
 import Version
 import UserNotifications
-import RxSwift
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,8 +33,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // if you use push notification
         PushNotificationManager.allowToPushNotification(with: self)
-        App.setupDefaultAppearance()
+        
+        Appearance.setup()
 
         return true
     }
@@ -71,7 +72,6 @@ extension AppDelegate {
 //    }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        // Convert a devicetoken
         let token = DeviceToken(data: deviceToken)
         print(token)
 
