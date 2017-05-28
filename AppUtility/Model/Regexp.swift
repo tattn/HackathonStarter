@@ -9,8 +9,8 @@
 import Foundation
 
 final class Regexp {
-    let internalRegexp: NSRegularExpression
-    let pattern: String
+    private let internalRegexp: NSRegularExpression
+    private let pattern: String
 
     init(_ pattern: String) {
         self.pattern = pattern
