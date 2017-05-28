@@ -623,6 +623,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Coding.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Version.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
