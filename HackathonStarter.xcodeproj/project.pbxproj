@@ -60,11 +60,11 @@
 
 /* Begin PBXFileReference section */
 		24137CC41D297814006AE0EC /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
-		2419F2881D441703005917D2 /* HogeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HogeModel.swift; sourceTree = "<group>"; };
-		242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		2419F2881D441703005917D2 /* HogeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HogeModel.swift; path = HogeModel.swift; sourceTree = "<group>"; };
+		242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
-		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Regexp.swift; path = Regexp.swift; sourceTree = "<group>"; };
+		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		243F948A1D25852500C302D0 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		243F948C1D2585DA00C302D0 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		243F948F1D25874800C302D0 /* IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		247A9C7D1ED9B5E900D929FF /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		247A9CD11EDA051200D929FF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		247A9D291EDAC81500D929FF /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		247A9D291EDAC81500D929FF /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
@@ -143,7 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				247A9D2B1EDACD0400D929FF /* Application */,
-				247A9D241EDAAD4A00D929FF /* Model */,
+				247A9D2F1EDAD0DA00D929FF /* Data */,
+				247A9D241EDAAD4A00D929FF /* Domain */,
 				247A9D2C1EDACD4900D929FF /* UI */,
 				247A9D2D1EDACEDE00D929FF /* Utility */,
 				24410D711D2427AA008B0A97 /* Assets.xcassets */,
@@ -192,14 +193,13 @@
 			path = Operator;
 			sourceTree = "<group>";
 		};
-		247A9D241EDAAD4A00D929FF /* Model */ = {
+		247A9D241EDAAD4A00D929FF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				247A9D291EDAC81500D929FF /* HTTPClient.swift */,
-				2419F2881D441703005917D2 /* HogeModel.swift */,
 				244274EB1D40F28000088A78 /* PushNotificationManager.swift */,
 			);
-			path = Model;
+			name = Domain;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		247A9D251EDAADE100D929FF /* Protocol */ = {
@@ -242,7 +242,6 @@
 				247A9C7C1ED9B5B200D929FF /* Operator */,
 				247A9D251EDAADE100D929FF /* Protocol */,
 			);
-			name = Utility;
 			path = Utility;
 			sourceTree = "<group>";
 		};
@@ -252,8 +251,17 @@
 				242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */,
 				243F94881D25825B00C302D0 /* Regexp.swift */,
 			);
-			name = Model;
 			path = Model;
+			sourceTree = "<group>";
+		};
+		247A9D2F1EDAD0DA00D929FF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				247A9D291EDAC81500D929FF /* HTTPClient.swift */,
+				2419F2881D441703005917D2 /* HogeModel.swift */,
+			);
+			name = Data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
