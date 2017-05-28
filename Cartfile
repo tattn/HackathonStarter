@@ -43,6 +43,7 @@ github "malcommac/SwiftDate" ~> 4.1.2
 
 # Reactive Programming
 github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/RxAlamofire"
 
 
 #############################################################

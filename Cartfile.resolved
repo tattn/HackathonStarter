@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.4.0"
 github "ReactiveX/RxSwift" "3.4.1"
+github "RxSwiftCommunity/RxAlamofire" "3.0.2"
 github "SVProgressHUD/SVProgressHUD" "2.1.2"
 github "ViccAlexander/Chameleon" "2.2.0"
 github "ashleymills/Reachability.swift" "v3"
