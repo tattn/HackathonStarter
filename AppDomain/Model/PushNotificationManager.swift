@@ -37,10 +37,10 @@ struct PushNotificationManager {
                 }
                 
                 if granted {
-                    debugPrint("Push notification is granted")
+                    print("Push notification is granted")
                     application.registerForRemoteNotifications()
                 } else {
-                    debugPrint("Push notification is NOT granted")
+                    print("Push notification is NOT granted")
                 }
             }
         } else {

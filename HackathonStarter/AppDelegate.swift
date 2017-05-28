@@ -89,7 +89,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-        debugPrint("push notification is open")
+        print("push notification is open")
         completionHandler()
     }
     
@@ -98,9 +98,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         if notification.request.trigger is UNPushNotificationTrigger {
-            debugPrint("receive a push notification on foreground")
+            print("receive a push notification on foreground")
         } else {
-            debugPrint("receive a local notification on foreground")
+            print("receive a local notification on foreground")
         }
         
         switch notification.request.identifier {
