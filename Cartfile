@@ -12,7 +12,7 @@ github "Alamofire/Alamofire"
 github "ashleymills/Reachability.swift" ~> 3.0
 
 # Storyboard/Nib Helper
-github "tarunon/Instantiate" "feature/instantiate_init"
+github "tarunon/Instantiate"
 
 # Object Mapping
 github "ikesyo/Himotoki"
@@ -45,7 +45,6 @@ github "malcommac/SwiftDate" ~> 4.1.2
 github "ReactiveX/RxSwift"
 github "RxSwiftCommunity/RxAlamofire"
 
-
 #############################################################
 # Optional
 
@@ -55,4 +54,6 @@ github "RxSwiftCommunity/RxAlamofire"
 # GPS
 # github 'malcommac/SwiftLocation'
 
+# XML
+# github "chenyunguiMilook/SwiftyXML"
 
