@@ -1,8 +1,8 @@
 //
-//  HogeModel.swift
+//  FooModel.swift
 //  HackathonStarter
 //
-//  Created by 田中　達也 on 2016/07/24.
+//  Created by Tatsuya Tanaka on 2016/07/24.
 //  Copyright © 2016年 tattn. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import RealmSwift
 import Himotoki
 import SwiftDate
 
-final class HogeModel: Object {
+final class FooModel: Object {
 
     fileprivate(set) dynamic var imageUrl: String = ""
     fileprivate(set) dynamic var updatedAt: Date = .init()
@@ -27,18 +27,18 @@ final class HogeModel: Object {
     }
 }
 
-extension HogeModel: Decodable {
+extension FooModel: Decodable {
     
-    static func decode(_ e: Extractor) throws -> HogeModel {
-        return try HogeModel(
+    static func decode(_ e: Extractor) throws -> FooModel {
+        return try FooModel(
             imageUrl: e <| "imageUrl",
             updatedAt: e <| "updatedAt"
         )
     }
 }
 
-extension HogeModel {
-    static func all() -> [HogeModel] {
+extension FooModel {
+    static func all() -> [FooModel] {
         if let realm = try? Realm() {
             return Array(realm.objects(self).sorted(byKeyPath: "updatedAt", ascending: false))
         }

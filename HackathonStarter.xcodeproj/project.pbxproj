@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24137CC51D297814006AE0EC /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24137CC41D297814006AE0EC /* Array+.swift */; };
-		2419F2891D441703005917D2 /* HogeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419F2881D441703005917D2 /* HogeModel.swift */; };
+		2419F2891D441703005917D2 /* FooModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419F2881D441703005917D2 /* FooModel.swift */; };
 		242C3BEA1D279ACD00BF7992 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */; };
 		242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */; };
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
@@ -63,7 +63,7 @@
 
 /* Begin PBXFileReference section */
 		24137CC41D297814006AE0EC /* Array+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
-		2419F2881D441703005917D2 /* HogeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HogeModel.swift; sourceTree = "<group>"; };
+		2419F2881D441703005917D2 /* FooModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooModel.swift; sourceTree = "<group>"; };
 		242C3BE91D279ACD00BF7992 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
@@ -218,13 +218,13 @@
 		247A9D2B1EDACD0400D929FF /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				243F948C1D2585DA00C302D0 /* AppSize.swift */,
 				24410D6A1D2427A9008B0A97 /* AppDelegate.swift */,
+				243F948C1D2585DA00C302D0 /* AppSize.swift */,
+				247A9D341EDB26C300D929FF /* Appearance.swift */,
 				247A9CD11EDA051200D929FF /* Errors.swift */,
 				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
 				247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */,
 				24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */,
-				247A9D341EDB26C300D929FF /* Appearance.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				247A9D311EDB12CB00D929FF /* HTTPClient */,
-				2419F2881D441703005917D2 /* HogeModel.swift */,
+				2419F2881D441703005917D2 /* FooModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2419F2891D441703005917D2 /* HogeModel.swift in Sources */,
+				2419F2891D441703005917D2 /* FooModel.swift in Sources */,
 				247A9D351EDB26C300D929FF /* Appearance.swift in Sources */,
 				24410D6D1D2427A9008B0A97 /* TopVC.swift in Sources */,
 				247A9D301EDAD1C300D929FF /* HTTPRequestProtocol.swift in Sources */,
