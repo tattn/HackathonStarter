@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Chameleon
 
 struct Appearance {
     static func setup() {
@@ -24,7 +23,7 @@ struct Appearance {
 }
 
 extension UIColor {
-    static var main: UIColor { return .flatRed() }
+    static var main: UIColor { return .red }
 }
 
 extension UIFont {

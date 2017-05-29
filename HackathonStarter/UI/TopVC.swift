@@ -9,6 +9,8 @@
 import UIKit
 import Instantiate
 import InstantiateStandard
+import RxSwift
+import RxCocoa
 
 final class TopVC: UIViewController, StoryboardInstantiatable {
     
@@ -18,6 +20,8 @@ final class TopVC: UIViewController, StoryboardInstantiatable {
         return UIStoryboard(name: "Main", bundle: nil)
     }
     
+    private let disposeBag = DisposeBag()
+    
     func inject(_ dependency: String) {
         label.text = dependency
     }
@@ -25,6 +29,15 @@ final class TopVC: UIViewController, StoryboardInstantiatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "🐱"
+        
+        let tapGesture = UITapGestureRecognizer()
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event.subscribe(onNext: { _ in
+            self.present(SampleListVC.instantiate(with: .init(title: "List")), animated: true)
+        })
+        .disposed(by: disposeBag)
+        
     }
 
 }

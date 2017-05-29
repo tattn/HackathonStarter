@@ -42,6 +42,9 @@
 		247A9D331EDB12F900D929FF /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D321EDB12F900D929FF /* HTTPRequest.swift */; };
 		247A9D351EDB26C300D929FF /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D341EDB26C300D929FF /* Appearance.swift */; };
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
+		249269561EDC5E2C00C24E40 /* SampleListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */; };
+		249269581EDC5EC600C24E40 /* SampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249269571EDC5EC600C24E40 /* SampleListVC.swift */; };
+		2492695E1EDC792800C24E40 /* SampleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2492695D1EDC792800C24E40 /* SampleListCell.xib */; };
 		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
@@ -100,6 +103,9 @@
 		247A9D321EDB12F900D929FF /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		247A9D341EDB26C300D929FF /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleListVC.storyboard; sourceTree = "<group>"; };
+		249269571EDC5EC600C24E40 /* SampleListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleListVC.swift; sourceTree = "<group>"; };
+		2492695D1EDC792800C24E40 /* SampleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleListCell.xib; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				247A9D2B1EDACD0400D929FF /* Application */,
 				247A9D2F1EDAD0DA00D929FF /* Data */,
 				247A9D241EDAAD4A00D929FF /* Domain */,
+				249269541EDC5E0F00C24E40 /* Template */,
 				247A9D2C1EDACD4900D929FF /* UI */,
 				247A9D2D1EDACEDE00D929FF /* Utility */,
 				24410D711D2427AA008B0A97 /* Assets.xcassets */,
@@ -277,6 +284,17 @@
 			path = HTTPClient;
 			sourceTree = "<group>";
 		};
+		249269541EDC5E0F00C24E40 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				2492695D1EDC792800C24E40 /* SampleListCell.xib */,
+				249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */,
+				249269571EDC5EC600C24E40 /* SampleListVC.swift */,
+			);
+			name = Template;
+			path = Template;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,7 +356,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2492695E1EDC792800C24E40 /* SampleListCell.xib in Resources */,
 				24410D751D2427AA008B0A97 /* LaunchScreen.storyboard in Resources */,
+				249269561EDC5E2C00C24E40 /* SampleListVC.storyboard in Resources */,
 				24410D721D2427AA008B0A97 /* Assets.xcassets in Resources */,
 				24410D701D2427AA008B0A97 /* Main.storyboard in Resources */,
 			);
@@ -403,6 +423,7 @@
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
+				249269581EDC5EC600C24E40 /* SampleListVC.swift in Sources */,
 				244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */,
 				24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
