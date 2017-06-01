@@ -178,11 +178,11 @@
 		24410D5E1D2427A9008B0A97 = {
 			isa = PBXGroup;
 			children = (
+				2441B2B21EE0670C0065A0A6 /* Frameworks */,
 				24410D691D2427A9008B0A97 /* HackathonStarter */,
-				2441B2A71EE066CF0065A0A6 /* RxHelper */,
 				24410D681D2427A9008B0A97 /* Products */,
 				244274E21D3FD42400088A78 /* Resources */,
-				2441B2B21EE0670C0065A0A6 /* Frameworks */,
+				2441B2A71EE066CF0065A0A6 /* RxHelper */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				2441B2B91EE0672B0065A0A6 /* Extension */,
-				2441B2A81EE066CF0065A0A6 /* RxHelper.h */,
 				2441B2A91EE066CF0065A0A6 /* Info.plist */,
+				2441B2A81EE066CF0065A0A6 /* RxHelper.h */,
 			);
 			path = RxHelper;
 			sourceTree = "<group>";
@@ -257,12 +257,13 @@
 		2441B2B91EE0672B0065A0A6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */,
 				2441B2BC1EE0676A0065A0A6 /* CLLocationManager+Rx.swift */,
 				2441B2BE1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift */,
+				2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */,
 				2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */,
 			);
 			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		244274E21D3FD42400088A78 /* Resources */ = {
