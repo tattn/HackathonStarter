@@ -18,6 +18,7 @@ github "tarunon/Instantiate"
 github "ikesyo/Himotoki"
 # github "Hearst-DD/ObjectMapper"
 # github "Anviking/Decodable"
+# github "johnsundell/unbox"
 
 
 # Downloading and Caching image
@@ -44,6 +45,7 @@ github "malcommac/SwiftDate" ~> 4.1.2
 # Reactive Programming
 github "ReactiveX/RxSwift"
 github "RxSwiftCommunity/RxAlamofire"
+github "RxSwiftCommunity/RxRealm"
 
 #############################################################
 # Optional
