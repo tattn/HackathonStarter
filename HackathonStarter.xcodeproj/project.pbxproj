@@ -30,6 +30,16 @@
 		24410D951D243538008B0A97 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D941D243538008B0A97 /* UIImage+.swift */; };
 		24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D961D24FCBB008B0A97 /* Comparable+.swift */; };
 		24410D991D24FD01008B0A97 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* URL+.swift */; };
+		2441B2AA1EE066CF0065A0A6 /* RxHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2441B2A81EE066CF0065A0A6 /* RxHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2441B2AD1EE066CF0065A0A6 /* RxHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2A61EE066CF0065A0A6 /* RxHelper.framework */; };
+		2441B2AE1EE066CF0065A0A6 /* RxHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2A61EE066CF0065A0A6 /* RxHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2441B2B61EE0670D0065A0A6 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2B31EE0670D0065A0A6 /* RxBlocking.framework */; };
+		2441B2B71EE0670D0065A0A6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2B41EE0670D0065A0A6 /* RxCocoa.framework */; };
+		2441B2B81EE0670D0065A0A6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2B51EE0670D0065A0A6 /* RxSwift.framework */; };
+		2441B2BB1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */; };
+		2441B2BD1EE0676A0065A0A6 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2BC1EE0676A0065A0A6 /* CLLocationManager+Rx.swift */; };
+		2441B2BF1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2BE1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift */; };
+		2441B2C11EE067940065A0A6 /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
@@ -51,6 +61,16 @@
 		24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD0C491D5F34DF0031B6F0 /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2441B2AB1EE066CF0065A0A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24410D5F1D2427A9008B0A97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2441B2A51EE066CF0065A0A6;
+			remoteInfo = RxHelper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		247A9CE41EDA0D6000D929FF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -58,6 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2441B2AE1EE066CF0065A0A6 /* RxHelper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +111,16 @@
 		24410D941D243538008B0A97 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		24410D961D24FCBB008B0A97 /* Comparable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+.swift"; sourceTree = "<group>"; };
 		24410D981D24FD01008B0A97 /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		2441B2A61EE066CF0065A0A6 /* RxHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2441B2A81EE066CF0065A0A6 /* RxHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxHelper.h; sourceTree = "<group>"; };
+		2441B2A91EE066CF0065A0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2441B2B31EE0670D0065A0A6 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		2441B2B41EE0670D0065A0A6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		2441B2B51EE0670D0065A0A6 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxImagePickerDelegateProxy.swift; sourceTree = "<group>"; };
+		2441B2BC1EE0676A0065A0A6 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		2441B2BE1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
+		2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Rx.swift"; sourceTree = "<group>"; };
 		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
@@ -117,6 +148,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2441B2AD1EE066CF0065A0A6 /* RxHelper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2441B2A21EE066CF0065A0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2441B2B61EE0670D0065A0A6 /* RxBlocking.framework in Frameworks */,
+				2441B2B71EE0670D0065A0A6 /* RxCocoa.framework in Frameworks */,
+				2441B2B81EE0670D0065A0A6 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				24410D691D2427A9008B0A97 /* HackathonStarter */,
+				2441B2A71EE066CF0065A0A6 /* RxHelper */,
 				24410D681D2427A9008B0A97 /* Products */,
 				244274E21D3FD42400088A78 /* Resources */,
+				2441B2B21EE0670C0065A0A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				24410D671D2427A9008B0A97 /* HackathonStarter.app */,
+				2441B2A61EE066CF0065A0A6 /* RxHelper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +232,37 @@
 				24410D981D24FD01008B0A97 /* URL+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2441B2A71EE066CF0065A0A6 /* RxHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2441B2B91EE0672B0065A0A6 /* Extension */,
+				2441B2A81EE066CF0065A0A6 /* RxHelper.h */,
+				2441B2A91EE066CF0065A0A6 /* Info.plist */,
+			);
+			path = RxHelper;
+			sourceTree = "<group>";
+		};
+		2441B2B21EE0670C0065A0A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2441B2B31EE0670D0065A0A6 /* RxBlocking.framework */,
+				2441B2B41EE0670D0065A0A6 /* RxCocoa.framework */,
+				2441B2B51EE0670D0065A0A6 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2441B2B91EE0672B0065A0A6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */,
+				2441B2BC1EE0676A0065A0A6 /* CLLocationManager+Rx.swift */,
+				2441B2BE1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift */,
+				2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		244274E21D3FD42400088A78 /* Resources */ = {
@@ -291,11 +367,21 @@
 				249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */,
 				249269571EDC5EC600C24E40 /* SampleListVC.swift */,
 			);
-			name = Template;
 			path = Template;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2441B2A31EE066CF0065A0A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2441B2AA1EE066CF0065A0A6 /* RxHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		24410D661D2427A9008B0A97 /* HackathonStarter */ = {
@@ -311,11 +397,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				2441B2AC1EE066CF0065A0A6 /* PBXTargetDependency */,
 			);
 			name = HackathonStarter;
 			productName = HackathonStarter;
 			productReference = 24410D671D2427A9008B0A97 /* HackathonStarter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2441B2A51EE066CF0065A0A6 /* RxHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2441B2B11EE066CF0065A0A6 /* Build configuration list for PBXNativeTarget "RxHelper" */;
+			buildPhases = (
+				2441B2A11EE066CF0065A0A6 /* Sources */,
+				2441B2A21EE066CF0065A0A6 /* Frameworks */,
+				2441B2A31EE066CF0065A0A6 /* Headers */,
+				2441B2A41EE066CF0065A0A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxHelper;
+			productName = RxHelper;
+			productReference = 2441B2A61EE066CF0065A0A6 /* RxHelper.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -330,6 +435,11 @@
 					24410D661D2427A9008B0A97 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
+					};
+					2441B2A51EE066CF0065A0A6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -347,6 +457,7 @@
 			projectRoot = "";
 			targets = (
 				24410D661D2427A9008B0A97 /* HackathonStarter */,
+				2441B2A51EE066CF0065A0A6 /* RxHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -361,6 +472,13 @@
 				249269561EDC5E2C00C24E40 /* SampleListVC.storyboard in Resources */,
 				24410D721D2427AA008B0A97 /* Assets.xcassets in Resources */,
 				24410D701D2427AA008B0A97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2441B2A41EE066CF0065A0A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +567,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2441B2A11EE066CF0065A0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2441B2BB1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift in Sources */,
+				2441B2BF1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
+				2441B2C11EE067940065A0A6 /* UIImagePickerController+Rx.swift in Sources */,
+				2441B2BD1EE0676A0065A0A6 /* CLLocationManager+Rx.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2441B2AC1EE066CF0065A0A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2441B2A51EE066CF0065A0A6 /* RxHelper */;
+			targetProxy = 2441B2AB1EE066CF0065A0A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		24410D6E1D2427AA008B0A97 /* Main.storyboard */ = {
@@ -601,6 +738,64 @@
 			};
 			name = Release;
 		};
+		2441B2AF1EE066CF0065A0A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RxHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.RxHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2441B2B01EE066CF0065A0A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RxHelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.RxHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -621,6 +816,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2441B2B11EE066CF0065A0A6 /* Build configuration list for PBXNativeTarget "RxHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2441B2AF1EE066CF0065A0A6 /* Debug */,
+				2441B2B01EE066CF0065A0A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
