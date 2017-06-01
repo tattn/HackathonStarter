@@ -13,7 +13,7 @@
 		242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */; };
 		243F94841D25815500C302D0 /* Ionicons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94831D25815500C302D0 /* Ionicons.swift */; };
 		243F94891D25825B00C302D0 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F94881D25825B00C302D0 /* Regexp.swift */; };
-		243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948A1D25852500C302D0 /* GlobalFunctions.swift */; };
+		243F948B1D25852500C302D0 /* CoreFunctionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948A1D25852500C302D0 /* CoreFunctionExtension.swift */; };
 		243F948D1D2585DA00C302D0 /* AppSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948C1D2585DA00C302D0 /* AppSize.swift */; };
 		243F94901D25874800C302D0 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243F948F1D25874800C302D0 /* IBDesignable.swift */; };
 		24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D6A1D2427A9008B0A97 /* AppDelegate.swift */; };
@@ -40,6 +40,7 @@
 		2441B2BD1EE0676A0065A0A6 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2BC1EE0676A0065A0A6 /* CLLocationManager+Rx.swift */; };
 		2441B2BF1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2BE1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift */; };
 		2441B2C11EE067940065A0A6 /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */; };
+		2441B2C41EE080DC0065A0A6 /* Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2441B2C31EE080DC0065A0A6 /* Retry.swift */; };
 		244274D11D3F4B5F00088A78 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274D01D3F4B5F00088A78 /* UIImageView+.swift */; };
 		244274E41D3FD4BB00088A78 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274E31D3FD4BB00088A78 /* Realm+.swift */; };
 		244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244274EB1D40F28000088A78 /* PushNotificationManager.swift */; };
@@ -92,7 +93,7 @@
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
-		243F948A1D25852500C302D0 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		243F948A1D25852500C302D0 /* CoreFunctionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreFunctionExtension.swift; path = CoreFunctionExtension.swift; sourceTree = "<group>"; };
 		243F948C1D2585DA00C302D0 /* AppSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSize.swift; sourceTree = "<group>"; };
 		243F948F1D25874800C302D0 /* IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		24410D671D2427A9008B0A97 /* HackathonStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +122,7 @@
 		2441B2BC1EE0676A0065A0A6 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 		2441B2BE1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Rx.swift"; sourceTree = "<group>"; };
+		2441B2C31EE080DC0065A0A6 /* Retry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retry.swift; sourceTree = "<group>"; };
 		244274D01D3F4B5F00088A78 /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		244274E11D3FD41600088A78 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		244274E31D3FD4BB00088A78 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
@@ -262,8 +264,17 @@
 				2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */,
 				2441B2C01EE067940065A0A6 /* UIImagePickerController+Rx.swift */,
 			);
-			name = Extension;
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2441B2C21EE080C70065A0A6 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				243F948A1D25852500C302D0 /* CoreFunctionExtension.swift */,
+				2441B2C31EE080DC0065A0A6 /* Retry.swift */,
+			);
+			name = Function;
+			path = Function;
 			sourceTree = "<group>";
 		};
 		244274E21D3FD42400088A78 /* Resources */ = {
@@ -306,7 +317,6 @@
 				243F948C1D2585DA00C302D0 /* AppSize.swift */,
 				247A9D341EDB26C300D929FF /* Appearance.swift */,
 				247A9CD11EDA051200D929FF /* Errors.swift */,
-				243F948A1D25852500C302D0 /* GlobalFunctions.swift */,
 				247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */,
 				24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */,
 			);
@@ -327,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				24410D7E1D242A00008B0A97 /* Extension */,
+				2441B2C21EE080C70065A0A6 /* Function */,
 				247A9D2E1EDACF0800D929FF /* Model */,
 				247A9C7C1ED9B5B200D929FF /* Operator */,
 				247A9D251EDAADE100D929FF /* Protocol */,
@@ -550,7 +561,7 @@
 				24FD0C4A1D5F34DF0031B6F0 /* ProgressHUD.swift in Sources */,
 				24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */,
 				24410D6B1D2427A9008B0A97 /* AppDelegate.swift in Sources */,
-				243F948B1D25852500C302D0 /* GlobalFunctions.swift in Sources */,
+				243F948B1D25852500C302D0 /* CoreFunctionExtension.swift in Sources */,
 				24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */,
 				247A9C801ED9BF3C00D929FF /* NotificationKey.swift in Sources */,
 				243F948D1D2585DA00C302D0 /* AppSize.swift in Sources */,
@@ -564,6 +575,7 @@
 				247A9CD21EDA051200D929FF /* Errors.swift in Sources */,
 				247A9D331EDB12F900D929FF /* HTTPRequest.swift in Sources */,
 				242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */,
+				2441B2C41EE080DC0065A0A6 /* Retry.swift in Sources */,
 				24410D861D242BEE008B0A97 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +837,7 @@
 				2441B2B01EE066CF0065A0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
