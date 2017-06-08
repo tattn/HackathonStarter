@@ -51,13 +51,11 @@ final class SampleListVC: UIViewController {
         }
     }
     
-    fileprivate let requester = HTTPJSONRequest()
-        .setURL("https://jsonplaceholder.typicode.com/photos")
-    
-    fileprivate lazy var items: Observable<[SampleItem]> = {
-        return self.requester
-            .asObservable()
-            .map { try [SampleItem].decode($0) }
+    private let requestSubject = PublishSubject<Void>()
+    private lazy var items: Driver<[SampleItem]> = {
+        return self.requestSubject
+            .flatMapLatest { [unowned self] _ in self.requestListData() }
+            .asDriver(onErrorDriveWith: .empty())
     }()
     
     static var instantiateSource: InstantiateSource {
@@ -68,6 +66,7 @@ final class SampleListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.refreshControl = UIRefreshControl()
         tableView.registerNib(type: SampleListCell.self)
         bind()
     }
@@ -76,16 +75,40 @@ final class SampleListVC: UIViewController {
         super.viewWillAppear(animated)
         tableView.indexPathsForSelectedRows?
             .forEach { tableView.deselectRow(at: $0, animated: true) }
+        requestSubject.onNext()
     }
     
     private func bind() {
-        items.bind(to: tableView.rx.items) { tableView, row, element in
-            return SampleListCell.dequeue(from: tableView,
+        items
+            .do(onNext: { [unowned self] _ in self.tableView.refreshControl?.endRefreshing() })
+            .drive(tableView.rx.items) { tableView, row, element in
+                SampleListCell.dequeue(from: tableView,
                                           for: IndexPath(row: row, section: 0),
                                           with: element)
-        }
-        .disposed(by: disposeBag)
+            }
+            .disposed(by: disposeBag)
+        
+        items
+            .debug("refresh end", trimOutput: false)
+            .drive(onNext: { _ in self.tableView.refreshControl?.endRefreshing() })
+            .disposed(by: disposeBag)
+        
+        tableView.refreshControl?.rx
+            .controlEvent(.valueChanged)
+            .debug("refresh start", trimOutput: false)
+            .filter { [unowned self] _ in self.tableView.refreshControl?.isRefreshing == true }
+            .bind(to: requestSubject)
+            .disposed(by: disposeBag)
     }
+    
+    private func requestListData() -> Observable<[SampleItem]> {
+        return HTTPJSONRequest()
+            .setURL("https://jsonplaceholder.typicode.com/photos")
+            .asObservable()
+            .map { try [SampleItem].decode($0) }
+            .debug("request", trimOutput: false)
+    }
+
 }
 
 extension SampleListVC: StoryboardInstantiatable {
