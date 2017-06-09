@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-struct ProgressHUD {
+class ProgressHUD: NSObject {
     static func show(title: String? = nil, ignoreInteraction: Bool = false) {
         if let title = title {
             SVProgressHUD.show(withStatus: title)
@@ -27,5 +27,43 @@ struct ProgressHUD {
         if UIApplication.shared.isIgnoringInteractionEvents {
             UIApplication.shared.endIgnoringInteractionEvents()
         }
+    }
+}
+
+import RxSwift
+import RxCocoa
+
+extension Reactive where Base: ProgressHUD {
+
+    static var isShowing: AnyObserver<Bool> {
+        return AnyObserver { event in
+            MainScheduler.ensureExecutingOnScheduler()
+            
+            switch (event) {
+            case .next(let value):
+                if value {
+                    ProgressHUD.show()
+                } else {
+                    ProgressHUD.dismiss()
+                }
+            case .error:
+                ProgressHUD.dismiss()
+            case .completed:
+                break
+            }
+        }
+    }
+}
+
+import RxHelper
+
+extension ObservableConvertibleType {
+    func progress(with bag: DisposeBag) -> Observable<E> {
+        let activityIndicator = ActivityIndicator()
+        activityIndicator
+            .asDriver()
+            .drive(ProgressHUD.rx.isShowing)
+            .disposed(by: bag)
+        return trackActivity(activityIndicator)
     }
 }

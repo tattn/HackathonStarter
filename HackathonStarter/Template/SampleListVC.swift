@@ -13,6 +13,7 @@ import InstantiateStandard
 import RxSwift
 import RxCocoa
 import Himotoki
+import RxHelper
 
 // MARK: - Model
 
@@ -88,14 +89,8 @@ final class SampleListVC: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        items
-            .debug("refresh end", trimOutput: false)
-            .drive(onNext: { _ in self.tableView.refreshControl?.endRefreshing() })
-            .disposed(by: disposeBag)
-        
         tableView.refreshControl?.rx
             .controlEvent(.valueChanged)
-            .debug("refresh start", trimOutput: false)
             .filter { [unowned self] _ in self.tableView.refreshControl?.isRefreshing == true }
             .bind(to: requestSubject)
             .disposed(by: disposeBag)
@@ -105,8 +100,8 @@ final class SampleListVC: UIViewController {
         return HTTPJSONRequest()
             .setURL("https://jsonplaceholder.typicode.com/photos")
             .asObservable()
+            .progress(with: disposeBag)
             .map { try [SampleItem].decode($0) }
-            .debug("request", trimOutput: false)
     }
 
 }

@@ -56,6 +56,7 @@
 		249269561EDC5E2C00C24E40 /* SampleListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */; };
 		249269581EDC5EC600C24E40 /* SampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249269571EDC5EC600C24E40 /* SampleListVC.swift */; };
 		2492695E1EDC792800C24E40 /* SampleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2492695D1EDC792800C24E40 /* SampleListCell.xib */; };
+		24A83B771EEAEBD300F72A23 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */; };
 		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
@@ -139,6 +140,7 @@
 		249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleListVC.storyboard; sourceTree = "<group>"; };
 		249269571EDC5EC600C24E40 /* SampleListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleListVC.swift; sourceTree = "<group>"; };
 		2492695D1EDC792800C24E40 /* SampleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleListCell.xib; sourceTree = "<group>"; };
+		24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				2441B2B91EE0672B0065A0A6 /* Extension */,
 				2441B2A91EE066CF0065A0A6 /* Info.plist */,
 				2441B2A81EE066CF0065A0A6 /* RxHelper.h */,
+				24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */,
 			);
 			path = RxHelper;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2441B2BB1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift in Sources */,
+				24A83B771EEAEBD300F72A23 /* ActivityIndicator.swift in Sources */,
 				2441B2BF1EE067810065A0A6 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				2441B2C11EE067940065A0A6 /* UIImagePickerController+Rx.swift in Sources */,
 				2441B2BD1EE0676A0065A0A6 /* CLLocationManager+Rx.swift in Sources */,
