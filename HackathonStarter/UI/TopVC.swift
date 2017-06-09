@@ -20,8 +20,6 @@ final class TopVC: UIViewController, StoryboardInstantiatable {
         return UIStoryboard(name: "Main", bundle: nil)
     }
     
-    private let disposeBag = DisposeBag()
-    
     func inject(_ dependency: String) {
         label.text = dependency
     }

@@ -63,8 +63,6 @@ final class SampleListVC: UIViewController {
         return .identifier(className)
     }
     
-    fileprivate let disposeBag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.refreshControl = UIRefreshControl()

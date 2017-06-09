@@ -42,3 +42,11 @@ extension NSObjectProtocol where Self: NSObject {
         return properties
     }
 }
+
+import RxSwift
+import NSObject_Rx
+extension NSObject {
+    var disposeBag: DisposeBag {
+        return rx.disposeBag
+    }
+}

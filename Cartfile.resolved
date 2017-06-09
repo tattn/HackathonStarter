@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.4.0"
 github "ReactiveX/RxSwift" "3.5.0"
+github "RxSwiftCommunity/NSObject-Rx" "2.3.0"
 github "RxSwiftCommunity/RxAlamofire" "3.0.2"
 github "RxSwiftCommunity/RxRealm" "0.6.0"
 github "SVProgressHUD/SVProgressHUD" "2.1.2"
