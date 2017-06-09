@@ -93,7 +93,7 @@
 		242CA74D1D5DA5B400BD0C4E /* NSLocalizedString+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocalizedString+.swift"; sourceTree = "<group>"; };
 		243F94831D25815500C302D0 /* Ionicons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ionicons.swift; sourceTree = "<group>"; };
 		243F94881D25825B00C302D0 /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
-		243F948A1D25852500C302D0 /* CoreFunctionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreFunctionExtension.swift; path = CoreFunctionExtension.swift; sourceTree = "<group>"; };
+		243F948A1D25852500C302D0 /* CoreFunctionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreFunctionExtension.swift; sourceTree = "<group>"; };
 		243F948C1D2585DA00C302D0 /* AppSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSize.swift; sourceTree = "<group>"; };
 		243F948F1D25874800C302D0 /* IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		24410D671D2427A9008B0A97 /* HackathonStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,7 +273,6 @@
 				243F948A1D25852500C302D0 /* CoreFunctionExtension.swift */,
 				2441B2C31EE080DC0065A0A6 /* Retry.swift */,
 			);
-			name = Function;
 			path = Function;
 			sourceTree = "<group>";
 		};
@@ -524,6 +523,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
