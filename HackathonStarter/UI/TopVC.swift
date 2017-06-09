@@ -15,6 +15,7 @@ import RxCocoa
 final class TopVC: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var label2: UILabel!
     
     static var storyboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
@@ -27,15 +28,21 @@ final class TopVC: UIViewController, StoryboardInstantiatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "🐱"
+        label2.text = "🐶"
         
-        let tapGesture = UITapGestureRecognizer()
-        label.isUserInteractionEnabled = true
+        var tapGesture = UITapGestureRecognizer()
         label.addGestureRecognizer(tapGesture)
         tapGesture.rx.event.subscribe(onNext: { _ in
-            self.present(SampleListVC.instantiate(with: .init(title: "List")), animated: true)
+            self.navigationController?.pushViewController(SimpleListVC.instantiate(with: .init(title: "🐱")), animated: true)
         })
         .disposed(by: disposeBag)
         
+        tapGesture = UITapGestureRecognizer()
+        label2.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event.subscribe(onNext: { _ in
+            self.navigationController?.pushViewController(SimpleCollectionVC.instantiate(with: .init(title: "🐶")), animated: true)
+        })
+        .disposed(by: disposeBag)
     }
 
 }

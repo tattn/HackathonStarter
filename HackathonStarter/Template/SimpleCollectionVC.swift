@@ -1,8 +1,8 @@
 //
-//  SampleListVC.swift
+//  SimpleCollectionVC.swift
 //  HackathonStarter
 //
-//  Created by Tatsuya Tanaka on 20170529.
+//  Created by Tatsuya Tanaka on 20170610.
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
@@ -15,42 +15,21 @@ import RxCocoa
 import Himotoki
 import RxHelper
 
-// MARK: - Model
-
-struct SampleItem: Decodable {
-    let title: String
-    let imageURL: String
-    
-    static func decode(_ e: Extractor) throws -> SampleItem {
-        return try SampleItem(
-            title: e <| "title",
-            imageURL: e <| "thumbnailUrl"
-        )
-    }
-}
-
 // MARK: - Cell
 
-final class SampleListCell: UITableViewCell, Reusable, NibInstantiatable {
+final class SimpleCollectionViewCell: UICollectionViewCell, Reusable, NibInstantiatable {
     @IBOutlet private weak var thumbnailImageView: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
     
     func inject(_ dependency: SampleItem) {
         thumbnailImageView.setWebImage(dependency.imageURL)
-        titleLabel.text = dependency.title
     }
 }
 
 // MARK: - ViewController
 
-final class SampleListVC: UIViewController {
+final class SimpleCollectionVC: UIViewController {
     
-    @IBOutlet private weak var tableView: UITableView! {
-        didSet {
-            tableView.rowHeight = UITableViewAutomaticDimension
-            tableView.estimatedRowHeight = 50
-        }
-    }
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     private let requestSubject = PublishSubject<Void>()
     private lazy var items: Driver<[SampleItem]> = {
@@ -65,31 +44,29 @@ final class SampleListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.refreshControl = UIRefreshControl()
-        tableView.registerNib(type: SampleListCell.self)
+        collectionView.refreshControl = UIRefreshControl()
+        collectionView.registerNib(type: SimpleCollectionViewCell.self)
         bind()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.indexPathsForSelectedRows?
-            .forEach { tableView.deselectRow(at: $0, animated: true) }
         requestSubject.onNext()
     }
     
     private func bind() {
         items
-            .do(onNext: { [unowned self] _ in self.tableView.refreshControl?.endRefreshing() })
-            .drive(tableView.rx.items) { tableView, row, element in
-                SampleListCell.dequeue(from: tableView,
-                                          for: IndexPath(row: row, section: 0),
-                                          with: element)
+            .do(onNext: { [unowned self] _ in self.collectionView.refreshControl?.endRefreshing() })
+            .drive(collectionView.rx.items) { collectionView, index, item in
+                SimpleCollectionViewCell.dequeue(from: collectionView,
+                                                 for: IndexPath(row: index, section: 0),
+                                                 with: item)
             }
             .disposed(by: disposeBag)
         
-        tableView.refreshControl?.rx
+        collectionView.refreshControl?.rx
             .controlEvent(.valueChanged)
-            .filter { [unowned self] _ in self.tableView.refreshControl?.isRefreshing == true }
+            .filter { [unowned self] _ in self.collectionView.refreshControl?.isRefreshing == true }
             .bind(to: requestSubject)
             .disposed(by: disposeBag)
     }
@@ -104,7 +81,7 @@ final class SampleListVC: UIViewController {
 
 }
 
-extension SampleListVC: StoryboardInstantiatable {
+extension SimpleCollectionVC: StoryboardInstantiatable {
     struct Dependency {
         let title: String
 //        let id: String

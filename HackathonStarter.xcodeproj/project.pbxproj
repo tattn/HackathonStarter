@@ -53,10 +53,13 @@
 		247A9D331EDB12F900D929FF /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D321EDB12F900D929FF /* HTTPRequest.swift */; };
 		247A9D351EDB26C300D929FF /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A9D341EDB26C300D929FF /* Appearance.swift */; };
 		247D6D541D47CEBE005864EC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D6D531D47CEBE005864EC /* UIFont+.swift */; };
-		249269561EDC5E2C00C24E40 /* SampleListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */; };
-		249269581EDC5EC600C24E40 /* SampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249269571EDC5EC600C24E40 /* SampleListVC.swift */; };
-		2492695E1EDC792800C24E40 /* SampleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2492695D1EDC792800C24E40 /* SampleListCell.xib */; };
+		249269561EDC5E2C00C24E40 /* SimpleListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249269551EDC5E2C00C24E40 /* SimpleListVC.storyboard */; };
+		249269581EDC5EC600C24E40 /* SimpleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249269571EDC5EC600C24E40 /* SimpleListVC.swift */; };
+		2492695E1EDC792800C24E40 /* SimpleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2492695D1EDC792800C24E40 /* SimpleListCell.xib */; };
 		24A83B771EEAEBD300F72A23 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */; };
+		24A83B7B1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A83B7A1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib */; };
+		24A83B7D1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A83B7C1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard */; };
+		24A83B7F1EEAFA7000F72A23 /* SimpleCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A83B7E1EEAFA7000F72A23 /* SimpleCollectionVC.swift */; };
 		24C450041ED75D1B009B6B8C /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */; };
 		24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA30E31D441E3E00E4C9C4 /* NSError+.swift */; };
 		24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDCC6E1D36870700CC8046 /* Dictionary+.swift */; };
@@ -137,10 +140,13 @@
 		247A9D321EDB12F900D929FF /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		247A9D341EDB26C300D929FF /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		247D6D531D47CEBE005864EC /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
-		249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleListVC.storyboard; sourceTree = "<group>"; };
-		249269571EDC5EC600C24E40 /* SampleListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleListVC.swift; sourceTree = "<group>"; };
-		2492695D1EDC792800C24E40 /* SampleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleListCell.xib; sourceTree = "<group>"; };
+		249269551EDC5E2C00C24E40 /* SimpleListVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleListVC.storyboard; sourceTree = "<group>"; };
+		249269571EDC5EC600C24E40 /* SimpleListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleListVC.swift; sourceTree = "<group>"; };
+		2492695D1EDC792800C24E40 /* SimpleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleListCell.xib; sourceTree = "<group>"; };
 		24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		24A83B7A1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
+		24A83B7C1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleCollectionVC.storyboard; sourceTree = "<group>"; };
+		24A83B7E1EEAFA7000F72A23 /* SimpleCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionVC.swift; sourceTree = "<group>"; };
 		24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		24DA30E31D441E3E00E4C9C4 /* NSError+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+.swift"; sourceTree = "<group>"; };
 		24DDCC6E1D36870700CC8046 /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
@@ -377,11 +383,30 @@
 		249269541EDC5E0F00C24E40 /* Template */ = {
 			isa = PBXGroup;
 			children = (
-				2492695D1EDC792800C24E40 /* SampleListCell.xib */,
-				249269551EDC5E2C00C24E40 /* SampleListVC.storyboard */,
-				249269571EDC5EC600C24E40 /* SampleListVC.swift */,
+				24A83B791EEAF98400F72A23 /* SimpleCollectionView */,
+				24A83B781EEAF95D00F72A23 /* SimpleTableView */,
 			);
 			path = Template;
+			sourceTree = "<group>";
+		};
+		24A83B781EEAF95D00F72A23 /* SimpleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				2492695D1EDC792800C24E40 /* SimpleListCell.xib */,
+				249269551EDC5E2C00C24E40 /* SimpleListVC.storyboard */,
+				249269571EDC5EC600C24E40 /* SimpleListVC.swift */,
+			);
+			name = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		24A83B791EEAF98400F72A23 /* SimpleCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				24A83B7A1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib */,
+				24A83B7C1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard */,
+				24A83B7E1EEAFA7000F72A23 /* SimpleCollectionVC.swift */,
+			);
+			name = SimpleCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,9 +506,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2492695E1EDC792800C24E40 /* SampleListCell.xib in Resources */,
+				24A83B7D1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard in Resources */,
+				2492695E1EDC792800C24E40 /* SimpleListCell.xib in Resources */,
 				24410D751D2427AA008B0A97 /* LaunchScreen.storyboard in Resources */,
-				249269561EDC5E2C00C24E40 /* SampleListVC.storyboard in Resources */,
+				24A83B7B1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib in Resources */,
+				249269561EDC5E2C00C24E40 /* SimpleListVC.storyboard in Resources */,
 				24410D721D2427AA008B0A97 /* Assets.xcassets in Resources */,
 				24410D701D2427AA008B0A97 /* Main.storyboard in Resources */,
 			);
@@ -557,7 +584,7 @@
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
 				24410D8E1D242E48008B0A97 /* UIView+.swift in Sources */,
 				24410D901D242E98008B0A97 /* CollectionType+.swift in Sources */,
-				249269581EDC5EC600C24E40 /* SampleListVC.swift in Sources */,
+				249269581EDC5EC600C24E40 /* SimpleListVC.swift in Sources */,
 				244274F41D410CE100088A78 /* SwipeReturnable.swift in Sources */,
 				24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */,
 				244274EC1D40F28000088A78 /* PushNotificationManager.swift in Sources */,
@@ -576,6 +603,7 @@
 				244274FD1D4128D500088A78 /* UIViewController+.swift in Sources */,
 				243F94891D25825B00C302D0 /* Regexp.swift in Sources */,
 				242C3BEA1D279ACD00BF7992 /* KeyboardObserver.swift in Sources */,
+				24A83B7F1EEAFA7000F72A23 /* SimpleCollectionVC.swift in Sources */,
 				247A9CD21EDA051200D929FF /* Errors.swift in Sources */,
 				247A9D331EDB12F900D929FF /* HTTPRequest.swift in Sources */,
 				242CA74E1D5DA5B400BD0C4E /* NSLocalizedString+.swift in Sources */,

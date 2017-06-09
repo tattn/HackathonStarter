@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimpleCollectionViewCell" id="esn-1T-ODB" customClass="SimpleCollectionViewCell" customModule="HackathonStarter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U7d-E1-EMC">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="U7d-E1-EMC" firstAttribute="top" secondItem="esn-1T-ODB" secondAttribute="top" id="04S-lt-Z2L"/>
+                <constraint firstAttribute="bottom" secondItem="U7d-E1-EMC" secondAttribute="bottom" id="DtY-Ix-BXC"/>
+                <constraint firstAttribute="trailing" secondItem="U7d-E1-EMC" secondAttribute="trailing" id="XEa-fM-i2c"/>
+                <constraint firstItem="U7d-E1-EMC" firstAttribute="leading" secondItem="esn-1T-ODB" secondAttribute="leading" id="fn9-ch-hkv"/>
+            </constraints>
+            <size key="customSize" width="90" height="90"/>
+            <connections>
+                <outlet property="thumbnailImageView" destination="U7d-E1-EMC" id="TgM-ac-hOq"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="55"/>
+        </collectionViewCell>
+    </objects>
+</document>
