@@ -248,9 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				2441B2B91EE0672B0065A0A6 /* Extension */,
+				24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */,
 				2441B2A91EE066CF0065A0A6 /* Info.plist */,
 				2441B2A81EE066CF0065A0A6 /* RxHelper.h */,
-				24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */,
 			);
 			path = RxHelper;
 			sourceTree = "<group>";
@@ -397,16 +397,18 @@
 				249269571EDC5EC600C24E40 /* SimpleListVC.swift */,
 			);
 			name = SimpleTableView;
+			path = SimpleTableView;
 			sourceTree = "<group>";
 		};
 		24A83B791EEAF98400F72A23 /* SimpleCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				24A83B7A1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib */,
 				24A83B7C1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard */,
 				24A83B7E1EEAFA7000F72A23 /* SimpleCollectionVC.swift */,
+				24A83B7A1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib */,
 			);
 			name = SimpleCollectionView;
+			path = SimpleCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
