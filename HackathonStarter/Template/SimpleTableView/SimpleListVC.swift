@@ -17,7 +17,7 @@ import RxHelper
 
 // MARK: - Model
 
-struct SampleItem: Decodable {
+struct SampleItem: Himotoki.Decodable {
     let title: String
     let imageURL: String
     
@@ -74,7 +74,7 @@ final class SimpleListVC: UIViewController {
         super.viewWillAppear(animated)
         tableView.indexPathsForSelectedRows?
             .forEach { tableView.deselectRow(at: $0, animated: true) }
-        requestSubject.onNext()
+        requestSubject.onNext(())
     }
     
     private func bind() {

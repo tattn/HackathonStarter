@@ -24,7 +24,7 @@ extension UIImageView {
 
     func setWebImageWithIndicator(_ url: URL?, indicatorColor: UIColor = .white) {
         addLoading()
-        kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { [weak self] _ in
+        kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { [weak self] _, _, _, _ in
             self?.removeLoading()
         }
     }

@@ -23,18 +23,11 @@ github "ikesyo/Himotoki"
 # github "Anviking/Decodable"
 # github "johnsundell/unbox"
 
-
 # Downloading and Caching image
 github "onevcat/Kingfisher"
 
-
 # Flat Color Framework
 github "ViccAlexander/Chameleon"
-
-
-# Mobile database
-github "realm/realm-cocoa"
-
 
 # Progress Indicator
 github "SVProgressHUD/SVProgressHUD"
@@ -43,16 +36,19 @@ github "SVProgressHUD/SVProgressHUD"
 github "kishikawakatsumi/KeychainAccess"
 
 # Syntax suger for Date
-github "malcommac/SwiftDate" ~> 4.1.2
+# github "malcommac/SwiftDate"
 
 # Reactive Programming
 github "ReactiveX/RxSwift"
 github "RxSwiftCommunity/RxAlamofire"
-github "RxSwiftCommunity/RxRealm"
 github "RxSwiftCommunity/NSObject-Rx"
 
 #############################################################
 # Optional
+
+# Mobile database
+# github "realm/realm-cocoa"
+# github "RxSwiftCommunity/RxRealm"
 
 # Animation
 # github "MengTo/Spring" "swift2"

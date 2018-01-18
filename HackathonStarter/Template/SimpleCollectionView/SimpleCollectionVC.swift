@@ -51,7 +51,7 @@ final class SimpleCollectionVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        requestSubject.onNext()
+        requestSubject.onNext(())
     }
     
     private func bind() {

@@ -761,13 +761,13 @@ public enum Ionicons: String {
 
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
         let attString = NSMutableAttributedString(string: self.rawValue, attributes: [
-            NSFontAttributeName: font,
-            NSForegroundColorAttributeName: color,
-            NSParagraphStyleAttributeName: style
+            NSAttributedStringKey.font: font,
+            NSAttributedStringKey.foregroundColor: color,
+            NSAttributedStringKey.paragraphStyle: style
         ])
 
         if let backgroundColor = backgroundColor {
-            attString.addAttributes([NSBackgroundColorAttributeName: backgroundColor], range: NSRange(location: 0, length: attString.length))
+            attString.addAttributes([NSAttributedStringKey.backgroundColor: backgroundColor], range: NSRange(location: 0, length: attString.length))
         }
 
         let ctx = NSStringDrawingContext()

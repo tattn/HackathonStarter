@@ -12,33 +12,33 @@ import CoreLocation
     import RxCocoa
 #endif
 
+import CoreLocation
+
 extension Reactive where Base: CLLocationManager {
-    
+
     /**
      Reactive wrapper for `delegate`.
-     
      For more information take a look at `DelegateProxyType` protocol documentation.
      */
-    public var delegate: DelegateProxy {
-        return RxCLLocationManagerDelegateProxy.proxyForObject(base)
+    public var delegate: DelegateProxy<CLLocationManager, CLLocationManagerDelegate> {
+        return RxCLLocationManagerDelegateProxy.proxy(for: base)
     }
-    
+
     // MARK: Responding to Location Events
-    
     /**
      Reactive wrapper for `delegate` message.
      */
     public var didUpdateLocations: Observable<[CLLocation]> {
-        return (delegate as! RxCLLocationManagerDelegateProxy).didUpdateLocationsSubject.asObservable()
+        return RxCLLocationManagerDelegateProxy.proxy(for: base).didUpdateLocationsSubject.asObservable()
     }
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
     public var didFailWithError: Observable<Error> {
-        return (delegate as! RxCLLocationManagerDelegateProxy).didFailWithErrorSubject.asObservable()
+        return RxCLLocationManagerDelegateProxy.proxy(for: base).didFailWithErrorSubject.asObservable()
     }
-    
+
     #if os(iOS) || os(macOS)
     /**
      Reactive wrapper for `delegate` message.
@@ -50,11 +50,10 @@ extension Reactive where Base: CLLocationManager {
         }
     }
     #endif
-    
+
     #if os(iOS)
-    
+
     // MARK: Pausing Location Updates
-    
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -64,7 +63,7 @@ extension Reactive where Base: CLLocationManager {
                 return ()
         }
     }
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -74,9 +73,8 @@ extension Reactive where Base: CLLocationManager {
                 return ()
         }
     }
-    
+
     // MARK: Responding to Heading Events
-    
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -86,9 +84,8 @@ extension Reactive where Base: CLLocationManager {
                 return try castOrThrow(CLHeading.self, a[1])
         }
     }
-    
+
     // MARK: Responding to Region Events
-    
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -98,7 +95,7 @@ extension Reactive where Base: CLLocationManager {
                 return try castOrThrow(CLRegion.self, a[1])
         }
     }
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -108,11 +105,11 @@ extension Reactive where Base: CLLocationManager {
                 return try castOrThrow(CLRegion.self, a[1])
         }
     }
-    
+
     #endif
-    
+
     #if os(iOS) || os(macOS)
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -126,7 +123,7 @@ extension Reactive where Base: CLLocationManager {
                 return (state: state, region: region)
         }
     }
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -138,7 +135,7 @@ extension Reactive where Base: CLLocationManager {
                 return (region: region, error: error)
         }
     }
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -148,13 +145,12 @@ extension Reactive where Base: CLLocationManager {
                 return try castOrThrow(CLRegion.self, a[1])
         }
     }
-    
+
     #endif
-    
+
     #if os(iOS)
-    
+
     // MARK: Responding to Ranging Events
-    
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -166,7 +162,7 @@ extension Reactive where Base: CLLocationManager {
                 return (beacons: beacons, region: region)
         }
     }
-    
+
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -178,9 +174,8 @@ extension Reactive where Base: CLLocationManager {
                 return (region: region, error: error)
         }
     }
-    
+
     // MARK: Responding to Visit Events
-    
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -191,11 +186,10 @@ extension Reactive where Base: CLLocationManager {
                 return try castOrThrow(CLVisit.self, a[1])
         }
     }
-    
+
     #endif
-    
+
     // MARK: Responding to Authorization Changes
-    
     /**
      Reactive wrapper for `delegate` message.
      */
@@ -213,7 +207,7 @@ fileprivate func castOrThrow<T>(_ resultType: T.Type, _ object: Any) throws -> T
     guard let returnValue = object as? T else {
         throw RxCocoaError.castingError(object: object, targetType: resultType)
     }
-    
+
     return returnValue
 }
 
@@ -221,10 +215,10 @@ fileprivate func castOptionalOrThrow<T>(_ resultType: T.Type, _ object: Any) thr
     if NSNull().isEqual(object) {
         return nil
     }
-    
+
     guard let returnValue = object as? T else {
         throw RxCocoaError.castingError(object: object, targetType: resultType)
     }
-    
+
     return returnValue
 }

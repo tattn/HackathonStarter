@@ -12,16 +12,22 @@ import RxSwift
 import RxAlamofire
 
 final class HTTPJSONRequest: HTTPRequestType, HTTPDefaultRequestType {
+    typealias ResponseType = Any
+
     var configuration = HTTPRequestConfiguration()
     let _request = SessionManager.default.rx.json
 }
 
 final class HTTPDataRequest: HTTPRequestType, HTTPDefaultRequestType {
+    typealias ResponseType = Data
+
     var configuration = HTTPRequestConfiguration()
     let _request =  SessionManager.default.rx.data
 }
 
 final class HTTPStringRequest: HTTPRequestType, HTTPDefaultRequestType {
+    typealias ResponseType = (HTTPURLResponse, String)
+
     var configuration = HTTPRequestConfiguration()
     let _request =  SessionManager.default.rx.responseString
 }
