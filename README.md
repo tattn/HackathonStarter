@@ -3,8 +3,8 @@ HackathonStarter
 
 ![Platform](https://img.shields.io/badge/platform-iOS-yellow.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-[![Swift Version](https://img.shields.io/badge/Swift-3-F16D39.svg)](https://developer.apple.com/swift)
-![Xcode Version](https://img.shields.io/badge/Xcode-8.3+-red.svg)
+[![Swift Version](https://img.shields.io/badge/Swift-4-F16D39.svg)](https://developer.apple.com/swift)
+![Xcode Version](https://img.shields.io/badge/Xcode-9+-red.svg)
 
 Hackathon starter kit for iOS.
 
