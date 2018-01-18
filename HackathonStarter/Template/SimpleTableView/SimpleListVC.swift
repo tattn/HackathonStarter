@@ -6,10 +6,7 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import Instantiate
-import InstantiateStandard
 import RxSwift
 import RxCocoa
 import RxHelper
@@ -23,7 +20,7 @@ struct SampleItem: Codable {
 
 // MARK: - Cell
 
-final class SimpleListCell: UITableViewCell, Reusable, NibInstantiatable {
+final class SimpleListCell: UITableViewCell, NibInstantiatable {
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
@@ -35,7 +32,7 @@ final class SimpleListCell: UITableViewCell, Reusable, NibInstantiatable {
 
 // MARK: - ViewController
 
-final class SimpleListVC: UIViewController {
+final class SimpleListVC: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -50,15 +47,15 @@ final class SimpleListVC: UIViewController {
             .flatMapLatest { [unowned self] _ in self.requestListData() }
             .asDriver(onErrorDriveWith: .empty())
     }()
-    
-    static var instantiateSource: InstantiateSource {
+
+    static var instantiateType: SwiftExtensions.StoryboardInstantiateType {
         return .identifier(className)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.refreshControl = UIRefreshControl()
-        tableView.registerNib(type: SimpleListCell.self)
+        tableView.register(cellType: SimpleListCell.self)
         bind()
     }
     
@@ -73,9 +70,9 @@ final class SimpleListVC: UIViewController {
         items
             .do(onNext: { [unowned self] _ in self.tableView.refreshControl?.endRefreshing() })
             .drive(tableView.rx.items) { tableView, row, element in
-                SimpleListCell.dequeue(from: tableView,
-                                          for: IndexPath(row: row, section: 0),
-                                          with: element)
+                tableView.dequeueReusableCell(with: SimpleListCell.self, for: IndexPath(row: row, section: 0)).apply {
+                    $0.inject(element)
+                }
             }
             .disposed(by: disposeBag)
         
@@ -94,16 +91,4 @@ final class SimpleListVC: UIViewController {
             .map { try JSONDecoder().decode([SampleItem].self, from: $0) }
     }
 
-}
-
-extension SimpleListVC: StoryboardInstantiatable {
-    struct Dependency {
-        let title: String
-//        let id: String
-    }
-    
-    func inject(_ dependency: Dependency) {
-        title = dependency.title
-//        dependency.id
-    }
 }

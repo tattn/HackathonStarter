@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Instantiate
-import InstantiateStandard
 import RxSwift
 import RxCocoa
 
@@ -32,15 +30,15 @@ final class TopVC: UIViewController, StoryboardInstantiatable {
         
         var tapGesture = UITapGestureRecognizer()
         label.addGestureRecognizer(tapGesture)
-        tapGesture.rx.event.subscribe(onNext: { _ in
-            self.navigationController?.pushViewController(SimpleListVC.instantiate(with: .init(title: "🐱")), animated: true)
+        tapGesture.rx.event.subscribe({ _ in
+            self.navigationController?.pushViewController(SimpleListVC.instantiate().apply { $0.title = "🐱" }, animated: true)
         })
         .disposed(by: disposeBag)
         
         tapGesture = UITapGestureRecognizer()
         label2.addGestureRecognizer(tapGesture)
-        tapGesture.rx.event.subscribe(onNext: { _ in
-            self.navigationController?.pushViewController(SimpleCollectionVC.instantiate(with: .init(title: "🐶")), animated: true)
+        tapGesture.rx.event.subscribe({ _ in
+            self.navigationController?.pushViewController(SimpleCollectionVC.instantiate().apply { $0.title = "🐶" }, animated: true)
         })
         .disposed(by: disposeBag)
     }

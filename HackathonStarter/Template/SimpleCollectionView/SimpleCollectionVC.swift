@@ -6,17 +6,14 @@
 //  Copyright © 2017年 tattn. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import Instantiate
-import InstantiateStandard
 import RxSwift
 import RxCocoa
 import RxHelper
 
 // MARK: - Cell
 
-final class SimpleCollectionViewCell: UICollectionViewCell, Reusable, NibInstantiatable {
+final class SimpleCollectionViewCell: UICollectionViewCell, NibInstantiatable {
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     
     func inject(_ dependency: SampleItem) {
@@ -26,7 +23,7 @@ final class SimpleCollectionViewCell: UICollectionViewCell, Reusable, NibInstant
 
 // MARK: - ViewController
 
-final class SimpleCollectionVC: UIViewController {
+final class SimpleCollectionVC: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -36,15 +33,15 @@ final class SimpleCollectionVC: UIViewController {
             .flatMapLatest { [unowned self] _ in self.requestListData() }
             .asDriver(onErrorDriveWith: .empty())
     }()
-    
-    static var instantiateSource: InstantiateSource {
+
+    static var instantiateType: SwiftExtensions.StoryboardInstantiateType {
         return .identifier(className)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.refreshControl = UIRefreshControl()
-        collectionView.registerNib(type: SimpleCollectionViewCell.self)
+        collectionView.register(cellType: SimpleCollectionViewCell.self)
         bind()
     }
     
@@ -57,9 +54,9 @@ final class SimpleCollectionVC: UIViewController {
         items
             .do(onNext: { [unowned self] _ in self.collectionView.refreshControl?.endRefreshing() })
             .drive(collectionView.rx.items) { collectionView, index, item in
-                SimpleCollectionViewCell.dequeue(from: collectionView,
-                                                 for: IndexPath(row: index, section: 0),
-                                                 with: item)
+                collectionView.dequeueReusableCell(with: SimpleCollectionViewCell.self, for: IndexPath(row: index, section: 0)).apply {
+                    $0.inject(item)
+                }
             }
             .disposed(by: disposeBag)
         
@@ -78,16 +75,4 @@ final class SimpleCollectionVC: UIViewController {
             .map { try JSONDecoder().decode([SampleItem].self, from: $0) }
     }
 
-}
-
-extension SimpleCollectionVC: StoryboardInstantiatable {
-    struct Dependency {
-        let title: String
-//        let id: String
-    }
-    
-    func inject(_ dependency: Dependency) {
-        title = dependency.title
-//        dependency.id
-    }
 }

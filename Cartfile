@@ -1,6 +1,7 @@
 #############################################################
 # Requirements
 
+github "tattn/SwiftExtensions"
 github "tattn/UserDefaults"
 github "tattn/Alert"
 github "tattn/SwiftyToast"
@@ -13,9 +14,6 @@ github "antitypical/Result"
 # HTTP Networking
 github "Alamofire/Alamofire"
 github "ashleymills/Reachability.swift" ~> 3.0
-
-# Storyboard/Nib Helper
-github "tarunon/Instantiate"
 
 # Downloading and Caching image
 github "onevcat/Kingfisher"

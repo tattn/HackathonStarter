@@ -8,16 +8,6 @@
 
 import Foundation
 
-extension NSObjectProtocol {
-    static var className: String {
-        return String(describing: self)
-    }
-
-    var className: String {
-        return type(of: self).className
-    }
-}
-
 extension NSObjectProtocol where Self: NSObject {
     var description: String {
         let mirror = Mirror(reflecting: self)

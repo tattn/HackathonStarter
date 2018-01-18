@@ -29,7 +29,6 @@
 		24410D921D242ED2008B0A97 /* EnumEnumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D911D242ED2008B0A97 /* EnumEnumerable.swift */; };
 		24410D951D243538008B0A97 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D941D243538008B0A97 /* UIImage+.swift */; };
 		24410D971D24FCBC008B0A97 /* Comparable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D961D24FCBB008B0A97 /* Comparable+.swift */; };
-		24410D991D24FD01008B0A97 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24410D981D24FD01008B0A97 /* URL+.swift */; };
 		2441B2AA1EE066CF0065A0A6 /* RxHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2441B2A81EE066CF0065A0A6 /* RxHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2441B2AD1EE066CF0065A0A6 /* RxHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2A61EE066CF0065A0A6 /* RxHelper.framework */; };
 		2441B2AE1EE066CF0065A0A6 /* RxHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2441B2A61EE066CF0065A0A6 /* RxHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -114,7 +113,6 @@
 		24410D911D242ED2008B0A97 /* EnumEnumerable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumEnumerable.swift; sourceTree = "<group>"; };
 		24410D941D243538008B0A97 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		24410D961D24FCBB008B0A97 /* Comparable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+.swift"; sourceTree = "<group>"; };
-		24410D981D24FD01008B0A97 /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
 		2441B2A61EE066CF0065A0A6 /* RxHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2441B2A81EE066CF0065A0A6 /* RxHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxHelper.h; sourceTree = "<group>"; };
 		2441B2A91EE066CF0065A0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +139,7 @@
 		249269551EDC5E2C00C24E40 /* SimpleListVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleListVC.storyboard; sourceTree = "<group>"; };
 		249269571EDC5EC600C24E40 /* SimpleListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleListVC.swift; sourceTree = "<group>"; };
 		2492695D1EDC792800C24E40 /* SimpleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleListCell.xib; sourceTree = "<group>"; };
+		249AB1C4201113C000C36FFD /* HackathonStarter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HackathonStarter-Bridging-Header.h"; sourceTree = "<group>"; };
 		24A83B761EEAEBD200F72A23 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		24A83B7A1EEAF9B600F72A23 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
 		24A83B7C1EEAF9EB00F72A23 /* SimpleCollectionVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleCollectionVC.storyboard; sourceTree = "<group>"; };
@@ -236,7 +235,6 @@
 				244274D01D3F4B5F00088A78 /* UIImageView+.swift */,
 				24410D8D1D242E48008B0A97 /* UIView+.swift */,
 				244274FC1D4128D500088A78 /* UIViewController+.swift */,
-				24410D981D24FD01008B0A97 /* URL+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +322,7 @@
 				247A9CD11EDA051200D929FF /* Errors.swift */,
 				247A9C7F1ED9BF3C00D929FF /* NotificationKey.swift */,
 				24C450031ED75D1B009B6B8C /* UserDefaultsKey.swift */,
+				249AB1C4201113C000C36FFD /* HackathonStarter-Bridging-Header.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -537,8 +536,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyToast.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UserDefaults.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Instantiate.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/InstantiateStandard.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alert.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Coding.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Version.framework",
@@ -548,6 +545,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NSObject_Rx.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftExtensions.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
@@ -570,7 +568,6 @@
 				24137CC51D297814006AE0EC /* Array+.swift in Sources */,
 				247A9C7E1ED9B5E900D929FF /* Operator.swift in Sources */,
 				24DDCC6F1D36870700CC8046 /* Dictionary+.swift in Sources */,
-				24410D991D24FD01008B0A97 /* URL+.swift in Sources */,
 				24DA30E41D441E3E00E4C9C4 /* NSError+.swift in Sources */,
 				243F94901D25874800C302D0 /* IBDesignable.swift in Sources */,
 				24410D881D242CAB008B0A97 /* UIApplication+.swift in Sources */,
@@ -757,6 +754,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -767,6 +765,8 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.HackathonStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackathonStarter/Application/HackathonStarter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -777,6 +777,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -787,6 +788,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.HackathonStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackathonStarter/Application/HackathonStarter-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
