@@ -12,21 +12,13 @@ import Instantiate
 import InstantiateStandard
 import RxSwift
 import RxCocoa
-import Himotoki
 import RxHelper
 
 // MARK: - Model
 
-struct SampleItem: Himotoki.Decodable {
+struct SampleItem: Codable {
     let title: String
-    let imageURL: String
-    
-    static func decode(_ e: Extractor) throws -> SampleItem {
-        return try SampleItem(
-            title: e <| "title",
-            imageURL: e <| "thumbnailUrl"
-        )
-    }
+    let thumbnailUrl: URL
 }
 
 // MARK: - Cell
@@ -36,7 +28,7 @@ final class SimpleListCell: UITableViewCell, Reusable, NibInstantiatable {
     @IBOutlet private weak var titleLabel: UILabel!
     
     func inject(_ dependency: SampleItem) {
-        thumbnailImageView.setWebImage(dependency.imageURL)
+        thumbnailImageView.setWebImage(dependency.thumbnailUrl)
         titleLabel.text = dependency.title
     }
 }
@@ -95,11 +87,11 @@ final class SimpleListVC: UIViewController {
     }
     
     private func requestListData() -> Observable<[SampleItem]> {
-        return HTTPJSONRequest()
+        return HTTPDataRequest()
             .setURL("https://jsonplaceholder.typicode.com/photos")
             .asObservable()
             .progress(with: disposeBag)
-            .map { try [SampleItem].decode($0) }
+            .map { try JSONDecoder().decode([SampleItem].self, from: $0) }
     }
 
 }

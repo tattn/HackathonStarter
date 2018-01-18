@@ -17,12 +17,6 @@ github "ashleymills/Reachability.swift" ~> 3.0
 # Storyboard/Nib Helper
 github "tarunon/Instantiate"
 
-# Object Mapping
-github "ikesyo/Himotoki"
-# github "Hearst-DD/ObjectMapper"
-# github "Anviking/Decodable"
-# github "johnsundell/unbox"
-
 # Downloading and Caching image
 github "onevcat/Kingfisher"
 

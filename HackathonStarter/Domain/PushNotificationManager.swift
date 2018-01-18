@@ -38,7 +38,9 @@ struct PushNotificationManager {
                 
                 if granted {
                     print("Push notification is granted")
-                    application.registerForRemoteNotifications()
+                    DispatchQueue.main.async {
+                        application.registerForRemoteNotifications()
+                    }
                 } else {
                     print("Push notification is NOT granted")
                 }

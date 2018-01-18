@@ -12,7 +12,6 @@ import Instantiate
 import InstantiateStandard
 import RxSwift
 import RxCocoa
-import Himotoki
 import RxHelper
 
 // MARK: - Cell
@@ -21,7 +20,7 @@ final class SimpleCollectionViewCell: UICollectionViewCell, Reusable, NibInstant
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     
     func inject(_ dependency: SampleItem) {
-        thumbnailImageView.setWebImage(dependency.imageURL)
+        thumbnailImageView.setWebImage(dependency.thumbnailUrl)
     }
 }
 
@@ -72,11 +71,11 @@ final class SimpleCollectionVC: UIViewController {
     }
     
     private func requestListData() -> Observable<[SampleItem]> {
-        return HTTPJSONRequest()
+        return HTTPDataRequest()
             .setURL("https://jsonplaceholder.typicode.com/photos")
             .asObservable()
             .progress(with: disposeBag)
-            .map { try [SampleItem].decode($0) }
+            .map { try JSONDecoder().decode([SampleItem].self, from: $0) }
     }
 
 }
