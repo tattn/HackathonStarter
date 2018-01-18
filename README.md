@@ -22,12 +22,12 @@ Edit Cartfile, and run the following:
 $ carthage bootstrap --platform iOS --cache-builds
 ```
 
-if you use CocoaPods, run the following:
-```bash
-$ bundle exec pod init
-$ vi Podfile
-$ bundle exec pod install
-```
+## Reference
+
+**SwiftExtensions**  
+https://github.com/tattn/SwiftExtensions
+
+HackathonStarter uses **SwiftExtensions**. See it if you wanna know what kind of extensions.
 
 
 # License
