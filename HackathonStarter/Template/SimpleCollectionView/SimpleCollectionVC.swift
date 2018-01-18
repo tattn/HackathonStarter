@@ -17,7 +17,7 @@ final class SimpleCollectionViewCell: UICollectionViewCell, NibInstantiatable {
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     
     func inject(_ dependency: SampleItem) {
-        thumbnailImageView.setWebImage(dependency.thumbnailUrl)
+        thumbnailImageView.setImage(with: dependency.thumbnailUrl)
     }
 }
 

@@ -25,7 +25,7 @@ final class SimpleListCell: UITableViewCell, NibInstantiatable {
     @IBOutlet private weak var titleLabel: UILabel!
     
     func inject(_ dependency: SampleItem) {
-        thumbnailImageView.setWebImage(dependency.thumbnailUrl)
+        thumbnailImageView.setImage(with: dependency.thumbnailUrl)
         titleLabel.text = dependency.title
     }
 }

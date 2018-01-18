@@ -9,36 +9,26 @@
 import UIKit
 import Kingfisher
 
-private let activityIndicatorViewTag = 2017
+private let activityIndicatorViewTag = 2018
 
 extension UIImageView {
 
-    func setWebImage(_ url: URL?) {
+    func setImage(with url: URL?) {
         kf.setImage(with: url)
     }
 
-    @nonobjc
-    func setWebImage(_ urlString: String) {
-        setWebImage(urlString.url)
-    }
-
-    func setWebImageWithIndicator(_ url: URL?, indicatorColor: UIColor = .white) {
+    func setImage(with url: URL?, indicatorColor: UIColor) {
         addLoading()
         kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { [weak self] _, _, _, _ in
             self?.removeLoading()
         }
     }
 
-    @nonobjc
-    func setWebImageWithIndicator(_ urlString: String) {
-        setWebImageWithIndicator(urlString.url)
-    }
-
     func cancelDownload() {
         kf.cancelDownloadTask()
     }
 
-    fileprivate func addLoading(_ indicatorColor: UIColor = .white) {
+    private func addLoading(_ indicatorColor: UIColor = .white) {
         if let loading = viewWithTag(activityIndicatorViewTag) as? UIActivityIndicatorView {
             loading.startAnimating()
         } else {
@@ -56,7 +46,7 @@ extension UIImageView {
         }
     }
 
-    fileprivate func removeLoading() {
+    private func removeLoading() {
         if let activityIndicatorView = self.viewWithTag(activityIndicatorViewTag) as? UIActivityIndicatorView {
             activityIndicatorView.stopAnimating()
             activityIndicatorView.removeFromSuperview()
