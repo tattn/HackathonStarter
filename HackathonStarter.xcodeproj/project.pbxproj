@@ -93,7 +93,6 @@
 		2441B2A61EE066CF0065A0A6 /* RxHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2441B2A81EE066CF0065A0A6 /* RxHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxHelper.h; sourceTree = "<group>"; };
 		2441B2A91EE066CF0065A0A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2441B2B31EE0670D0065A0A6 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		2441B2B41EE0670D0065A0A6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		2441B2B51EE0670D0065A0A6 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		2441B2BA1EE0674C0065A0A6 /* RxImagePickerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxImagePickerDelegateProxy.swift; sourceTree = "<group>"; };
@@ -216,7 +215,6 @@
 		2441B2B21EE0670C0065A0A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2441B2B31EE0670D0065A0A6 /* RxBlocking.framework */,
 				2441B2B41EE0670D0065A0A6 /* RxCocoa.framework */,
 				2441B2B51EE0670D0065A0A6 /* RxSwift.framework */,
 			);
