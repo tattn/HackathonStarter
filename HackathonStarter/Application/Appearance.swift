@@ -15,7 +15,7 @@ struct Appearance {
         UINavigationBar.appearance().tintColor = .main
         
         // Text color of NavigationBar
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.main]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.main]
         
         // Text color (UIButton & UIAlertView & ...)
         UIView.appearance().tintColor = .main

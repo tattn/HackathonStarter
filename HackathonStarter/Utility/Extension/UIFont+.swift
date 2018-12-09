@@ -9,13 +9,11 @@
 import UIKit
 
 extension UIFont {
-
     func size(of string: String, constrainedToWidth width: Double) -> CGSize {
         return (string as NSString)
-               .boundingRect(with: CGSize(width: width, height: Double.greatestFiniteMagnitude),
-                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                     attributes: [NSAttributedStringKey.font: self],
-                                     context: nil).size
+            .boundingRect(with: CGSize(width: width, height: Double.greatestFiniteMagnitude),
+                          options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                          attributes: [NSAttributedString.Key.font: self],
+                          context: nil).size
     }
-
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// for Debugging
 extension NSObjectProtocol where Self: NSObject {
     var description: String {
         let mirror = Mirror(reflecting: self)

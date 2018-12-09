@@ -21,8 +21,8 @@ public final class KeyboardObserver {
 
     public init() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     deinit {
@@ -33,7 +33,7 @@ public final class KeyboardObserver {
         isShown = true
 
         guard let userInfo = notification.userInfo,
-            let keyboardRect = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+            let keyboardRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
 
         delegate?.keyboardWillShow(rect: keyboardRect)
     }
@@ -42,7 +42,7 @@ public final class KeyboardObserver {
         isShown = false
 
         guard let userInfo = notification.userInfo,
-            let keyboardRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
+            let keyboardRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
 
         delegate?.keyboardWillHide(rect: keyboardRect)
     }

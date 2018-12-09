@@ -16,11 +16,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         if UserDefaults.standard.string(for: .previousLaunchAppVersion) == nil {
             // First launching
-            // do something ?
+            // do something
             
             UserDefaults.standard.set("\(Version.current)", for: .previousLaunchAppVersion)
         } else {
@@ -28,10 +28,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Launch via push notification
-        if let option = launchOptions {
-            if let userInfo = option[.remoteNotification] as? [AnyHashable: Any] {
-                PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
-            }
+        if let option = launchOptions, let userInfo = option[.remoteNotification] as? [AnyHashable: Any]  {
+            PushNotificationManager.handlePushNotification(userInfo, state: application.applicationState)
         }
         
         // if you use push notification
@@ -62,20 +60,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - Push Notification
 extension AppDelegate {
-
-    // for iOS 9
-//    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-//        print(error)
-//    }
-//
-//    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
-//        application.registerForRemoteNotifications()
-//    }
-
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = DeviceToken(data: deviceToken)
         print(token)
-
         PushNotificationManager.send(token)
     }
 
@@ -87,7 +74,6 @@ extension AppDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
-    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
