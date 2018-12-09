@@ -10,8 +10,6 @@ import UIKit
 
 extension UIApplication {    
     func openSettingApplication() {
-        if let url = URL(string: UIApplicationOpenSettingsURLString) {
-            UIApplication.shared.open(url)
-        }
+        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
     }
 }

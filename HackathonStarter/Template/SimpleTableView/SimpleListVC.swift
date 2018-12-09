@@ -36,7 +36,7 @@ final class SimpleListVC: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 50
         }
     }

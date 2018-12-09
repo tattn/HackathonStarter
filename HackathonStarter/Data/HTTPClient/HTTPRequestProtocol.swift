@@ -19,11 +19,11 @@ final class HTTPRequestConfiguration {
     var headers: [String: String] = [:]
 }
 
-protocol HTTPRequestType: class {
+protocol HTTPRequestType: AnyObject {
     associatedtype ResponseType
-    
+
     var configuration: HTTPRequestConfiguration { get set }
-    
+
     func asObservable() -> Observable<ResponseType>
 }
 
@@ -33,7 +33,7 @@ protocol HTTPDefaultRequestType {
 }
 
 extension HTTPRequestType where Self: HTTPDefaultRequestType {
-    func asObservable() -> Observable<ResponseType> {
+    func asObservable() -> Observable<Self.ResponseType> {
         return _request(configuration.method,
                         configuration.url,
                         configuration.parameters,
@@ -47,27 +47,27 @@ extension HTTPRequestType {
         block(configuration)
         return self
     }
-    
+
     func setURL(_ url: URL) -> Self {
         self.configuration.url = url
         return self
     }
-    
+
     func setMethod(_ method: HTTPMethod) -> Self {
         self.configuration.method = method
         return self
     }
-    
+
     func setParameters(_ parameters: [String: Any]) -> Self {
         self.configuration.parameters = parameters
         return self
     }
-    
+
     func setEncoding(_ encoding: ParameterEncoding) -> Self {
         self.configuration.encoding = encoding
         return self
     }
-    
+
     func setHeaders(_ headers: [String: String]) -> Self {
         self.configuration.headers = headers
         return self

@@ -13,7 +13,6 @@ extension Notification.Name {
 }
 
 extension Notification.Name: ExpressibleByStringLiteral {
-    
     public init(stringLiteral value: String) {
         self = Notification.Name(value)
     }

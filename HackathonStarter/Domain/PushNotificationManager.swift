@@ -9,10 +9,10 @@
 import UIKit
 import UserNotifications
 
-struct DeviceToken {
-    let data: Data
+public struct DeviceToken {
+    public let data: Data
     
-    init(data: Data) {
+    public init(data: Data) {
         self.data = data
     }
 }
@@ -24,31 +24,23 @@ extension DeviceToken: CustomStringConvertible {
 }
 
 struct PushNotificationManager {
-
     static func allowToPushNotification(with appDelegate: AppDelegate) {
-        let application = UIApplication.shared
-        if #available(iOS 10.0, *) {
-            let center = UNUserNotificationCenter.current()
-            center.delegate = appDelegate
-            center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
-                if let error = error {
-                    print(error)
-                    return
-                }
-                
-                if granted {
-                    print("Push notification is granted")
-                    DispatchQueue.main.async {
-                        application.registerForRemoteNotifications()
-                    }
-                } else {
-                    print("Push notification is NOT granted")
-                }
+        let center = UNUserNotificationCenter.current()
+        center.delegate = appDelegate
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if let error = error {
+                print(error)
+                return
             }
-        } else {
-            let type: UIUserNotificationType = [.alert, .badge, .sound]
-            let setting = UIUserNotificationSettings(types: type, categories: nil)
-            application.registerUserNotificationSettings(setting)
+
+            if granted {
+                print("Push notification is granted")
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            } else {
+                print("Push notification is NOT granted")
+            }
         }
     }
     
@@ -59,7 +51,7 @@ struct PushNotificationManager {
         }
     }
 
-    static func handlePushNotification(_ userInfo: [AnyHashable: Any], state: UIApplicationState) {
+    static func handlePushNotification(_ userInfo: [AnyHashable: Any], state: UIApplication.State) {
         switch state {
         case .inactive:
             // Launch via push notification
