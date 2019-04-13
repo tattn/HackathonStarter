@@ -60,6 +60,8 @@ struct PushNotificationManager {
             break
         case .background:
             break
+        @unknown default:
+            break
         }
     }
 

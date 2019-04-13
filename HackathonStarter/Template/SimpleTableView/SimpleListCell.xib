@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimpleListCell" rowHeight="89" id="DxO-jj-m3f" customClass="SimpleListCell" customModule="HackathonStarter" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimpleListCell" id="DxO-jj-m3f" customClass="SimpleListCell" customModule="HackathonStarter" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DxO-jj-m3f" id="ove-v5-Zh8">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="DxO-jj-m3f" id="ove-v5-Zh8">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sCs-wp-Ico">
-                        <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                        <rect key="frame" x="0.0" y="0.0" width="89" height="89.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="sCs-wp-Ico" secondAttribute="height" multiplier="1:1" id="Cf2-lA-KOK"/>
                             <constraint firstAttribute="height" constant="89" id="jKI-Bv-zbc"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nym-nl-7Sh">
-                        <rect key="frame" x="99" y="34" width="258" height="21"/>
+                        <rect key="frame" x="99" y="34.5" width="250" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,7 +36,7 @@
                     <constraint firstItem="sCs-wp-Ico" firstAttribute="top" secondItem="ove-v5-Zh8" secondAttribute="top" id="6Vw-SJ-B4A"/>
                     <constraint firstItem="sCs-wp-Ico" firstAttribute="leading" secondItem="ove-v5-Zh8" secondAttribute="leading" id="B4e-fr-BU9"/>
                     <constraint firstAttribute="bottom" secondItem="sCs-wp-Ico" secondAttribute="bottom" id="J0M-9L-Q3k"/>
-                    <constraint firstItem="Nym-nl-7Sh" firstAttribute="centerY" secondItem="ove-v5-Zh8" secondAttribute="centerY" id="cCv-4r-Qdl"/>
+                    <constraint firstItem="Nym-nl-7Sh" firstAttribute="centerY" secondItem="sCs-wp-Ico" secondAttribute="centerY" id="QxJ-EQ-Gfd"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Nym-nl-7Sh" secondAttribute="trailing" constant="10" id="hxD-o7-fee"/>
                     <constraint firstItem="Nym-nl-7Sh" firstAttribute="leading" secondItem="sCs-wp-Ico" secondAttribute="trailing" constant="10" id="iMB-iI-tC0"/>
                 </constraints>

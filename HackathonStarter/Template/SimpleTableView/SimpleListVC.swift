@@ -34,12 +34,7 @@ final class SimpleListCell: UITableViewCell, NibInstantiatable {
 
 final class SimpleListVC: UIViewController, StoryboardInstantiatable {
     
-    @IBOutlet private weak var tableView: UITableView! {
-        didSet {
-            tableView.rowHeight = UITableView.automaticDimension
-            tableView.estimatedRowHeight = 50
-        }
-    }
+    @IBOutlet private weak var tableView: UITableView!
     
     private let requestSubject = PublishSubject<Void>()
     private lazy var items: Driver<[SampleItem]> = {
