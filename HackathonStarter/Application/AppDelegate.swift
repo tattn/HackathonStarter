@@ -10,6 +10,7 @@ import UIKit
 import Alert
 import Version
 import UserNotifications
+@_exported import SwiftExtensions
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
